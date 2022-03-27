@@ -1,0 +1,1 @@
+#signal_strength	bar_graph	waveform	pulse_rate	spO2	byte0	byte1	byte2	byte3	byte4	byte5	byte6	byte7	byte8	
