@@ -1,0 +1,523 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>IFloat &mdash; Arena 1.0.31.8 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Arena 1.0.31.8 documentation" href="index.html"/>
+        <link rel="up" title="GenApi C++" href="cpp_genapi.html"/>
+        <link rel="next" title="INode" href="cpp_genapi_inode.html"/>
+        <link rel="prev" title="IEnumerationT" href="cpp_genapi_ienumerationt.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home">
+          
+
+          <!--
+            
+            <img src="_static/lucid-white.png" class="logo" />
+          -->
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.31
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_sdk_datasheet.html">Arena SDK Datasheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_windows.html">Arena SDK for Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_linux.html">Arena SDK for Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sdk.html">Code Reference &amp; Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gentl.html">GenTL Features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cpp.html">Arena C++</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cpp_arena.html">Arena C++</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cpp_genapi.html">GenApi C++</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_concatenatedwrite.html">ConcatenatedWrite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ibase.html">IBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iboolean.html">IBoolean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icategory.html">ICategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ichunkport.html">IChunkPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icommand.html">ICommand</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumentry.html">IEnumEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumeration.html">IEnumeration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumerationt.html">IEnumerationT</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">IFloat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inode.html">INode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemap.html">INodeMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemapdyn.html">INodeMapDyn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iport.html">IPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportrecorder.html">IPortRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportstacked.html">IPortStacked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iregister.html">IRegister</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_istring.html">IString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ivalue.html">IValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapfactory.html">NodeMapFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapref.html">NodeMapRef</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_portwritelist.html">PortWriteList</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_save.html">Save C++</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_examples.html">C++ Code Samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="c.html">Arena C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cs.html">Arena.NET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qt.html">Qt</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arena</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sdk.html">Code Reference &amp; Samples</a> &raquo;</li>
+        
+          <li><a href="cpp.html">Arena C++</a> &raquo;</li>
+        
+          <li><a href="cpp_genapi.html">GenApi C++</a> &raquo;</li>
+        
+      <li>IFloat</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ifloat">
+<h1>IFloat<a class="headerlink" href="#ifloat" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Definition of the IFloat interface. </p>
+<dl class="type">
+<dt id="_CPPv216GENAPI_NAMESPACE">
+<span id="GENAPI_NAMESPACE"></span><span class="target" id="namespace_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e"></span><em class="property">namespace </em><code class="descname">GENAPI_NAMESPACE</code><a class="headerlink" href="#_CPPv216GENAPI_NAMESPACE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv2N16GENAPI_NAMESPACE9CFloatRefE">
+<span id="GENAPI_NAMESPACE::CFloatRef"></span><span class="target" id="group___gen_api___public_impl_1gad2c0d60bdcaf0a8ff9c30962abfd5f89"></span><em class="property">typedef </em><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefTE" title="GENAPI_NAMESPACE::CFloatRefT">CFloatRefT</a>&lt;IFloat&gt; <code class="descname">CFloatRef</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE9CFloatRefE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reference to an IFloat pointer </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACEaSEd">
+<span id="GENAPI_NAMESPACE::assign-operator__double"></span><span class="target" id="_i_float_8h_1a9367fd99f8e56a7cf3a3d88108be8944"></span><em class="property">virtual</em> IFloat &amp;<code class="descname">operator=</code><span class="sig-paren">(</span>double <em>Value</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACEaSEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE6GetMinEv">
+<span id="GENAPI_NAMESPACE::GetMin"></span><span class="target" id="_i_float_8h_1a1043025bbbd7f989825a2a28a2a8f477"></span>int64_t <code class="descname">GetMin</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE6GetMinEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get minimum value allowed. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE6GetMaxEv">
+<span id="GENAPI_NAMESPACE::GetMax"></span><span class="target" id="_i_float_8h_1a0f572b86b562742582537c19fc146341"></span>int64_t <code class="descname">GetMax</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE6GetMaxEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get maximum value allowed. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE6HasIncEv">
+<span id="GENAPI_NAMESPACE::HasInc"></span><span class="target" id="_i_float_8h_1a51c92bd67d04c02e5129e103c28d3d69"></span><em class="property">virtual</em> bool <code class="descname">HasInc</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE6HasIncEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>True if the float has a constant increment. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10GetIncModeEv">
+<span id="GENAPI_NAMESPACE::GetIncMode"></span><span class="target" id="_i_float_8h_1af3cd0e0dbfbe60b3c20cf2b9f8cc74cc"></span>EIncMode <code class="descname">GetIncMode</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10GetIncModeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get increment mode. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE6GetIncEv">
+<span id="GENAPI_NAMESPACE::GetInc"></span><span class="target" id="_i_float_8h_1a669c3a66564a5f2595aa2066d653663e"></span>int64_t <code class="descname">GetInc</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE6GetIncEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the constant increment if there is any. </p>
+<p>Get increment. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE20GetListOfValidValuesEb">
+<span id="GENAPI_NAMESPACE::GetListOfValidValues__b"></span><span class="target" id="_i_float_8h_1ac1166188a3e0c0f0a935a63589579073"></span>int64_autovector_t <code class="descname">GetListOfValidValues</code><span class="sig-paren">(</span>bool <em>bounded</em> = true<span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE20GetListOfValidValuesEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get list of valid value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE17GetRepresentationEv">
+<span id="GENAPI_NAMESPACE::GetRepresentation"></span><span class="target" id="_i_float_8h_1a17a3cfec7441868bd7aba65fc5120e98"></span>ERepresentation <code class="descname">GetRepresentation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE17GetRepresentationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get recommended representation. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE7GetUnitEv">
+<span id="GENAPI_NAMESPACE::GetUnitC"></span><span class="target" id="_i_float_8h_1a1a79e320167e1b641274af7ed5d69efb"></span>GENICAM_NAMESPACE::gcstring <code class="descname">GetUnit</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE7GetUnitEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the physical unit name. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE18GetDisplayNotationEv">
+<span id="GENAPI_NAMESPACE::GetDisplayNotationC"></span><span class="target" id="_i_float_8h_1a05517ad0c2de6dacd6a36279d952467f"></span><em class="property">virtual</em> EDisplayNotation <code class="descname">GetDisplayNotation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE18GetDisplayNotationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the way the float should be converted to a string. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE19GetDisplayPrecisionEv">
+<span id="GENAPI_NAMESPACE::GetDisplayPrecisionC"></span><span class="target" id="_i_float_8h_1a62a60d2c0ceaa560aa0a20e06f8b01a0"></span><em class="property">virtual</em> int64_t <code class="descname">GetDisplayPrecision</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE19GetDisplayPrecisionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the precision to be used when converting the float to a string. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE9ImposeMinEd">
+<span id="GENAPI_NAMESPACE::ImposeMin__double"></span><span class="target" id="_i_float_8h_1a2de1a3e94ae76c92fe7656e4a6a8086b"></span><em class="property">virtual</em> void <code class="descname">ImposeMin</code><span class="sig-paren">(</span>double <em>Value</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE9ImposeMinEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Restrict minimum value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE9ImposeMaxEd">
+<span id="GENAPI_NAMESPACE::ImposeMax__double"></span><span class="target" id="_i_float_8h_1aac6390daa368cef55fe5f3570e9e937b"></span><em class="property">virtual</em> void <code class="descname">ImposeMax</code><span class="sig-paren">(</span>double <em>Value</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE9ImposeMaxEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Restrict maximum value. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Variables</p>
+<dl class="member">
+<dt>
+<span class="target" id="group___gen_api___public_interface_1gacafac28d479374ddc33fba04aaf07607"></span><code class="descname">interface GENAPI_DECL_ABSTRACT GENAPI_NAMESPACE::IFloat</code></dt>
+<dd><p>Interface for float properties. </p>
+</dd></dl>
+
+</div>
+<dl class="class">
+<dt>
+<span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t"></span><em class="property">template </em>&lt;<em class="property">class</em> T&gt;</dt>
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefTE">
+<span id="GENAPI_NAMESPACE::CFloatRefT"></span><em class="property">class </em><code class="descname">CFloatRefT</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from <a class="reference internal" href="cpp_genapi_ivalue.html#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_value_ref_t"><span class="std std-ref">GENAPI_NAMESPACE::CValueRefT&lt; T &gt;</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefT8SetValueEdb">
+<span id="GENAPI_NAMESPACE::CFloatRefT::SetValue__double.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1a7637cc859d2adab93303f56b99004381"></span><em class="property">virtual</em> void <code class="descname">SetValue</code><span class="sig-paren">(</span>double <em>Value</em>, bool <em>Verify</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefT8SetValueEdb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefTaSEd">
+<span id="GENAPI_NAMESPACE::CFloatRefT::assign-operator__double"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1ae972c875a22dce19df687496bea059ae"></span><em class="property">virtual</em> IFloat &amp;<code class="descname">operator=</code><span class="sig-paren">(</span>double <em>Value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefTaSEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefT8GetValueEbb">
+<span id="GENAPI_NAMESPACE::CFloatRefT::GetValue__b.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1a07cc4a09004584cdcd386eeccbfe964f"></span><em class="property">virtual</em> double <code class="descname">GetValue</code><span class="sig-paren">(</span>bool <em>Verify</em> = false, bool <em>IgnoreCache</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefT8GetValueEbb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefTclEv">
+<span id="GENAPI_NAMESPACE::CFloatRefT::call-operator"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1a66cb4c53d349a5642bcdacb99cfafa4c"></span><em class="property">virtual</em> double <code class="descname">operator()</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefTclEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefTmlEv">
+<span id="GENAPI_NAMESPACE::CFloatRefT::mul-operator"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1ac4182f07a5f729739c36784e67c0ad64"></span><em class="property">virtual</em> double <code class="descname">operator*</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefTmlEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefT6GetMinEv">
+<span id="GENAPI_NAMESPACE::CFloatRefT::GetMin"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1afc3bf0a253904782a1bb5f55458af2e6"></span><em class="property">virtual</em> double <code class="descname">GetMin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefT6GetMinEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get minimum value allowed. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefT6GetMaxEv">
+<span id="GENAPI_NAMESPACE::CFloatRefT::GetMax"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1a6c19b6c7e3341fc99755aff865443ac3"></span><em class="property">virtual</em> double <code class="descname">GetMax</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefT6GetMaxEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get maximum value allowed. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefT6HasIncEv">
+<span id="GENAPI_NAMESPACE::CFloatRefT::HasInc"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1af83e623027c9a510af8c7698ec163aea"></span><em class="property">virtual</em> bool <code class="descname">HasInc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefT6HasIncEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>True if the float has a constant increment. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefT10GetIncModeEv">
+<span id="GENAPI_NAMESPACE::CFloatRefT::GetIncMode"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1afdfd09e6a532c4715e0e62ebedff2ec9"></span><em class="property">virtual</em> EIncMode <code class="descname">GetIncMode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefT10GetIncModeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefT6GetIncEv">
+<span id="GENAPI_NAMESPACE::CFloatRefT::GetInc"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1a3157458c7c8cb4abbc7cdf455d5337fc"></span><em class="property">virtual</em> double <code class="descname">GetInc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefT6GetIncEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the constant increment if there is any. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefT20GetListOfValidValuesEb">
+<span id="GENAPI_NAMESPACE::CFloatRefT::GetListOfValidValues__b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1a30f2286942d5e4027229858e0ffcc9ce"></span><em class="property">virtual</em> double_autovector_t <code class="descname">GetListOfValidValues</code><span class="sig-paren">(</span>bool <em>bounded</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefT20GetListOfValidValuesEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get list of valid value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefT17GetRepresentationEv">
+<span id="GENAPI_NAMESPACE::CFloatRefT::GetRepresentation"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1afd6b27b31202e5b63cc8ac1b0c177fad"></span><em class="property">virtual</em> ERepresentation <code class="descname">GetRepresentation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefT17GetRepresentationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get recommended representation. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE10CFloatRefT7GetUnitEv">
+<span id="GENAPI_NAMESPACE::CFloatRefT::GetUnitC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1ae18c33ffa3cf903dd50e2a1c8bd84e99"></span><em class="property">virtual</em> GENICAM_NAMESPACE::gcstring <code class="descname">GetUnit</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE10CFloatRefT7GetUnitEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get unit. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE10CFloatRefT18GetDisplayNotationEv">
+<span id="GENAPI_NAMESPACE::CFloatRefT::GetDisplayNotationC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1aa810e344276935ee6235256012b10829"></span><em class="property">virtual</em> EDisplayNotation <code class="descname">GetDisplayNotation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE10CFloatRefT18GetDisplayNotationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the way the float should be converted to a string. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE10CFloatRefT19GetDisplayPrecisionEv">
+<span id="GENAPI_NAMESPACE::CFloatRefT::GetDisplayPrecisionC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1a70f55f43c3716727ef239f73342ef4c2"></span><em class="property">virtual</em> int64_t <code class="descname">GetDisplayPrecision</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE10CFloatRefT19GetDisplayPrecisionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the precision to be used when converting the float to a string. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefT11GetIntAliasEv">
+<span id="GENAPI_NAMESPACE::CFloatRefT::GetIntAlias"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1aedf8ae161193213238522d4eb22bb9a8"></span>IInteger *<code class="descname">GetIntAlias</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefT11GetIntAliasEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>gets the interface of an alias node. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefT12GetEnumAliasEv">
+<span id="GENAPI_NAMESPACE::CFloatRefT::GetEnumAlias"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1abdf304d86ceaea1cd64d0550c5405d9d"></span>IEnumeration *<code class="descname">GetEnumAlias</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefT12GetEnumAliasEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>gets the interface of an alias node. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefT9ImposeMinEd">
+<span id="GENAPI_NAMESPACE::CFloatRefT::ImposeMin__double"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1aa42a2959e96997e20f90d4c8175cb8d6"></span><em class="property">virtual</em> void <code class="descname">ImposeMin</code><span class="sig-paren">(</span>double <em>Value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefT9ImposeMinEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Restrict minimum value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefT9ImposeMaxEd">
+<span id="GENAPI_NAMESPACE::CFloatRefT::ImposeMax__double"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1aa5ad3c20a66fd0d1a6e09f4c15477e24"></span><em class="property">virtual</em> void <code class="descname">ImposeMax</code><span class="sig-paren">(</span>double <em>Value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefT9ImposeMaxEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Restrict maximum value. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Private Types</p>
+<dl class="type">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10CFloatRefT3refE">
+<span id="GENAPI_NAMESPACE::CFloatRefT::ref"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_float_ref_t_1ab06d848a734eb7011ac421e3bdb8594d"></span><em class="property">typedef </em><a class="reference internal" href="cpp_genapi_ivalue.html#_CPPv2N16GENAPI_NAMESPACE10CValueRefTE" title="GENAPI_NAMESPACE::CValueRefT">CValueRefT</a>&lt;T&gt; <code class="descname">ref</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10CFloatRefT3refE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cpp_genapi_inode.html" class="btn btn-neutral float-right" title="INode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cpp_genapi_ienumerationt.html" class="btn btn-neutral" title="IEnumerationT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Lucid Vision Labs, Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.31.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,691 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Record, Introduction &mdash; Arena 1.0.31.8 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Arena 1.0.31.8 documentation" href="index.html"/>
+        <link rel="up" title="C# Code Samples" href="cs_examples.html"/>
+        <link rel="next" title="Save, Introduction" href="cs_examples_save.html"/>
+        <link rel="prev" title="Polarization, DoLP AoLP" href="cs_examples_polarization_dolpaolp.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home">
+          
+
+          <!--
+            
+            <img src="_static/lucid-white.png" class="logo" />
+          -->
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.31
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_sdk_datasheet.html">Arena SDK Datasheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_windows.html">Arena SDK for Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_linux.html">Arena SDK for Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sdk.html">Code Reference &amp; Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gentl.html">GenTL Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpp.html">Arena C++</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c.html">Arena C</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cs.html">Arena.NET</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cs_arena.html">Arena.NET</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cs_examples.html">C# Code Samples</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_simpleacquisition.html">Simple Acquisition, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition.html">Acquisition, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_multithreadeacquisitionandsave.html">Acquisition, Multithreaded Acquisition and Save</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_multidevice.html">Acquisition, Multi-Device</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_rapidacquisition.html">Acquisition, Rapid Acquisition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_sensorbinning.html">Acquisition, Sensor Binning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_imagecallbacks.html">Callback, Image Callbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_multithreadedimagecallbacks.html">Callback, Multithreaded Image Callbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_onevent.html">Callback, On Event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_onnodechange.html">Callback, On Node Change</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_polling.html">Callback, Polling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_chunkdata.html">ChunkData, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_chunkdata_crcvalidation.html">Chunk Data, CRC Validation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_enumeration.html">Enumeration, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_enumeration_handlingdisconnections.html">Enumeration, Handling Disconnections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_explore_nodes.html">Explore_Nodes, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_explore_nodetypes.html">Explore, Node Types, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_explore_nodemaps.html">Explore, Node Maps, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_exposure.html">Exposure, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_exposure_forhdr.html">Exposure, For HDR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_exposure_long.html">Exposure, Long</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_forceip.html">Force Ip, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_helios_heatmap.html">Helios, HeatMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_helios_minmaxdepth.html">Helios, Min Max Depth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_helios_smoothresults.html">Helios, Smooth Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_ipconfig_manual.html">IP Config, Manual</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_ipconfig_auto.html">IP Config, Auto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_lut.html">LUT, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_multicast.html">Multicast, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_pixelcorrection.html">Pixel Correction, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_polarization_colordolpaolp.html">Polarization, Color DoLP AoLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_polarization_dolpaolp.html">Polarization, DoLP AoLP</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Record, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save.html">Save, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_bitmap.html">Save, Bitmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_filenamepattern.html">Save, File Name Pattern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_ply.html">Save, Ply</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_raw.html">Save, Raw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_scheduledactioncommands.html">Scheduled Action Commands, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_sequencer_hdr.html">Sequencer, HDR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_streamables.html">Streamables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_trigger.html">Trigger, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_trigger_nextleader.html">Trigger, Next Leader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_trigger_overlappingtrigger.html">Trigger, Overlapping Trigger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_usersets.html">UserSets, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wpf_cameraselection.html">Windows Presentation Foundation, Camera Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wpf_featuretree.html">Windows Presentation Foundation, Feature Tree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wpf_miniexample.html">Windows Presentation Foundation, Mini Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wpf_streaming.html">Windows Presentation Foundation, Streaming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qt.html">Qt</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arena</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sdk.html">Code Reference &amp; Samples</a> &raquo;</li>
+        
+          <li><a href="cs.html">Arena.NET</a> &raquo;</li>
+        
+          <li><a href="cs_examples.html">C# Code Samples</a> &raquo;</li>
+        
+      <li>Record, Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="record-introduction">
+<h1>Record, Introduction<a class="headerlink" href="#record-introduction" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-c++"><div class="highlight"><pre><span></span>/***************************************************************************************
+ ***                                                                                 ***
+ ***  Copyright (c) 2021, Lucid Vision Labs, Inc.                                    ***
+ ***                                                                                 ***
+ ***  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR     ***
+ ***  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,       ***
+ ***  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE    ***
+ ***  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER         ***
+ ***  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  ***
+ ***  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  ***
+ ***  SOFTWARE.                                                                      ***
+ ***                                                                                 ***
+ ***************************************************************************************/
+﻿using System;
+using System.Collections.Generic; // for List&lt;&gt;
+
+namespace Cs_Record
+{
+        class Cs_Record
+        {
+                const String TAB1 = &quot;  &quot;;
+                const String TAB2 = &quot;    &quot;;
+                const String ERASE_LINE = &quot;\t\t\t\t\t&quot;;
+
+                // Record: Introduction
+                //    This example introduces the basics of video recording using the
+                //    save library. This includes preparing, creating, and writing images
+                //    to the video.
+
+                // =-=-=-=-=-=-=-=-=-
+                // =-=- SETTINGS =-=-
+                // =-=-=-=-=-=-=-=-=-
+
+                // Memory Limitations
+                //    This example appends many images to record a video stream and can
+                //    quickly exceed memory limits when running on a &quot;Win32&quot; platform
+                //    target. The 32-bit Windows system allocates a total of 2GB of
+                //    memory for all data types. It is suggested to run this example on
+                //    an &quot;x64&quot; platform, which has an 8TB memory limit: 2GB of shared
+                //    data between the stack and static data, and the remainder for
+                //    dynamic data. If running on a Win32 platform, this example reduces
+                //    the height and width for each image being saved to the video file.
+                const Int32 WIDTH = 800;  // image width
+                const Int32 HEIGHT = 600; // image height
+
+                // Frames per second
+                //    This example chooses its FPS setting arbitrarily. If the device is
+                //    outputting images at a similar frame rate, it may seem as though
+                //    the image is configured for real-time video, but this is only
+                //    incidental. 250 images and 25 frames per second will produce a 10
+                //    second video.
+                const double FRAMES_PER_SECOND = 25.0;
+
+                // number of images to grab
+                const UInt32 NUM_IMAGES = 250;
+
+                // File name
+                //    The relative path and file name to save to. After running the
+                //    example, a video should exist at the location specified. The image
+                //    writer chooses the file format by the image&#39;s extension. Aside from
+                //    MPEG-4 (.mp4), videos can be saved as AVI (.avi), MOV (.mov), and
+                //    raw (.raw) files.
+                const String FILE_NAME = &quot;Cs_Record/video.mp4&quot;;
+
+                // =-=-=-=-=-=-=-=-=-
+                // =-=- EXAMPLE -=-=-
+                // =-=-=-=-=-=-=-=-=-
+
+                static void Usage()
+                {
+                        Console.WriteLine(&quot;Usage:&quot;);
+                        Console.WriteLine(&quot;{0} [-w width] [-h height] [-n numImages]&quot;, System.AppDomain.CurrentDomain.FriendlyName);
+                        Console.WriteLine(&quot;Where:&quot;);
+                        Console.WriteLine(&quot;width:     camera image width to configure. Default is {0}&quot;, WIDTH);
+                        Console.WriteLine(&quot;height:    camera image height to configure. Default is {0}&quot;, HEIGHT);
+                        Console.WriteLine(&quot;numImages: number of images to capture for recording. Default is {0}&quot;, NUM_IMAGES);
+                        Console.WriteLine(&quot;fps:       framerate to use for the recording. Default is {0}\n&quot;, FRAMES_PER_SECOND);
+                }
+
+                // sets integer value safely
+                // (1) ensures increment
+                // (2) ensures over minimum
+                // (3) ensures below maximum
+                // (4) sets value
+                static Int64 SetIntValue(ArenaNET.INodeMap nodeMap, String nodeName, Int64 value)
+                {
+                        // get node
+                        ArenaNET.IInteger integer = (ArenaNET.IInteger)nodeMap.GetNode(nodeName);
+
+                        // Ensure increment
+                        //    If a node has an increment (all integer nodes &amp; some float
+                        //    nodes), only multiples of the increment can be set.
+                        value = (((value - integer.Min) / integer.Inc) * integer.Inc) + integer.Min;
+
+        // Check min/max values
+        //    Values must not be less than the minimum or exceed the maximum value of
+        //    a node. If a value does so, simply push it within range.
+        if (value&lt; integer.Min)
+                value = integer.Min;
+
+        if (value &gt; integer.Max)
+                value = integer.Max;
+
+                        // set value
+                        integer.Value = value;
+
+        // return value for output
+        return value;
+        }
+
+                // sets float value safely
+                // (1) ensures over minimum
+                // (2) ensures below maximum
+                // (3) sets value
+                static Double SetFloatValue(ArenaNET.INodeMap nodeMap, String nodeName, Double value)
+                {
+                        // get node
+                        ArenaNET.IFloat floatNode = (ArenaNET.IFloat)nodeMap.GetNode(nodeName);
+
+                        // Check min/max values
+                        //    Values must not be less than the minimum or exceed the maximum
+                        //    value of a node. If a value does so, simply push it within
+                        //    range.
+                        if (value &lt; floatNode.Min)
+                                value = floatNode.Min;
+
+                        if (value &gt; floatNode.Max)
+                                value = floatNode.Max;
+
+                        // set value
+                        floatNode.Value = value;
+
+                        // return value for output
+                        return value;
+                }
+
+                // demonstrates recording a video
+                // (1) prepares video parameters
+                // (2) prepares video recorder
+                // (3) sets video settings
+                // (4) opens video
+                // (5) appends images
+                // (6) closes video
+                static void RecordVideo(List&lt;ArenaNET.IImage&gt; images, double fps)
+                {
+                        // Prepare video parameters
+                        Console.WriteLine(&quot;{0}Prepare video parameters ({1}x{2}, {3} FPS)&quot;, TAB1, images[0].Width, images[0].Height, fps);
+
+                        SaveNET.VideoParams parameters = new SaveNET.VideoParams(
+                                images[0].Width,
+                                images[0].Height,
+                                fps);
+
+                        // Prepare video recorder
+                        Console.WriteLine(&quot;{0}Prepare video recorder for video {1}&quot;, TAB1, FILE_NAME);
+
+                        SaveNET.VideoRecorder recorder = new SaveNET.VideoRecorder(
+                                parameters,
+                                FILE_NAME);
+
+                        // Set codec, container, and pixel format
+                        Console.WriteLine(&quot;{0}Set codec to H264, container to MPEG-4, and pixel format to BGR8&quot;, TAB1);
+
+                        recorder.SetH264Mp4BGR8();
+
+                        // Open video
+                        Console.WriteLine(&quot;{0}Open video&quot;, TAB1);
+
+                        Console.WriteLine(&quot;\nFFMPEG OUTPUT---------------\n&quot;);
+                        recorder.Open();
+                        Console.WriteLine(&quot;\nFFMPEG OUTPUT---------------\n&quot;);
+
+                        // Append images
+                        Console.WriteLine(&quot;{0}Append images&quot;, TAB2);
+
+                        for (Int32 i = 0; i &lt; images.Count; i++)
+                        {
+                                if (i % 25 == 0)
+                                        Console.Write(&quot;{0}&quot;, TAB2);
+                                Console.Write(&quot;.&quot;);
+                                if (i % images.Count == images.Count - 1)
+                                        Console.Write(&quot;\n&quot;);
+                                else if (i % 25 == 24)
+                                        Console.Write(&quot;\r{0}\r&quot;, ERASE_LINE);
+
+                                recorder.AppendImage(images[i].DataArray);
+                        }
+
+                        // Close video
+                        Console.WriteLine(&quot;{0}Close video&quot;, TAB1);
+
+                        Console.WriteLine(&quot;\nFFMPEG OUTPUT---------------\n&quot;);
+                        recorder.Close();
+                        Console.WriteLine(&quot;\nFFMPEG OUTPUT---------------\n&quot;);
+                }
+
+                // =-=-=-=-=-=-=-=-=-
+                // =- PREPARATION -=-
+                // =- &amp; CLEAN UP =-=-
+                // =-=-=-=-=-=-=-=-=-
+
+                static void Main(string[] args)
+                {
+                        Console.WriteLine(&quot;Cs_Record&quot;);
+
+                        // Parse command line args
+                        UInt32 width = WIDTH;
+                        UInt32 height = HEIGHT;
+                        UInt32 numImages = NUM_IMAGES;
+                        double fps = FRAMES_PER_SECOND;
+                        bool parseResult = true;
+
+                        for (UInt32 i = 0; i &lt; args.Length; i++)
+                        {
+                                if ((args[i] == &quot;-w&quot;) &amp;&amp; (i + 1) &lt; args.Length)
+                                {
+                                        parseResult |= UInt32.TryParse(args[++i], out width);
+                                }
+                                else if ((args[i] == &quot;-h&quot;) &amp;&amp; (i + 1) &lt; args.Length)
+                                {
+                                        parseResult |= UInt32.TryParse(args[++i], out height);
+                                }
+                                else if ((args[i] == &quot;-n&quot;) &amp;&amp; (i + 1) &lt; args.Length)
+                                {
+                                        parseResult |= UInt32.TryParse(args[++i], out numImages);
+                                }
+                                else if ((args[i] == &quot;-fps&quot;) &amp;&amp; (i + 1) &lt; args.Length)
+                                {
+                                        parseResult |= double.TryParse(args[++i], out fps);
+                                }
+                                else if (args[i] == &quot;--help&quot;)
+                                {
+                                        Usage();
+                                        return;
+                                }
+                                else
+                                {
+                                        Console.WriteLine(&quot;Invalid argument [{0}]&quot;, args[i]);
+                                        Usage();
+                                        return;
+                                }
+                        }
+
+                        if (height == 0 || width == 0 || !parseResult)
+                        {
+                                Console.WriteLine(&quot;Invalid recording setting specified!&quot;);
+                                return;
+                        }
+
+                        try
+                        {
+                                // prepare example
+                                ArenaNET.ISystem system = ArenaNET.Arena.OpenSystem();
+                                system.UpdateDevices(100);
+                                if (system.Devices.Count == 0)
+                                {
+                                        Console.WriteLine(&quot;\nNo camera connected\nPress enter to complete&quot;);
+                                        Console.Read();
+                                        return;
+                                }
+                                else if (numImages == 0)
+                                {
+                                        Console.WriteLine(&quot;\numImages should be greater than 0\nPress enter to complete&quot;);
+                                        Console.Read();
+                                        return;
+                                }
+
+                                ArenaNET.IDevice device = system.CreateDevice(system.Devices[0]);
+
+                                // Store initial settings
+                                String acquisitionModeInitial;
+                                Boolean frameRateEnableInitial = false;
+                                double frameRateInitial = 0;
+                                Int64 imageWidthInitial = 0;
+                                Int64 imageHeightInitial = 0;
+
+                                // Store initial camera settings
+                                // Acquisition mode
+                                acquisitionModeInitial = (device.NodeMap.GetNode(&quot;AcquisitionMode&quot;) as ArenaNET.IEnumeration).Entry.Symbolic;
+                                // Framerate enable
+                                frameRateEnableInitial = (device.NodeMap.GetNode(&quot;AcquisitionFrameRateEnable&quot;) as ArenaNET.IBoolean).Value;
+                                if (frameRateEnableInitial)
+                                {
+                                        frameRateInitial = (device.NodeMap.GetNode(&quot;AcquisitionFrameRate&quot;) as ArenaNET.IFloat).Value;
+                                }
+                                // Image width
+                                imageWidthInitial = (device.NodeMap.GetNode(&quot;Width&quot;) as ArenaNET.IInteger).Value;
+                                // Image height
+                                imageHeightInitial = (device.NodeMap.GetNode(&quot;Height&quot;) as ArenaNET.IInteger).Value;
+
+
+
+                                // Set acquisition mode
+                                (device.NodeMap.GetNode(&quot;AcquisitionMode&quot;) as ArenaNET.IEnumeration).FromString(&quot;Continuous&quot;);
+
+                                // Set width and height
+                                //    Reducing the size of an image reduces the amount of
+                                //    bandwidth required for each image. The less bandwidth
+                                //    required per image, the more images can be sent over the
+                                //    same bandwidth.
+                                SetIntValue(device.NodeMap, &quot;Width&quot;, width);
+                                SetIntValue(device.NodeMap, &quot;Height&quot;, height);
+
+                                // Set framerate
+                                (device.NodeMap.GetNode(&quot;AcquisitionFrameRateEnable&quot;) as ArenaNET.IBoolean).Value = true;
+                                fps = SetFloatValue(device.NodeMap, &quot;AcquisitionFrameRate&quot;, fps);
+
+                                Console.Write(&quot;Using: \nwidth: {0}\nheight: {1}\nnumImages: {2}\nfps: {3}\n&quot;,
+                                        (device.NodeMap.GetNode(&quot;Width&quot;) as ArenaNET.IInteger).Value,
+                                        (device.NodeMap.GetNode(&quot;Height&quot;) as ArenaNET.IInteger).Value,
+                                        numImages,
+                                        fps);
+
+                // enable stream auto negotiate packet size
+                var streamAutoNegotiatePacketSizeNode = (ArenaNET.IBoolean)device.TLStreamNodeMap.GetNode(&quot;StreamAutoNegotiatePacketSize&quot;);
+                streamAutoNegotiatePacketSizeNode.Value = true;
+
+                // enable stream packet resend
+                var streamPacketResendEnableNode = (ArenaNET.IBoolean)device.TLStreamNodeMap.GetNode(&quot;StreamPacketResendEnable&quot;);
+                streamPacketResendEnableNode.Value = true;
+
+                Console.WriteLine(&quot;Capturing images&quot;);
+
+                                List&lt;ArenaNET.IImage&gt; images = new List&lt;ArenaNET.IImage&gt;();
+                                device.StartStream();
+                                for (Int32 i = 0; i &lt; numImages; i++)
+                                {
+                                        if (i % 25 == 0)
+                                                Console.Write(&quot;{0}&quot;, TAB2);
+                                        Console.Write(&quot;.&quot;);
+                                        if (i % numImages == numImages - 1)
+                                                Console.Write(&quot;\n&quot;);
+                                        else if (i % 25 == 24)
+                                                Console.Write(&quot;\r{0}\r&quot;, ERASE_LINE);
+
+                                        ArenaNET.IImage image = device.GetImage(2000);
+                                        images.Add(ArenaNET.ImageFactory.Convert(image, ArenaNET.EPfncFormat.BGR8));
+                                        device.RequeueBuffer(image);
+
+                                }
+                                device.StopStream();
+
+                                // run example
+                                Console.WriteLine(&quot;Commence example\n&quot;);
+                                RecordVideo(images, fps);
+                                Console.WriteLine(&quot;\nExample complete&quot;);
+
+                                // clean up example
+                                for (Int32 i = 0; i &lt; images.Count; i++)
+                                        ArenaNET.ImageFactory.Destroy(images[i]);
+
+                                // Restore initial settings
+
+                                // Restore width and height
+                                SetIntValue(device.NodeMap, &quot;Width&quot;, imageWidthInitial);
+                                SetIntValue(device.NodeMap, &quot;Height&quot;, imageHeightInitial);
+
+                                // Restore acquisition mode
+                                (device.NodeMap.GetNode(&quot;AcquisitionMode&quot;) as ArenaNET.IEnumeration).FromString(acquisitionModeInitial);
+
+                                // Restore framerate
+                                (device.NodeMap.GetNode(&quot;AcquisitionFrameRateEnable&quot;) as ArenaNET.IBoolean).Value = frameRateEnableInitial;
+
+                                if (frameRateEnableInitial)
+                                {
+                                        SetFloatValue(device.NodeMap, &quot;AcquisitionFrameRate&quot;, frameRateInitial);
+                                }
+
+                                system.DestroyDevice(device);
+                                ArenaNET.Arena.CloseSystem(system);
+                        }
+                        catch (Exception ex)
+                        {
+                                Console.WriteLine(&quot;\nException thrown: {0}&quot;, ex.Message);
+                        }
+
+                        Console.WriteLine(&quot;Press enter to complete&quot;);
+                        Console.Read();
+                }
+        }
+}
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cs_examples_save.html" class="btn btn-neutral float-right" title="Save, Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cs_examples_polarization_dolpaolp.html" class="btn btn-neutral" title="Polarization, DoLP AoLP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Lucid Vision Labs, Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.31.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

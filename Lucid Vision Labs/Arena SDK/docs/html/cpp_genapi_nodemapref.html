@@ -1,0 +1,552 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>NodeMapRef &mdash; Arena 1.0.31.8 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Arena 1.0.31.8 documentation" href="index.html"/>
+        <link rel="up" title="GenApi C++" href="cpp_genapi.html"/>
+        <link rel="next" title="PortWriteList" href="cpp_genapi_portwritelist.html"/>
+        <link rel="prev" title="NodeMapFactory" href="cpp_genapi_nodemapfactory.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home">
+          
+
+          <!--
+            
+            <img src="_static/lucid-white.png" class="logo" />
+          -->
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.31
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_sdk_datasheet.html">Arena SDK Datasheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_windows.html">Arena SDK for Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_linux.html">Arena SDK for Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sdk.html">Code Reference &amp; Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gentl.html">GenTL Features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cpp.html">Arena C++</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cpp_arena.html">Arena C++</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cpp_genapi.html">GenApi C++</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_concatenatedwrite.html">ConcatenatedWrite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ibase.html">IBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iboolean.html">IBoolean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icategory.html">ICategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ichunkport.html">IChunkPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icommand.html">ICommand</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumentry.html">IEnumEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumeration.html">IEnumeration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumerationt.html">IEnumerationT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ifloat.html">IFloat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inode.html">INode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemap.html">INodeMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemapdyn.html">INodeMapDyn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iport.html">IPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportrecorder.html">IPortRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportstacked.html">IPortStacked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iregister.html">IRegister</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_istring.html">IString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ivalue.html">IValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapfactory.html">NodeMapFactory</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">NodeMapRef</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_portwritelist.html">PortWriteList</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_save.html">Save C++</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_examples.html">C++ Code Samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="c.html">Arena C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cs.html">Arena.NET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qt.html">Qt</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arena</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sdk.html">Code Reference &amp; Samples</a> &raquo;</li>
+        
+          <li><a href="cpp.html">Arena C++</a> &raquo;</li>
+        
+          <li><a href="cpp_genapi.html">GenApi C++</a> &raquo;</li>
+        
+      <li>NodeMapRef</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nodemapref">
+<h1>NodeMapRef<a class="headerlink" href="#nodemapref" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Definition of CNodeMapRef. </p>
+<dl class="type">
+<dt id="_CPPv216GENAPI_NAMESPACE">
+<span id="GENAPI_NAMESPACE"></span><span class="target" id="namespace_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e"></span><em class="property">namespace </em><code class="descname">GENAPI_NAMESPACE</code><a class="headerlink" href="#_CPPv216GENAPI_NAMESPACE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="_node_map_ref_8h_1a03e3a758942c77983af288e926431101"></span><code class="descname">GENAPI_DECL IDestroy* GENAPI_NAMESPACE::CastToIDestroy(INodeMap * pNodeMap)</code></dt>
+<dd><p>makes sure the dynamic_cast operator is implemented in the DLL (due to a Linux bug) </p>
+</dd></dl>
+
+</div>
+<dl class="class">
+<dt id="_CPPv2N16GENAPI_NAMESPACE24CGeneric_XMLLoaderParamsE">
+<span id="GENAPI_NAMESPACE::CGeneric_XMLLoaderParams"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_generic___x_m_l_loader_params"></span><em class="property">class </em><code class="descname">CGeneric_XMLLoaderParams</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE24CGeneric_XMLLoaderParamsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;NodeMapRef.h&gt;</em><p>Empty base class used by class <a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref"><span class="std std-ref">CNodeMapRef</span></a> as generic template argument. </p>
+<p>Subclassed by <a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t"><span class="std std-ref">GENAPI_NAMESPACE::CNodeMapRefT&lt; GENAPI_NAMESPACE::CGeneric_XMLLoaderParams &gt;</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Protected Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE24CGeneric_XMLLoaderParams11_InitializeEPN16GENAPI_NAMESPACE8INodeMapE">
+<span id="GENAPI_NAMESPACE::CGeneric_XMLLoaderParams::_Initialize__GENAPI_NAMESPACE::INodeMapP"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_generic___x_m_l_loader_params_1ad5e311e9bfd8aa5e316c3c7cee725dc3"></span><em class="property">virtual</em> void <code class="descname">_Initialize</code><span class="sig-paren">(</span><a class="reference internal" href="cpp_genapi_ibase.html#_CPPv216GENAPI_NAMESPACE" title="GENAPI_NAMESPACE">GENAPI_NAMESPACE</a>::INodeMap *<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE24CGeneric_XMLLoaderParams11_InitializeEPN16GENAPI_NAMESPACE8INodeMapE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N16GENAPI_NAMESPACE11CNodeMapRefE">
+<span id="GENAPI_NAMESPACE::CNodeMapRef"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref"></span><em class="property">class </em><code class="descname">CNodeMapRef</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE11CNodeMapRefE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;NodeMapRef.h&gt;</em><p>Smartpointer for NodeMaps with create function. </p>
+<p><dl class="docutils">
+<dt><strong>Note</strong></dt>
+<dd>This class is a simple typedef definition. The class syntax is only used, because Doxygen has to generate a useful documentation. </dd>
+</dl>
+</p>
+<p>Inherits from <a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t"><span class="std std-ref">GENAPI_NAMESPACE::CNodeMapRefT&lt; GENAPI_NAMESPACE::CGeneric_XMLLoaderParams &gt;</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE11CNodeMapRef11CNodeMapRefERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CNodeMapRef::CNodeMapRef__GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_1af9a5f48a8c68a4bc1b3542c57baef610"></span><code class="descname">CNodeMapRef</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>DeviceName</em> = &quot;Device&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE11CNodeMapRef11CNodeMapRefERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE11CNodeMapRef11CNodeMapRefEP8INodeMapRKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CNodeMapRef::CNodeMapRef__INodeMapP.GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_1a19ad9a4df7f5e932573161e7111fc801"></span><code class="descname">CNodeMapRef</code><span class="sig-paren">(</span>INodeMap *<em>pNodeMap</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>DeviceName</em> = &quot;Device&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE11CNodeMapRef11CNodeMapRefEP8INodeMapRKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE11CNodeMapRef11CNodeMapRefERK11CNodeMapRef">
+<span id="GENAPI_NAMESPACE::CNodeMapRef::CNodeMapRef__CNodeMapRefCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_1a06ba37b03ecdadb3ae79e4d54fb09662"></span><code class="descname">CNodeMapRef</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE11CNodeMapRef11CNodeMapRefERKN17GENICAM_NAMESPACE8gcstringE" title="GENAPI_NAMESPACE::CNodeMapRef::CNodeMapRef">CNodeMapRef</a> &amp;<em>Them</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE11CNodeMapRef11CNodeMapRefERK11CNodeMapRef" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE11CNodeMapRefaSERK11CNodeMapRef">
+<span id="GENAPI_NAMESPACE::CNodeMapRef::assign-operator__CNodeMapRefCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_1ae6db6f092c140960f4881cd242bd3761"></span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE11CNodeMapRefE" title="GENAPI_NAMESPACE::CNodeMapRef">CNodeMapRef</a> &amp;<code class="descname">operator=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE11CNodeMapRefE" title="GENAPI_NAMESPACE::CNodeMapRef">CNodeMapRef</a> &amp;<em>Them</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE11CNodeMapRefaSERK11CNodeMapRef" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assignment. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE11CNodeMapRefaSEP8INodeMap">
+<span id="GENAPI_NAMESPACE::CNodeMapRef::assign-operator__INodeMapP"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_1a6220f99d4e287c4884162dc1bbf5ea05"></span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE11CNodeMapRefE" title="GENAPI_NAMESPACE::CNodeMapRef">CNodeMapRef</a> &amp;<code class="descname">operator=</code><span class="sig-paren">(</span>INodeMap *<em>pNodeMap</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE11CNodeMapRefaSEP8INodeMap" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assignment of an INodeMap*. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt>
+<span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t"></span><em class="property">template </em>&lt;class <em>TCameraParams</em>&gt;</dt>
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefTE">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT"></span><em class="property">class </em><code class="descname">CNodeMapRefT</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;NodeMapRef.h&gt;</em><p>Smartpointer template for NodeMaps with create function. </p>
+<p><dl class="docutils">
+<dt><strong>Template Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">TCameraParams</span></code>: The camera specific parameter class (auto generated from camera xml file) </li>
+</ul>
+</dd>
+</dl>
+</p>
+<p>Inherits from TCameraParams</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT12CNodeMapRefTERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::CNodeMapRefT__GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a2b27b6e2906c5b2966a3ddbdd7ab9773"></span><code class="descname">CNodeMapRefT</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>DeviceName</em> = &quot;Device&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT12CNodeMapRefTERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT12CNodeMapRefTEP8INodeMapRKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::CNodeMapRefT__INodeMapP.GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a716a9d49cfcec5b27d0440a1713bb61b"></span><code class="descname">CNodeMapRefT</code><span class="sig-paren">(</span>INodeMap *<em>pNodeMap</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>DeviceName</em> = &quot;Device&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT12CNodeMapRefTEP8INodeMapRKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT12CNodeMapRefTERK12CNodeMapRefT">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::CNodeMapRefT__CNodeMapRefTCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a3ffd328ef1bd805730b318ec1f3466dc"></span><code class="descname">CNodeMapRefT</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT12CNodeMapRefTERKN17GENICAM_NAMESPACE8gcstringE" title="GENAPI_NAMESPACE::CNodeMapRefT::CNodeMapRefT">CNodeMapRefT</a> &amp;<em>Them</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT12CNodeMapRefTERK12CNodeMapRefT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefTaSERK12CNodeMapRefT">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::assign-operator__CNodeMapRefTCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1adc70863203442220e1ed4a1df605a560"></span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefTE" title="GENAPI_NAMESPACE::CNodeMapRefT">CNodeMapRefT</a>&lt;TCameraParams&gt; &amp;<code class="descname">operator=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefTE" title="GENAPI_NAMESPACE::CNodeMapRefT">CNodeMapRefT</a> &amp;<em>Them</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefTaSERK12CNodeMapRefT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assignment. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefTaSEP8INodeMap">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::assign-operator__INodeMapP"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1aa788c6146237bb49e82cc1d9f3ab5749"></span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefTE" title="GENAPI_NAMESPACE::CNodeMapRefT">CNodeMapRefT</a>&lt;TCameraParams&gt; &amp;<code class="descname">operator=</code><span class="sig-paren">(</span>INodeMap *<em>pNodeMap</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefTaSEP8INodeMap" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assignment of an INodeMap*. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefTD0Ev">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::~CNodeMapRefT"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a1d3e241e0b890d0637dcde1d1da840a3"></span><code class="descname">~CNodeMapRefT</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefTD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT8_DestroyEv">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_Destroy"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a7a80ea17ce268de92db14da09ab97776"></span>void <code class="descname">_Destroy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT8_DestroyEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destroys the node map. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT16_LoadXMLFromFileERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_LoadXMLFromFile__GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a8ac7e3576d4eced2f7134c5ef5a82cd3"></span>void <code class="descname">_LoadXMLFromFile</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>FileName</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT16_LoadXMLFromFileERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates the object from a XML file with given file name. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT19_LoadXMLFromZIPFileERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_LoadXMLFromZIPFile__GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a1e8dedf587dbed85c3180c1682979af2"></span>void <code class="descname">_LoadXMLFromZIPFile</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>ZipFileName</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT19_LoadXMLFromZIPFileERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates the object from a ZIP’d XML file with given file name. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT19_LoadXMLFromZIPDataEPKv6size_t">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_LoadXMLFromZIPData__voidCP.s"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1aebe40d7088f9857db886a5fed9997a8f"></span>void <code class="descname">_LoadXMLFromZIPData</code><span class="sig-paren">(</span><em class="property">const</em> void *<em>zipData</em>, size_t <em>zipSize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT19_LoadXMLFromZIPDataEPKv6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates the object from a ZIP’d XML file given in a string. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT22_LoadXMLFromFileInjectERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_LoadXMLFromFileInject__GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1af748abe9dce3e286b12f32ea7c2d7f78"></span>void <code class="descname">_LoadXMLFromFileInject</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>TargetFileName</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>InjectFileName</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT22_LoadXMLFromFileInjectERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates the object from a XML target and an inject file with given file name. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT18_LoadXMLFromStringERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_LoadXMLFromString__GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a7c32d49ee7ac9652416b62d97ce47ce6"></span>void <code class="descname">_LoadXMLFromString</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>XMLData</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT18_LoadXMLFromStringERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates the object from XML data given in a string. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT24_LoadXMLFromStringInjectERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_LoadXMLFromStringInject__GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a51b6fd2f72d72ee696c8f3e4dc8fc844"></span>void <code class="descname">_LoadXMLFromStringInject</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>TargetXMLDataconst</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>InjectXMLData</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT24_LoadXMLFromStringInjectERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates the object from XML data given in a string with injection. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE12CNodeMapRefT27_GetSupportedSchemaVersionsERN17GENICAM_NAMESPACE15gcstring_vectorE">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_GetSupportedSchemaVersions__GENICAM_NAMESPACE::gcstring_vectorRC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1ada2768408b4d7450f5eab53ed7cda5dd"></span>void <code class="descname">_GetSupportedSchemaVersions</code><span class="sig-paren">(</span>GENICAM_NAMESPACE::gcstring_vector &amp;<em>SchemaVersions</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE12CNodeMapRefT27_GetSupportedSchemaVersionsERN17GENICAM_NAMESPACE15gcstring_vectorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets a list of supported schema versions. </p>
+<p>Each list entry is a string with the format “{Major}.{Minor}” were {Major} and {Minor} are integers Example: {“1.1”, “1.2”} indicates that the schema v1.1 and v1.2 are supported. The SubMinor version number is not given since it is for fully compatible bug fixes only </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE12CNodeMapRefT14_GetDeviceNameEv">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_GetDeviceNameC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a31e2da48b52cd2680b3ef78560b61c02"></span>GENICAM_NAMESPACE::gcstring <code class="descname">_GetDeviceName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE12CNodeMapRefT14_GetDeviceNameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get device name. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT5_PollE7int64_t">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_Poll__int64_t"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1aae6720a1a8f405442c006cd6271bc1d8"></span>void <code class="descname">_Poll</code><span class="sig-paren">(</span>int64_t <em>ElapsedTime</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT5_PollE7int64_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fires nodes which have a polling time. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE12CNodeMapRefT9_GetNodesER10NodeList_t">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_GetNodes__NodeList_tRC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a792c1eed384f4242c55eba668cbdab82"></span>void <code class="descname">_GetNodes</code><span class="sig-paren">(</span><a class="reference internal" href="cpp_genapi_inode.html#_CPPv2N16GENAPI_NAMESPACE10NodeList_tE" title="GENAPI_NAMESPACE::NodeList_t">NodeList_t</a> &amp;<em>Nodes</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE12CNodeMapRefT9_GetNodesER10NodeList_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieves all nodes in the node map. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE12CNodeMapRefT8_GetNodeERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_GetNode__GENICAM_NAMESPACE::gcstringCRC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a41a4e250e1f2dd3b55375151a67fec94"></span>INode *<code class="descname">_GetNode</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>key</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE12CNodeMapRefT8_GetNodeERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieves the node from the central map by name. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE12CNodeMapRefT16_InvalidateNodesEv">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_InvalidateNodesC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a2f853e229a772ee9e85267a7200bcfe5"></span>void <code class="descname">_InvalidateNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE12CNodeMapRefT16_InvalidateNodesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Invalidates all nodes. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE12CNodeMapRefT8_ConnectEP5IPortRKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_Connect__IPortP.GENICAM_NAMESPACE::gcstringCRC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a5cdf9c29e72c95090117796c810ca92c"></span>bool <code class="descname">_Connect</code><span class="sig-paren">(</span>IPort *<em>pPort</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>PortName</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE12CNodeMapRefT8_ConnectEP5IPortRKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Connects a port to a port node with given name. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE12CNodeMapRefT8_ConnectEP5IPort">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_Connect__IPortPC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a7b924984680f17c2bb4eee0130d3044d"></span>bool <code class="descname">_Connect</code><span class="sig-paren">(</span>IPort *<em>pPort</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE12CNodeMapRefT8_ConnectEP5IPort" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Connects a port to the standard port “Device”. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT4_PtrE">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_Ptr__INodeMapP"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a21ac1abf32c345241bfc522c964f332f"></span>INodeMap *<code class="descname">_Ptr</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT4_PtrE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Pointer to the NodeMap. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT14_ClearXMLCacheEv">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_ClearXMLCache"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a09fe2faae283347b7130ff231cc8e6ea"></span>bool <code class="descname">_ClearXMLCache</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT14_ClearXMLCacheEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Clears the cache of the camera description files. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Private Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT7ReleaseEv">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::Release"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a122bbfaf454c8e0ddcdf1a414d862a00"></span>void <code class="descname">Release</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT7ReleaseEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT6AttachEP8INodeMapRKN17GENICAM_NAMESPACE8gcstringEPi">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::Attach__INodeMapP.GENICAM_NAMESPACE::gcstringCR.iP"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a0acaa776b2c73ce755df9f98b601da1f"></span>void <code class="descname">Attach</code><span class="sig-paren">(</span>INodeMap *<em>pNodeMap</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>DeviceName</em>, int *<em>pRefCount</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT6AttachEP8INodeMapRKN17GENICAM_NAMESPACE8gcstringEPi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Private Members</p>
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT11_DeviceNameE">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_DeviceName__GENICAM_NAMESPACE::gcstring"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1a1b7bb0669aa1e2e25c51feb321faf60a"></span>GENICAM_NAMESPACE::gcstring <code class="descname">_DeviceName</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT11_DeviceNameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The name of this device. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT10_pRefCountE">
+<span id="GENAPI_NAMESPACE::CNodeMapRefT::_pRefCount__iP"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_ref_t_1ad339248d7259a87e4628bfe33b91b56a"></span>int *<code class="descname">_pRefCount</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CNodeMapRefT10_pRefCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cpp_genapi_portwritelist.html" class="btn btn-neutral float-right" title="PortWriteList" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cpp_genapi_nodemapfactory.html" class="btn btn-neutral" title="NodeMapFactory" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Lucid Vision Labs, Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.31.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

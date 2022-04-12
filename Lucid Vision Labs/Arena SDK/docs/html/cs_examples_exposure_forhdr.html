@@ -1,0 +1,613 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Exposure, For HDR &mdash; Arena 1.0.31.8 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Arena 1.0.31.8 documentation" href="index.html"/>
+        <link rel="up" title="C# Code Samples" href="cs_examples.html"/>
+        <link rel="next" title="Exposure, Long" href="cs_examples_exposure_long.html"/>
+        <link rel="prev" title="Exposure, Introduction" href="cs_examples_exposure.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home">
+          
+
+          <!--
+            
+            <img src="_static/lucid-white.png" class="logo" />
+          -->
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.31
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_sdk_datasheet.html">Arena SDK Datasheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_windows.html">Arena SDK for Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_linux.html">Arena SDK for Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sdk.html">Code Reference &amp; Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gentl.html">GenTL Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpp.html">Arena C++</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c.html">Arena C</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cs.html">Arena.NET</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cs_arena.html">Arena.NET</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cs_examples.html">C# Code Samples</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_simpleacquisition.html">Simple Acquisition, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition.html">Acquisition, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_multithreadeacquisitionandsave.html">Acquisition, Multithreaded Acquisition and Save</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_multidevice.html">Acquisition, Multi-Device</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_rapidacquisition.html">Acquisition, Rapid Acquisition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_sensorbinning.html">Acquisition, Sensor Binning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_imagecallbacks.html">Callback, Image Callbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_multithreadedimagecallbacks.html">Callback, Multithreaded Image Callbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_onevent.html">Callback, On Event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_onnodechange.html">Callback, On Node Change</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_polling.html">Callback, Polling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_chunkdata.html">ChunkData, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_chunkdata_crcvalidation.html">Chunk Data, CRC Validation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_enumeration.html">Enumeration, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_enumeration_handlingdisconnections.html">Enumeration, Handling Disconnections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_explore_nodes.html">Explore_Nodes, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_explore_nodetypes.html">Explore, Node Types, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_explore_nodemaps.html">Explore, Node Maps, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_exposure.html">Exposure, Introduction</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Exposure, For HDR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_exposure_long.html">Exposure, Long</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_forceip.html">Force Ip, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_helios_heatmap.html">Helios, HeatMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_helios_minmaxdepth.html">Helios, Min Max Depth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_helios_smoothresults.html">Helios, Smooth Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_ipconfig_manual.html">IP Config, Manual</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_ipconfig_auto.html">IP Config, Auto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_lut.html">LUT, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_multicast.html">Multicast, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_pixelcorrection.html">Pixel Correction, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_polarization_colordolpaolp.html">Polarization, Color DoLP AoLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_polarization_dolpaolp.html">Polarization, DoLP AoLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_record.html">Record, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save.html">Save, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_bitmap.html">Save, Bitmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_filenamepattern.html">Save, File Name Pattern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_ply.html">Save, Ply</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_raw.html">Save, Raw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_scheduledactioncommands.html">Scheduled Action Commands, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_sequencer_hdr.html">Sequencer, HDR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_streamables.html">Streamables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_trigger.html">Trigger, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_trigger_nextleader.html">Trigger, Next Leader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_trigger_overlappingtrigger.html">Trigger, Overlapping Trigger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_usersets.html">UserSets, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wpf_cameraselection.html">Windows Presentation Foundation, Camera Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wpf_featuretree.html">Windows Presentation Foundation, Feature Tree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wpf_miniexample.html">Windows Presentation Foundation, Mini Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wpf_streaming.html">Windows Presentation Foundation, Streaming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qt.html">Qt</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arena</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sdk.html">Code Reference &amp; Samples</a> &raquo;</li>
+        
+          <li><a href="cs.html">Arena.NET</a> &raquo;</li>
+        
+          <li><a href="cs_examples.html">C# Code Samples</a> &raquo;</li>
+        
+      <li>Exposure, For HDR</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="exposure-for-hdr">
+<h1>Exposure, For HDR<a class="headerlink" href="#exposure-for-hdr" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-c++"><div class="highlight"><pre><span></span><span class="cm">/***************************************************************************************</span>
+<span class="cm"> ***                                                                                 ***</span>
+<span class="cm"> ***  Copyright (c) 2021, Lucid Vision Labs, Inc.                                    ***</span>
+<span class="cm"> ***                                                                                 ***</span>
+<span class="cm"> ***  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR     ***</span>
+<span class="cm"> ***  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,       ***</span>
+<span class="cm"> ***  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE    ***</span>
+<span class="cm"> ***  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER         ***</span>
+<span class="cm"> ***  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  ***</span>
+<span class="cm"> ***  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  ***</span>
+<span class="cm"> ***  SOFTWARE.                                                                      ***</span>
+<span class="cm"> ***                                                                                 ***</span>
+<span class="cm"> ***************************************************************************************/</span>
+<span class="k">using</span> <span class="n">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">;</span> <span class="c1">// for List&lt;&gt;</span>
+
+<span class="k">namespace</span> <span class="n">Cs_Exposure_ForHDR</span>
+<span class="p">{</span>
+        <span class="k">class</span> <span class="nc">Cs_Exposure_ForHDR</span>
+        <span class="p">{</span>
+                <span class="k">const</span> <span class="n">String</span> <span class="n">TAB1</span> <span class="o">=</span> <span class="s">&quot;  &quot;</span><span class="p">;</span>
+                <span class="k">const</span> <span class="n">String</span> <span class="n">TAB2</span> <span class="o">=</span> <span class="s">&quot;    &quot;</span><span class="p">;</span>
+                <span class="k">const</span> <span class="n">String</span> <span class="n">TAB3</span> <span class="o">=</span> <span class="s">&quot;      &quot;</span><span class="p">;</span>
+
+                <span class="c1">// Exposure: For High Dynamic Range</span>
+                <span class="c1">//    This example demonstrates dynamically updating the exposure time in</span>
+                <span class="c1">//    order to grab images appropriate for high dynamic range (or HDR)</span>
+                <span class="c1">//    imaging. HDR images can be created by combining a number of images</span>
+                <span class="c1">//    acquired at various exposure times. This example demonstrates</span>
+                <span class="c1">//    grabbing three images for this purpose, without the actual creation</span>
+                <span class="c1">//    of an HDR image.</span>
+
+                <span class="c1">// =-=-=-=-=-=-=-=-=-</span>
+                <span class="c1">// =-=- SETTINGS =-=-</span>
+                <span class="c1">// =-=-=-=-=-=-=-=-=-</span>
+
+                <span class="c1">// Exposure times</span>
+                <span class="k">static</span> <span class="kt">double</span> <span class="n">EXPOSURE_HIGH</span> <span class="o">=</span> <span class="mf">100000.0</span><span class="p">;</span>
+                <span class="k">static</span> <span class="kt">double</span> <span class="n">EXPOSURE_MID</span> <span class="o">=</span> <span class="mf">50000.0</span><span class="p">;</span>
+                <span class="k">static</span> <span class="kt">double</span> <span class="n">EXPOSURE_LOW</span> <span class="o">=</span> <span class="mf">25000.0</span><span class="p">;</span>
+
+                <span class="c1">// Image timeout</span>
+                <span class="c1">//    Timeout for grabbing images (in milliseconds). Have the timeout at</span>
+                <span class="c1">//    least a bit larger than the highest exposure time to avoid timing</span>
+                <span class="c1">//    out.</span>
+                <span class="k">const</span> <span class="n">UInt64</span> <span class="n">TIMEOUT</span> <span class="o">=</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">Consts</span><span class="p">.</span><span class="n">INF</span><span class="p">;</span>
+
+                <span class="c1">// number of images to grab</span>
+                <span class="k">const</span> <span class="n">UInt32</span> <span class="n">NUM_HDR_IMAGES</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+                <span class="c1">// =-=-=-=-=-=-=-=-=-</span>
+                <span class="c1">// =-=- EXAMPLE -=-=-</span>
+                <span class="c1">// =-=-=-=-=-=-=-=-=-</span>
+
+                <span class="c1">// HDR image struct</span>
+                <span class="c1">//    This struct holds the information needed for a single HDR image.</span>
+                <span class="c1">//    This includes one image taken with a high exposure time, one with a</span>
+                <span class="c1">//    medium exposure time, and one with a fairly low exposure time.</span>
+                <span class="k">struct</span> <span class="n">HDRImage</span>
+                <span class="p">{</span>
+                        <span class="k">public</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IImage</span> <span class="n">imageHigh</span><span class="p">,</span> <span class="n">imageMid</span><span class="p">,</span> <span class="n">imageLow</span><span class="p">;</span>
+                <span class="p">}</span>
+
+                <span class="c1">// Trigger software once armed</span>
+                <span class="c1">//    Continually check until trigger is armed. Once the trigger is</span>
+                <span class="c1">//    armed, it is ready to be executed.</span>
+                <span class="k">static</span> <span class="kt">void</span> <span class="n">TriggerSoftwareOnceArmed</span><span class="p">(</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IDevice</span> <span class="n">device</span><span class="p">)</span>
+                <span class="p">{</span>
+                        <span class="c1">// wait until trigger armed is true</span>
+                        <span class="kt">bool</span> <span class="n">triggerArmed</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+                        <span class="k">do</span>
+                        <span class="p">{</span>
+                                <span class="n">triggerArmed</span> <span class="o">=</span> <span class="p">((</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IBoolean</span><span class="p">)</span><span class="n">device</span><span class="p">.</span><span class="n">NodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;TriggerArmed&quot;</span><span class="p">)).</span><span class="n">Value</span><span class="p">;</span>
+                        <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">triggerArmed</span> <span class="o">==</span> <span class="nb">false</span><span class="p">);</span>
+
+                        <span class="c1">// retrieve and execute software trigger node</span>
+                        <span class="n">var</span> <span class="n">triggerSoftwareNode</span> <span class="o">=</span> <span class="n">device</span><span class="p">.</span><span class="n">NodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;TriggerSoftware&quot;</span><span class="p">)</span> <span class="n">as</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">ICommand</span><span class="p">;</span>
+                        <span class="n">triggerSoftwareNode</span><span class="p">.</span><span class="n">Execute</span><span class="p">();</span>
+                <span class="p">}</span>
+
+                <span class="c1">// demonstrates exposure configuration and acquisition for HDR imaging</span>
+                <span class="c1">// (1) sets trigger mode</span>
+                <span class="c1">// (2) disables automatic exposure</span>
+                <span class="c1">// (3) sets high exposure time</span>
+                <span class="c1">// (4) gets first image</span>
+                <span class="c1">// (5) sets medium exposure time</span>
+                <span class="c1">// (6) gets second image</span>
+                <span class="c1">// (7) sets low exposure time</span>
+                <span class="c1">// (8) gets third images</span>
+                <span class="c1">// (9) copies images into object for later processing</span>
+                <span class="c1">// (10) does NOT process copied images</span>
+                <span class="c1">// (11) cleans up copied images</span>
+                <span class="k">static</span> <span class="kt">void</span> <span class="n">AcquireHDRImages</span><span class="p">(</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IDevice</span> <span class="n">device</span><span class="p">)</span>
+                <span class="p">{</span>
+                        <span class="c1">// get node values that will be changed in order to return their</span>
+                        <span class="c1">// values at the end of the example</span>
+                        <span class="n">var</span> <span class="n">triggerModeNode</span> <span class="o">=</span> <span class="p">(</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IEnumeration</span><span class="p">)</span><span class="n">device</span><span class="p">.</span><span class="n">NodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;TriggerMode&quot;</span><span class="p">);</span>
+                        <span class="n">String</span> <span class="n">triggerModeInitial</span> <span class="o">=</span> <span class="n">triggerModeNode</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+
+                        <span class="n">var</span> <span class="n">triggerSourceNode</span> <span class="o">=</span> <span class="p">(</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IEnumeration</span><span class="p">)</span><span class="n">device</span><span class="p">.</span><span class="n">NodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;TriggerSource&quot;</span><span class="p">);</span>
+                        <span class="n">String</span> <span class="n">triggerSourceInitial</span> <span class="o">=</span> <span class="n">triggerSourceNode</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+
+                        <span class="n">var</span> <span class="n">triggerSelectorNode</span> <span class="o">=</span> <span class="p">(</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IEnumeration</span><span class="p">)</span><span class="n">device</span><span class="p">.</span><span class="n">NodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;TriggerSelector&quot;</span><span class="p">);</span>
+                        <span class="n">String</span> <span class="n">triggerSelectorInitial</span> <span class="o">=</span> <span class="n">triggerSelectorNode</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+
+                        <span class="n">var</span> <span class="n">exposureAutoNode</span> <span class="o">=</span> <span class="p">(</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IEnumeration</span><span class="p">)</span><span class="n">device</span><span class="p">.</span><span class="n">NodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;ExposureAuto&quot;</span><span class="p">);</span>
+                        <span class="n">String</span> <span class="n">exposureAutoInitial</span> <span class="o">=</span> <span class="n">exposureAutoNode</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+
+                        <span class="c1">// Get exposure time and software trigger nodes</span>
+                        <span class="c1">//    The exposure time and software trigger nodes are retrieved</span>
+                        <span class="c1">//    beforehand in order to check for existance, readability, and</span>
+                        <span class="c1">//    writability only once before the stream.</span>
+                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Get exposure time and software trigger nodes&quot;</span><span class="p">,</span> <span class="n">TAB1</span><span class="p">);</span>
+
+                        <span class="n">var</span> <span class="n">exposureTimeNode</span> <span class="o">=</span> <span class="n">device</span><span class="p">.</span><span class="n">NodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;ExposureTime&quot;</span><span class="p">)</span> <span class="n">as</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IFloat</span><span class="p">;</span>
+                        <span class="kt">double</span> <span class="n">exposureTimeInitial</span> <span class="o">=</span> <span class="n">exposureTimeNode</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+
+                        <span class="n">var</span> <span class="n">triggerSoftwareNode</span> <span class="o">=</span> <span class="n">device</span><span class="p">.</span><span class="n">NodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;TriggerSoftware&quot;</span><span class="p">)</span> <span class="n">as</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">ICommand</span><span class="p">;</span>
+
+                        <span class="c1">// Prepare trigger mode</span>
+                        <span class="c1">//    Enable trigger mode before starting the stream. This example</span>
+                        <span class="c1">//    uses the trigger to control the moment that images are taken.</span>
+                        <span class="c1">//    This ensures the exposure time of each image in a way that a</span>
+                        <span class="c1">//    continuous stream might have trouble with.</span>
+                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Prepare trigger mode&quot;</span><span class="p">,</span> <span class="n">TAB1</span><span class="p">);</span>
+
+            <span class="n">triggerSelectorNode</span><span class="p">.</span><span class="n">FromString</span><span class="p">(</span><span class="s">&quot;FrameStart&quot;</span><span class="p">);</span>
+            <span class="n">triggerModeNode</span><span class="p">.</span><span class="n">FromString</span><span class="p">(</span><span class="s">&quot;On&quot;</span><span class="p">);</span>
+                        <span class="n">triggerSourceNode</span><span class="p">.</span><span class="n">FromString</span><span class="p">(</span><span class="s">&quot;Software&quot;</span><span class="p">);</span>
+
+                        <span class="c1">// Disable automatic exposure</span>
+                        <span class="c1">//    Disable automatic exposure before starting the stream. The HDR</span>
+                        <span class="c1">//    images in this example require three images of varied</span>
+                        <span class="c1">//    exposures, which need to be set manually.</span>
+                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Disable automatic exposure&quot;</span><span class="p">,</span> <span class="n">TAB1</span><span class="p">);</span>
+
+                        <span class="n">exposureAutoNode</span><span class="p">.</span><span class="n">FromString</span><span class="p">(</span><span class="s">&quot;Off&quot;</span><span class="p">);</span>
+
+                        <span class="k">if</span> <span class="p">(</span><span class="n">exposureTimeNode</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">null</span><span class="p">)</span> <span class="o">||</span> <span class="n">triggerSoftwareNode</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">null</span><span class="p">))</span>
+                                <span class="k">throw</span> <span class="k">new</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">GenericException</span><span class="p">(</span><span class="s">&quot;ExposureTime or TriggerSoftware node not found&quot;</span><span class="p">);</span>
+
+                        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">exposureTimeNode</span><span class="p">.</span><span class="n">IsWritable</span> <span class="o">||</span> <span class="o">!</span><span class="n">triggerSoftwareNode</span><span class="p">.</span><span class="n">IsWritable</span><span class="p">)</span>
+                                <span class="k">throw</span> <span class="k">new</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">GenericException</span><span class="p">(</span><span class="s">&quot;ExposureTime or TriggerSoftware node not writable&quot;</span><span class="p">);</span>
+
+            <span class="c1">// enable stream auto negotiate packet size</span>
+            <span class="n">var</span> <span class="n">streamAutoNegotiatePacketSizeNode</span> <span class="o">=</span> <span class="p">(</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IBoolean</span><span class="p">)</span><span class="n">device</span><span class="p">.</span><span class="n">TLStreamNodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;StreamAutoNegotiatePacketSize&quot;</span><span class="p">);</span>
+            <span class="n">streamAutoNegotiatePacketSizeNode</span><span class="p">.</span><span class="n">Value</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+
+            <span class="c1">// enable stream packet resend</span>
+            <span class="n">var</span> <span class="n">streamPacketResendEnableNode</span> <span class="o">=</span> <span class="p">(</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IBoolean</span><span class="p">)</span><span class="n">device</span><span class="p">.</span><span class="n">TLStreamNodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;StreamPacketResendEnable&quot;</span><span class="p">);</span>
+            <span class="n">streamPacketResendEnableNode</span><span class="p">.</span><span class="n">Value</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+
+            <span class="c1">// start stream</span>
+            <span class="n">device</span><span class="p">.</span><span class="n">StartStream</span><span class="p">();</span>
+
+                        <span class="c1">// get images for HDR</span>
+                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Acquire HDR images&quot;</span><span class="p">,</span> <span class="n">TAB1</span><span class="p">);</span>
+
+                        <span class="n">List</span><span class="o">&lt;</span><span class="n">HDRImage</span><span class="o">&gt;</span> <span class="n">hdrImages</span> <span class="o">=</span> <span class="k">new</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">HDRImage</span><span class="o">&gt;</span><span class="p">();</span>
+
+                        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">NUM_HDR_IMAGES</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+                        <span class="p">{</span>
+                                <span class="c1">// Get high, medium, and low exposure images</span>
+                                <span class="c1">//    This example grabs three examples of varying exposures for</span>
+                                <span class="c1">//    later processing. For each image, the exposure must be set,</span>
+                                <span class="c1">//    an image must be triggered, and then that image must be</span>
+                                <span class="c1">//    retrieved. After the exposure time is changed, the setting</span>
+                                <span class="c1">//    does not take place on the device until after the next</span>
+                                <span class="c1">//    frame. Because of this, two images are retrieved, the first</span>
+                                <span class="c1">//    of which is discarded.</span>
+                                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Get HDR image {1}&quot;</span><span class="p">,</span> <span class="n">TAB2</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+
+                                <span class="c1">// get max and min exposure time to ensure set of exposure times</span>
+                                <span class="c1">// are within this range</span>
+                                <span class="kt">double</span> <span class="n">exposureTimeMax</span> <span class="o">=</span> <span class="n">exposureTimeNode</span><span class="p">.</span><span class="n">Max</span><span class="p">;</span>
+                                <span class="kt">double</span> <span class="n">exposureTimeMin</span> <span class="o">=</span> <span class="n">exposureTimeNode</span><span class="p">.</span><span class="n">Min</span><span class="p">;</span>
+
+                                <span class="c1">// if largest exposure times is not within the exposure time</span>
+                                <span class="c1">// range, set largest exposure time to max value and set the</span>
+                                <span class="c1">// remaining exposure times to half the value of the state before</span>
+                                <span class="k">if</span> <span class="p">(</span><span class="n">EXPOSURE_HIGH</span> <span class="o">&gt;</span> <span class="n">exposureTimeMax</span> <span class="o">||</span> <span class="n">EXPOSURE_LOW</span> <span class="o">&lt;</span> <span class="n">exposureTimeMin</span><span class="p">)</span>
+                                <span class="p">{</span>
+                                        <span class="n">EXPOSURE_HIGH</span> <span class="o">=</span> <span class="n">exposureTimeMax</span><span class="p">;</span>
+                                        <span class="n">EXPOSURE_MID</span> <span class="o">=</span> <span class="n">EXPOSURE_HIGH</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+                                        <span class="n">EXPOSURE_LOW</span> <span class="o">=</span> <span class="n">EXPOSURE_MID</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+                                <span class="p">}</span>
+
+                                <span class="c1">// high exposure image</span>
+                                <span class="n">exposureTimeNode</span><span class="p">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">EXPOSURE_HIGH</span><span class="p">;</span>
+                                <span class="n">TriggerSoftwareOnceArmed</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+                                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IImage</span> <span class="n">imagePreHigh</span> <span class="o">=</span> <span class="n">device</span><span class="p">.</span><span class="n">GetImage</span><span class="p">(</span><span class="n">TIMEOUT</span><span class="p">);</span>
+                                <span class="n">TriggerSoftwareOnceArmed</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+                                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IImage</span> <span class="n">imageHigh</span> <span class="o">=</span> <span class="n">device</span><span class="p">.</span><span class="n">GetImage</span><span class="p">(</span><span class="n">TIMEOUT</span><span class="p">);</span>
+
+                                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}High image (timestamp {1}, exposure {2})&quot;</span><span class="p">,</span> <span class="n">TAB3</span><span class="p">,</span> <span class="n">imageHigh</span><span class="p">.</span><span class="n">TimestampNs</span><span class="p">,</span> <span class="n">EXPOSURE_HIGH</span><span class="p">);</span>
+
+                                <span class="c1">// medium exposure image</span>
+                                <span class="n">exposureTimeNode</span><span class="p">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">EXPOSURE_MID</span><span class="p">;</span>
+                                <span class="n">TriggerSoftwareOnceArmed</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+                                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IImage</span> <span class="n">imagePreMid</span> <span class="o">=</span> <span class="n">device</span><span class="p">.</span><span class="n">GetImage</span><span class="p">(</span><span class="n">TIMEOUT</span><span class="p">);</span>
+                                <span class="n">TriggerSoftwareOnceArmed</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+                                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IImage</span> <span class="n">imageMid</span> <span class="o">=</span> <span class="n">device</span><span class="p">.</span><span class="n">GetImage</span><span class="p">(</span><span class="n">TIMEOUT</span><span class="p">);</span>
+
+                                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Mid image (timestamp {1}, exposure {2})&quot;</span><span class="p">,</span> <span class="n">TAB3</span><span class="p">,</span> <span class="n">imageMid</span><span class="p">.</span><span class="n">TimestampNs</span><span class="p">,</span> <span class="n">EXPOSURE_MID</span><span class="p">);</span>
+
+                                <span class="c1">// low exposure image</span>
+                                <span class="n">exposureTimeNode</span><span class="p">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">EXPOSURE_LOW</span><span class="p">;</span>
+                                <span class="n">TriggerSoftwareOnceArmed</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+                                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IImage</span> <span class="n">imagePreLow</span> <span class="o">=</span> <span class="n">device</span><span class="p">.</span><span class="n">GetImage</span><span class="p">(</span><span class="n">TIMEOUT</span><span class="p">);</span>
+                                <span class="n">TriggerSoftwareOnceArmed</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+                                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IImage</span> <span class="n">imageLow</span> <span class="o">=</span> <span class="n">device</span><span class="p">.</span><span class="n">GetImage</span><span class="p">(</span><span class="n">TIMEOUT</span><span class="p">);</span>
+
+                                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Low image (timestamp {1}, exposure {2})&quot;</span><span class="p">,</span> <span class="n">TAB3</span><span class="p">,</span> <span class="n">imageLow</span><span class="p">.</span><span class="n">TimestampNs</span><span class="p">,</span> <span class="n">EXPOSURE_LOW</span><span class="p">);</span>
+
+                                <span class="c1">// Copy images for processing later</span>
+                                <span class="c1">//    Use the image factory to copy the images for later</span>
+                                <span class="c1">//    processing. Images are copied in order to requeue buffers</span>
+                                <span class="c1">//    to allow for more images to be retrieved from the device.</span>
+                                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Copy images for HDR processing later&quot;</span><span class="p">,</span> <span class="n">TAB2</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+
+                                <span class="n">HDRImage</span> <span class="n">hdrImage</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HDRImage</span><span class="p">();</span>
+                                <span class="n">hdrImage</span><span class="p">.</span><span class="n">imageHigh</span> <span class="o">=</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">ImageFactory</span><span class="p">.</span><span class="n">Copy</span><span class="p">(</span><span class="n">imageHigh</span><span class="p">);</span>
+                                <span class="n">hdrImage</span><span class="p">.</span><span class="n">imageMid</span> <span class="o">=</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">ImageFactory</span><span class="p">.</span><span class="n">Copy</span><span class="p">(</span><span class="n">imageMid</span><span class="p">);</span>
+                                <span class="n">hdrImage</span><span class="p">.</span><span class="n">imageLow</span> <span class="o">=</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">ImageFactory</span><span class="p">.</span><span class="n">Copy</span><span class="p">(</span><span class="n">imageLow</span><span class="p">);</span>
+                                <span class="n">hdrImages</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">hdrImage</span><span class="p">);</span>
+
+                                <span class="n">device</span><span class="p">.</span><span class="n">RequeueBuffer</span><span class="p">(</span><span class="n">imagePreHigh</span><span class="p">);</span>
+                                <span class="n">device</span><span class="p">.</span><span class="n">RequeueBuffer</span><span class="p">(</span><span class="n">imageHigh</span><span class="p">);</span>
+                                <span class="n">device</span><span class="p">.</span><span class="n">RequeueBuffer</span><span class="p">(</span><span class="n">imagePreMid</span><span class="p">);</span>
+                                <span class="n">device</span><span class="p">.</span><span class="n">RequeueBuffer</span><span class="p">(</span><span class="n">imageMid</span><span class="p">);</span>
+                                <span class="n">device</span><span class="p">.</span><span class="n">RequeueBuffer</span><span class="p">(</span><span class="n">imagePreLow</span><span class="p">);</span>
+                                <span class="n">device</span><span class="p">.</span><span class="n">RequeueBuffer</span><span class="p">(</span><span class="n">imageLow</span><span class="p">);</span>
+                        <span class="p">}</span>
+
+                        <span class="c1">// stop stream</span>
+                        <span class="n">device</span><span class="p">.</span><span class="n">StopStream</span><span class="p">();</span>
+
+                        <span class="c1">// Run HDR processing</span>
+                        <span class="c1">//    Once the images have been retrieved and copied, they can be</span>
+                        <span class="c1">//    processed into an HDR image. HDR algorithms</span>
+                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Run HDR processing&quot;</span><span class="p">,</span> <span class="n">TAB1</span><span class="p">);</span>
+
+                        <span class="c1">// ...</span>
+                        <span class="c1">// ...</span>
+                        <span class="c1">// ...</span>
+
+                        <span class="c1">// clean up copied images</span>
+                        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">hdrImages</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+                        <span class="p">{</span>
+                                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">ImageFactory</span><span class="p">.</span><span class="n">Destroy</span><span class="p">(</span><span class="n">hdrImages</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">imageHigh</span><span class="p">);</span>
+                                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">ImageFactory</span><span class="p">.</span><span class="n">Destroy</span><span class="p">(</span><span class="n">hdrImages</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">imageMid</span><span class="p">);</span>
+                                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">ImageFactory</span><span class="p">.</span><span class="n">Destroy</span><span class="p">(</span><span class="n">hdrImages</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">imageLow</span><span class="p">);</span>
+                        <span class="p">}</span>
+
+                        <span class="c1">// return nodes to their initial values</span>
+                        <span class="n">exposureTimeNode</span><span class="p">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">exposureTimeInitial</span><span class="p">;</span>
+                        <span class="n">exposureAutoNode</span><span class="p">.</span><span class="n">FromString</span><span class="p">(</span><span class="n">exposureAutoInitial</span><span class="p">);</span>
+                        <span class="n">triggerSelectorNode</span><span class="p">.</span><span class="n">FromString</span><span class="p">(</span><span class="n">triggerSelectorInitial</span><span class="p">);</span>
+                        <span class="n">triggerSourceNode</span><span class="p">.</span><span class="n">FromString</span><span class="p">(</span><span class="n">triggerSourceInitial</span><span class="p">);</span>
+                        <span class="n">triggerModeNode</span><span class="p">.</span><span class="n">FromString</span><span class="p">(</span><span class="n">triggerModeInitial</span><span class="p">);</span>
+                <span class="p">}</span>
+
+                <span class="c1">// =-=-=-=-=-=-=-=-=-</span>
+                <span class="c1">// =- PREPARATION -=-</span>
+                <span class="c1">// =- &amp; CLEAN UP =-=-</span>
+                <span class="c1">// =-=-=-=-=-=-=-=-=-</span>
+
+                <span class="k">static</span> <span class="kt">void</span> <span class="n">Main</span><span class="p">(</span><span class="n">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+                <span class="p">{</span>
+                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Cs_Exposure_ForHDR&quot;</span><span class="p">);</span>
+
+                        <span class="k">try</span>
+                        <span class="p">{</span>
+                                <span class="c1">// prepare example</span>
+                                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">ISystem</span> <span class="n">system</span> <span class="o">=</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">Arena</span><span class="p">.</span><span class="n">OpenSystem</span><span class="p">();</span>
+                                <span class="n">system</span><span class="p">.</span><span class="n">UpdateDevices</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+                                <span class="k">if</span> <span class="p">(</span><span class="n">system</span><span class="p">.</span><span class="n">Devices</span><span class="p">.</span><span class="n">Count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+                                <span class="p">{</span>
+                                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">No camera connected</span><span class="se">\n</span><span class="s">Press enter to complete&quot;</span><span class="p">);</span>
+                                        <span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span>
+                                        <span class="k">return</span><span class="p">;</span>
+                                <span class="p">}</span>
+                                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IDevice</span> <span class="n">device</span> <span class="o">=</span> <span class="n">system</span><span class="p">.</span><span class="n">CreateDevice</span><span class="p">(</span><span class="n">system</span><span class="p">.</span><span class="n">Devices</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+                                <span class="c1">// run example</span>
+                                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Commence example</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+                                <span class="n">AcquireHDRImages</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+                                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Example complete&quot;</span><span class="p">);</span>
+
+                                <span class="c1">// clean up example</span>
+                                <span class="n">system</span><span class="p">.</span><span class="n">DestroyDevice</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+                                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">Arena</span><span class="p">.</span><span class="n">CloseSystem</span><span class="p">(</span><span class="n">system</span><span class="p">);</span>
+                        <span class="p">}</span>
+                        <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span>
+                        <span class="p">{</span>
+                                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Exception thrown: {0}&quot;</span><span class="p">,</span> <span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+                        <span class="p">}</span>
+
+                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Press enter to complete&quot;</span><span class="p">);</span>
+                        <span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span>
+                <span class="p">}</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cs_examples_exposure_long.html" class="btn btn-neutral float-right" title="Exposure, Long" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cs_examples_exposure.html" class="btn btn-neutral" title="Exposure, Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Lucid Vision Labs, Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.31.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

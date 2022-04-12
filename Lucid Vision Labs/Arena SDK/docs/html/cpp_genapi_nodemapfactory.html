@@ -1,0 +1,693 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>NodeMapFactory &mdash; Arena 1.0.31.8 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Arena 1.0.31.8 documentation" href="index.html"/>
+        <link rel="up" title="GenApi C++" href="cpp_genapi.html"/>
+        <link rel="next" title="NodeMapRef" href="cpp_genapi_nodemapref.html"/>
+        <link rel="prev" title="IValue" href="cpp_genapi_ivalue.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home">
+          
+
+          <!--
+            
+            <img src="_static/lucid-white.png" class="logo" />
+          -->
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.31
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_sdk_datasheet.html">Arena SDK Datasheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_windows.html">Arena SDK for Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_linux.html">Arena SDK for Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sdk.html">Code Reference &amp; Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gentl.html">GenTL Features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cpp.html">Arena C++</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cpp_arena.html">Arena C++</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cpp_genapi.html">GenApi C++</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_concatenatedwrite.html">ConcatenatedWrite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ibase.html">IBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iboolean.html">IBoolean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icategory.html">ICategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ichunkport.html">IChunkPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icommand.html">ICommand</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumentry.html">IEnumEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumeration.html">IEnumeration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumerationt.html">IEnumerationT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ifloat.html">IFloat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inode.html">INode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemap.html">INodeMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemapdyn.html">INodeMapDyn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iport.html">IPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportrecorder.html">IPortRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportstacked.html">IPortStacked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iregister.html">IRegister</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_istring.html">IString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ivalue.html">IValue</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">NodeMapFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapref.html">NodeMapRef</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_portwritelist.html">PortWriteList</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_save.html">Save C++</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_examples.html">C++ Code Samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="c.html">Arena C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cs.html">Arena.NET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qt.html">Qt</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arena</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sdk.html">Code Reference &amp; Samples</a> &raquo;</li>
+        
+          <li><a href="cpp.html">Arena C++</a> &raquo;</li>
+        
+          <li><a href="cpp_genapi.html">GenApi C++</a> &raquo;</li>
+        
+      <li>NodeMapFactory</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nodemapfactory">
+<h1>NodeMapFactory<a class="headerlink" href="#nodemapfactory" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Definition of the node map factory. </p>
+<dl class="type">
+<dt id="_CPPv216GENAPI_NAMESPACE">
+<span id="GENAPI_NAMESPACE"></span><span class="target" id="namespace_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e"></span><em class="property">namespace </em><code class="descname">GENAPI_NAMESPACE</code><a class="headerlink" href="#_CPPv216GENAPI_NAMESPACE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Enums</p>
+<dl class="type">
+<dt id="_CPPv2N16GENAPI_NAMESPACE13ECacheUsage_tE">
+<span id="GENAPI_NAMESPACE::ECacheUsage_t"></span><span class="target" id="group___gen_api___public_interface_1ga94258565fb87d33c031a07668e1eb3ec"></span><em class="property">enum </em><code class="descname">ECacheUsage_t</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE13ECacheUsage_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Lists the cache usage strategies. The cache stores preprocessed camera description xml files providing faster access or smaller footprint. </p>
+<p><dl class="docutils">
+<dt><strong>Note</strong></dt>
+<dd>The environment variable GENICAM_CACHE_VERSION, e.g. GENICAM_CACHE_V3_0, must contain the path to cache directory for using the cache. </dd>
+</dl>
+</p>
+<p><em>Values:</em></p>
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE20CacheUsage_AutomaticE">
+<span id="GENAPI_NAMESPACE::CacheUsage_Automatic"></span><span class="target" id="group___gen_api___public_interface_1gga94258565fb87d33c031a07668e1eb3eca6b04f0767e6802ecbff90637b47ada1e"></span><code class="descname">CacheUsage_Automatic</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE20CacheUsage_AutomaticE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The use of cache files is determined automatically. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE21CacheUsage_ForceWriteE">
+<span id="GENAPI_NAMESPACE::CacheUsage_ForceWrite"></span><span class="target" id="group___gen_api___public_interface_1gga94258565fb87d33c031a07668e1eb3eca1d82d9d312df056e1722bf8c69fcdfb8"></span><code class="descname">CacheUsage_ForceWrite</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE21CacheUsage_ForceWriteE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Forces the loading and preprocessing of the camera description xml file. If a cache directory is available the result of preprocessing is written to the cache. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE20CacheUsage_ForceReadE">
+<span id="GENAPI_NAMESPACE::CacheUsage_ForceRead"></span><span class="target" id="group___gen_api___public_interface_1gga94258565fb87d33c031a07668e1eb3ecad12045c3d8c76be7fe4de73e95da8056"></span><code class="descname">CacheUsage_ForceRead</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE20CacheUsage_ForceReadE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Suppresses loading and preprocessing of the camera description xml file and forces reading a cache file from cache directory. Fails if no matching cache file is available. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE17CacheUsage_IgnoreE">
+<span id="GENAPI_NAMESPACE::CacheUsage_Ignore"></span><span class="target" id="group___gen_api___public_interface_1gga94258565fb87d33c031a07668e1eb3eca43a0a2b449d25bb439f4adc8aed6de75"></span><code class="descname">CacheUsage_Ignore</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE17CacheUsage_IgnoreE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Forces the loading and preprocessing of the camera description xml file. No cache file is written. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N16GENAPI_NAMESPACE14EContentType_tE">
+<span id="GENAPI_NAMESPACE::EContentType_t"></span><span class="target" id="group___gen_api___public_interface_1ga1e3e67d916057567db450fa7394bb02f"></span><em class="property">enum </em><code class="descname">EContentType_t</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE14EContentType_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Lists the processable file types. </p>
+<p><em>Values:</em></p>
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15ContentType_XmlE">
+<span id="GENAPI_NAMESPACE::ContentType_Xml"></span><span class="target" id="group___gen_api___public_interface_1gga1e3e67d916057567db450fa7394bb02faf908699a230a1ef3c5b2ceba923dada4"></span><code class="descname">ContentType_Xml</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15ContentType_XmlE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>XML camera description file text. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE21ContentType_ZippedXmlE">
+<span id="GENAPI_NAMESPACE::ContentType_ZippedXml"></span><span class="target" id="group___gen_api___public_interface_1gga1e3e67d916057567db450fa7394bb02fa3efe58e165b9e60aeb3de9c20d941187"></span><code class="descname">ContentType_ZippedXml</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE21ContentType_ZippedXmlE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Zipped XML camera description file text. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<dl class="class">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactoryE">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory"></span><em class="property">class </em><code class="descname">CNodeMapFactory</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactoryE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;NodeMapFactory.h&gt;</em><p>The node map factory is used for creating node maps from camera description files. </p>
+<p><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Simple node map creation from buffer, downloaded from a device for instance.</span>
+<span class="n">CNodeMapFactory</span> <span class="nf">cameraNodeMapFactory</span><span class="p">(</span> <span class="n">ContentType_ZippedXml</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">bufferSize</span><span class="p">);</span>
+
+<span class="c1">// Create the node map. The node map can be destroyed using the IDestroy interface later.</span>
+<span class="n">INodeMap</span><span class="o">*</span> <span class="n">pNodeMap</span> <span class="o">=</span> <span class="n">cameraNodeMapFactory</span><span class="p">.</span><span class="n">CreateNodeMap</span><span class="p">();</span>
+<span class="c1">// The next step is attaching the device port (not shown).</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><strong>Examples</strong></dt>
+<dd></dd>
+</dl>
+</p>
+<p><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Node map creation with injecting additional xml fragments.</span>
+<span class="n">CNodeMapFactory</span> <span class="nf">cameraNodeMapFactory</span><span class="p">(</span> <span class="n">ContentType_Xml</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">bufferSize</span><span class="p">);</span>
+<span class="n">cameraParameters</span><span class="p">.</span><span class="n">AddInjectionData</span><span class="p">(</span> <span class="n">CNodeMapFactory</span><span class="p">(</span><span class="n">ContentType_Xml</span><span class="p">,</span> <span class="n">filename1</span><span class="p">));</span>
+<span class="n">cameraParameters</span><span class="p">.</span><span class="n">AddInjectionData</span><span class="p">(</span> <span class="n">CNodeMapFactory</span><span class="p">(</span><span class="n">ContentType_Xml</span><span class="p">,</span> <span class="n">filename2</span><span class="p">));</span>
+
+<span class="c1">// Create the node map. The node map can be destroyed using the IDestroy interface later.</span>
+<span class="n">INodeMap</span><span class="o">*</span> <span class="n">pNodeMap</span> <span class="o">=</span> <span class="n">cameraNodeMapFactory</span><span class="p">.</span><span class="n">CreateNodeMap</span><span class="p">();</span>
+<span class="c1">// The next step is attaching the device port (not shown).</span>
+</pre></div>
+</div>
+</p>
+<p><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Node map creation and additional extraction of a category subtree.</span>
+<span class="n">CNodeMapFactory</span> <span class="nf">cameraNodeMapFactory</span><span class="p">(</span> <span class="n">ContentType_Xml</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">bufferSize</span><span class="p">);</span>
+<span class="c1">// Extract a subtree for later chunk parsing.</span>
+<span class="n">CNodeMapFactory</span> <span class="n">chunkDataNodeMapFactory</span> <span class="o">=</span> <span class="n">cameraParameters</span><span class="p">.</span><span class="n">ExtractSubtree</span><span class="p">(</span><span class="s">&quot;ChunkData&quot;</span><span class="p">);</span>
+
+<span class="c1">// Create the node map. The node map can be destroyed using the IDestroy interface later.</span>
+<span class="n">INodeMap</span><span class="o">*</span> <span class="n">pNodeMap</span> <span class="o">=</span> <span class="n">cameraParameters</span><span class="p">.</span><span class="n">CreateNodeMap</span><span class="p">();</span>
+<span class="c1">// The next step is attaching the device port (not shown).</span>
+</pre></div>
+</div>
+</p>
+<p><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Node map creation with injecting additional xml fragments and additional extraction of a category subtree.</span>
+<span class="n">CNodeMapFactory</span> <span class="nf">cameraNodeMapFactory</span><span class="p">(</span> <span class="n">ContentType_Xml</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">bufferSize</span><span class="p">);</span>
+<span class="n">cameraParameters</span><span class="p">.</span><span class="n">AddInjectionData</span><span class="p">(</span> <span class="n">CNodeMapFactory</span><span class="p">(</span><span class="n">ContentType_Xml</span><span class="p">,</span> <span class="n">filename1</span><span class="p">));</span>
+<span class="n">cameraParameters</span><span class="p">.</span><span class="n">AddInjectionData</span><span class="p">(</span> <span class="n">CNodeMapFactory</span><span class="p">(</span><span class="n">ContentType_Xml</span><span class="p">,</span> <span class="n">filename2</span><span class="p">));</span>
+<span class="n">CNodeMapFactory</span> <span class="n">chunkDataNodeMapFactory</span> <span class="o">=</span> <span class="n">cameraNodeMapFactory</span><span class="p">.</span><span class="n">ExtractSubtree</span><span class="p">(</span><span class="s">&quot;ChunkData&quot;</span><span class="p">);</span>
+
+<span class="c1">// Create the node map. The node map can be destroyed using the IDestroy interface later.</span>
+<span class="n">INodeMap</span><span class="o">*</span> <span class="n">pNodeMap</span> <span class="o">=</span> <span class="n">cameraNodeMapFactory</span><span class="p">.</span><span class="n">CreateNodeMap</span><span class="p">();</span>
+<span class="c1">// The next step is attaching the device port (not shown).</span>
+
+<span class="c1">// A node map factory can create multiple node maps from the provided camera description file(s).</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">INodeMap</span><span class="o">*</span> <span class="n">pNodeMapChunks</span> <span class="o">=</span> <span class="n">chunkDataNodeMapFactory</span><span class="p">.</span><span class="n">CreateNodeMap</span><span class="p">();</span>
+    <span class="c1">//...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</p>
+<p><dl class="docutils">
+<dt><strong>Attention</strong></dt>
+<dd>The is <a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory"><span class="std std-ref">CNodeMapFactory</span></a> not thread-safe.</dd>
+<dt><strong>Attention</strong></dt>
+<dd>You need to take care when camera description file data can be actually be freed, see method documentation of the node map factory for more detail. </dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory15CNodeMapFactoryEv">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::CNodeMapFactory"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a606a1c9bec1fb7542bb5f12e710c6d2d"></span><code class="descname">CNodeMapFactory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory15CNodeMapFactoryEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates an empty node map factory for assigning a non-empty node map factory later. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactoryD0Ev">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::~CNodeMapFactory"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1aa2575dbfb762120fb19c67bc4ff221db"></span><em class="property">virtual</em> <code class="descname">~CNodeMapFactory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactoryD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destroys the node map factory data if all references to the data have been released. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory15CNodeMapFactoryERK15CNodeMapFactory">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::CNodeMapFactory__CNodeMapFactoryCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1aa6054adafaf425eeac7202e963f75561"></span><code class="descname">CNodeMapFactory</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory15CNodeMapFactoryEv" title="GENAPI_NAMESPACE::CNodeMapFactory::CNodeMapFactory">CNodeMapFactory</a>&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory15CNodeMapFactoryERK15CNodeMapFactory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates another reference to the node map factory data. No data is copied. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactoryaSERK15CNodeMapFactory">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::assign-operator__CNodeMapFactoryCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a21fde8398a5ea2440d901d2ee2973b7c"></span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactoryE" title="GENAPI_NAMESPACE::CNodeMapFactory">CNodeMapFactory</a> &amp;<code class="descname">operator=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactoryE" title="GENAPI_NAMESPACE::CNodeMapFactory">CNodeMapFactory</a>&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactoryaSERK15CNodeMapFactory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates another reference to the assigned node map factory data. Destroys the “overwritten” node map factory data if all references to the data have been released. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory15CNodeMapFactoryE14EContentType_tRKN17GENICAM_NAMESPACE8gcstringE13ECacheUsage_tb">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::CNodeMapFactory__EContentType_t.GENICAM_NAMESPACE::gcstringCR.ECacheUsage_t.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a10428850182d605575d4832a4ba935ef"></span><code class="descname">CNodeMapFactory</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE14EContentType_tE" title="GENAPI_NAMESPACE::EContentType_t">EContentType_t</a> <em>FileType</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>FileName</em>, <a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE13ECacheUsage_tE" title="GENAPI_NAMESPACE::ECacheUsage_t">ECacheUsage_t</a> <em>CacheUsage</em> = CacheUsage_Automatic, bool <em>SuppressStringsOnLoad</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory15CNodeMapFactoryE14EContentType_tRKN17GENICAM_NAMESPACE8gcstringE13ECacheUsage_tb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates the node map factory and simply stores the full path to the provided camera description file data. </p>
+<p>
+Throws an invalid argument exception if FileName is empty. Throws if environment variables in FileName cannot be resolved.<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">FileType</span></code>: Defines how the camera description file is stored, e.g. as zipped XML text. </li>
+<li><code class="docutils literal"><span class="pre">FileName</span></code>: The full path of the camera description file to process. </li>
+<li><code class="docutils literal"><span class="pre">CacheUsage</span></code>: Defines if and how to use the cache for preprocessed camera description files. </li>
+<li><code class="docutils literal"><span class="pre">SuppressStringsOnLoad</span></code>: Suppresses loading strings that are not needed for most use cases, e.g. node tooltip or description, for reducing the memory footprint.</li>
+</ul>
+</dd>
+</dl>
+</p>
+<p><dl class="docutils">
+<dt><strong>Attention</strong></dt>
+<dd>The given file must be readable until the camera description file data has been released. The <a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a54577733c94c447fa2ed5f9321d2c33c"><span class="std std-ref">IsCameraDescriptionFileDataReleased()</span></a> method can be used to check if releasing has been done. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory15CNodeMapFactoryE14EContentType_tPKv6size_t13ECacheUsage_tb">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::CNodeMapFactory__EContentType_t.voidCP.s.ECacheUsage_t.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1afd35284f728a39dbccc7a4166ee3eec6"></span><code class="descname">CNodeMapFactory</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE14EContentType_tE" title="GENAPI_NAMESPACE::EContentType_t">EContentType_t</a> <em>ContentType</em>, <em class="property">const</em> void *<em>pData</em>, size_t <em>DataSize</em>, <a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE13ECacheUsage_tE" title="GENAPI_NAMESPACE::ECacheUsage_t">ECacheUsage_t</a> <em>CacheUsage</em> = CacheUsage_Automatic, bool <em>SuppressStringsOnLoad</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory15CNodeMapFactoryE14EContentType_tPKv6size_t13ECacheUsage_tb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates the node map factory and simply stores the pointer and the size of the provided camera description file data. </p>
+<p>
+Throws an invalid argument exception if pData is NULL or DataSize is 0.<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">ContentType</span></code>: Defines how the camera description file is stored, e.g. as zipped XML text. </li>
+<li><code class="docutils literal"><span class="pre">pData</span></code>: The pointer to the camera description file data. </li>
+<li><code class="docutils literal"><span class="pre">DataSize</span></code>: The size of the camera description file data. </li>
+<li><code class="docutils literal"><span class="pre">CacheUsage</span></code>: Defines if and how to use the cache for preprocessed camera description files. </li>
+<li><code class="docutils literal"><span class="pre">SuppressStringsOnLoad</span></code>: Suppresses loading strings that are not needed for most use cases, e.g. node tooltip or description, for reducing the memory footprint.</li>
+</ul>
+</dd>
+</dl>
+</p>
+<p><dl class="docutils">
+<dt><strong>Attention</strong></dt>
+<dd>The given buffer must not be freed or changed until the camera description file data has been released. The <a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a54577733c94c447fa2ed5f9321d2c33c"><span class="std std-ref">IsCameraDescriptionFileDataReleased()</span></a> method can be used to check if releasing has been done. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory15CNodeMapFactoryERKN17GENICAM_NAMESPACE8gcstringE13ECacheUsage_tb">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::CNodeMapFactory__GENICAM_NAMESPACE::gcstringCR.ECacheUsage_t.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a16fee57dec574e2d1e486e0960303071"></span><code class="descname">CNodeMapFactory</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>XmlData</em>, <a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE13ECacheUsage_tE" title="GENAPI_NAMESPACE::ECacheUsage_t">ECacheUsage_t</a> <em>CacheUsage</em> = CacheUsage_Automatic, bool <em>SuppressStringsOnLoad</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory15CNodeMapFactoryERKN17GENICAM_NAMESPACE8gcstringE13ECacheUsage_tb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates the node map factory and copies the provided camera description file string. </p>
+<p>
+Throws an invalid argument exception if XmlData is empty. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">XmlData</span></code>: The camera description file data as XML text. The provided text is copied. You can use the overloaded constructor accepting a buffer to avoid that. <div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="n">gcstring</span> <span class="n">cdfData</span><span class="p">;</span>
+<span class="c1">//... fill cdfData ...</span>
+<span class="n">CNodeMapFactory</span> <span class="nf">factory</span><span class="p">(</span><span class="n">ContentType_Xml</span><span class="p">,</span> <span class="n">cfdData</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="n">cfdData</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+<span class="c1">// Create the node map. The node map can be destroyed using the IDestroy interface later.</span>
+<span class="n">INodeMap</span><span class="o">*</span> <span class="n">pNodeMap</span> <span class="o">=</span> <span class="n">factory</span><span class="p">.</span><span class="n">CreateNodeMap</span><span class="p">();</span>
+<span class="c1">// The next step is attaching the device port (not shown).</span>
+</pre></div>
+</div>
+ </li>
+<li><code class="docutils literal"><span class="pre">CacheUsage</span></code>: Defines if and how to use the cache for preprocessed camera description files. </li>
+<li><code class="docutils literal"><span class="pre">SuppressStringsOnLoad</span></code>: Suppresses loading strings that are not needed for most use cases, e.g. node tooltip or description, for reducing the memory footprint.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE15CNodeMapFactory7IsEmptyEv">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::IsEmptyC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a2ef7dc88c3912a354ad078ea520d5344"></span>bool <code class="descname">IsEmpty</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE15CNodeMapFactory7IsEmptyEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns true if nothing is loaded (<a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1aaa240b091568bee561617131bf7ed0b0"><span class="std std-ref">IsLoaded()</span></a>) and no source data is available, e.g. when the node map factory has been created with the default constructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory16AddInjectionDataER15CNodeMapFactory">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::AddInjectionData__CNodeMapFactoryR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1aae642bb91a664b6ab1dc3992ebb54b0d"></span>void <code class="descname">AddInjectionData</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactoryE" title="GENAPI_NAMESPACE::CNodeMapFactory">CNodeMapFactory</a> &amp;<em>injectionData</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory16AddInjectionDataER15CNodeMapFactory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Adds a node map factory representing a camera description file to inject. </p>
+<p>
+The injected files are injected in the order they are added. InjectionData must not be preprocessed. The <a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a039f218826035a887505c340d148bbfc"><span class="std std-ref">IsPreprocessed()</span></a> method can be used to check if preprocessing has been done before. The cache usage of injection data is ignored. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">injectionData</span></code>: A node map factory representing a camera description file to inject.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory13LoadAndInjectEv">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::LoadAndInject"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a7ca659d01e3f131763c5d8da007b41af"></span>void <code class="descname">LoadAndInject</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory13LoadAndInjectEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Advanced: Loads, Parses, and Injects the camera description files recursively. The result is a memory internal representation of the camera description file(s), the CNodeDataMap (not part of the public interface). </p>
+<p>This step is usually done automatically. Prevents cache read if called manually. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE15CNodeMapFactory8IsLoadedEv">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::IsLoadedC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1aaa240b091568bee561617131bf7ed0b0"></span>bool <code class="descname">IsLoaded</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE15CNodeMapFactory8IsLoadedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Can be used to check whether the <a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a7ca659d01e3f131763c5d8da007b41af"><span class="std std-ref">LoadAndInject()</span></a> processing step has been performed. Returns true if <a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a039f218826035a887505c340d148bbfc"><span class="std std-ref">IsPreprocessed()</span></a> returns true (Preprocessed Data has been loaded from cache). </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory14ExtractSubtreeERKN17GENICAM_NAMESPACE8gcstringEb">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::ExtractSubtree__GENICAM_NAMESPACE::gcstringCR.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a5e9012c80a12a421a3878d9eacb5518b"></span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactoryE" title="GENAPI_NAMESPACE::CNodeMapFactory">CNodeMapFactory</a> <code class="descname">ExtractSubtree</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>SubTreeRootNodeName</em>, bool <em>doRenameToRoot</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory14ExtractSubtreeERKN17GENICAM_NAMESPACE8gcstringEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The name of the node that represents the root of the subtree that shall be extracted. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">SubTreeRootNodeName</span></code>: The root of the branch to extract, e.g. “ChunkData”. </li>
+<li><code class="docutils literal"><span class="pre">doRenameToRoot</span></code>: Renames the extracted subtree root node SubTreeRootNodeName to “Root”, sets the IsFeature property. <a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1aa17fe46a5d57a45c62c15bc7dd5e4596"><span class="std std-ref">Preprocess()</span></a> is automatically called if needed to create the memory internal representation of the camera description file(s). The preprocessed result can be read from the cache or written to the cache in this step. This depends on the availability of a cache and the used CacheUsage setting. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory10PreprocessEv">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::Preprocess"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1aa17fe46a5d57a45c62c15bc7dd5e4596"></span>void <code class="descname">Preprocess</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory10PreprocessEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Advanced: Creates the preprocessed memory internal representation of the camera description file(s), the CNodeDataMap (not part of the public interface). </p>
+<p>This step is usually done automatically. Preprocessed data can be read from the cache or written to the cache in this step. This depends on the availability of a cache and the used CacheUsage setting. By calling this method directly direct cache load is suppressed, see <a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1aec8cf9cadb7492546c6ce9550e37be14"><span class="std std-ref">CreateNodeMap()</span></a> for more information. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE15CNodeMapFactory14IsPreprocessedEv">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::IsPreprocessedC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a039f218826035a887505c340d148bbfc"></span>bool <code class="descname">IsPreprocessed</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE15CNodeMapFactory14IsPreprocessedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Can be used to check whether the <a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1aa17fe46a5d57a45c62c15bc7dd5e4596"><span class="std std-ref">Preprocess()</span></a> processing step has been performed. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory32ReleaseCameraDescriptionFileDataEv">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::ReleaseCameraDescriptionFileData"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1af7aa9a03ccdfff824e2cf79088327702"></span>void <code class="descname">ReleaseCameraDescriptionFileData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory32ReleaseCameraDescriptionFileDataEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Advanced: Releases any in constructors provided camera description file data buffers or files. </p>
+<p>This step is usually done automatically. All references to added injection data are dropped in this step to free the data. After this step any in constructors provided buffers can be freed or any in constructors given files can be deleted. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE15CNodeMapFactory35IsCameraDescriptionFileDataReleasedEv">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::IsCameraDescriptionFileDataReleasedC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a54577733c94c447fa2ed5f9321d2c33c"></span>bool <code class="descname">IsCameraDescriptionFileDataReleased</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE15CNodeMapFactory35IsCameraDescriptionFileDataReleasedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Can be used to check whether the <a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1af7aa9a03ccdfff824e2cf79088327702"><span class="std std-ref">ReleaseCameraDescriptionFileData()</span></a> processing step has been performed. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory13CreateNodeMapERKN17GENICAM_NAMESPACE8gcstringEb">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::CreateNodeMap__GENICAM_NAMESPACE::gcstringCR.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1aec8cf9cadb7492546c6ce9550e37be14"></span>INodeMap *<code class="descname">CreateNodeMap</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>DeviceName</em> = &quot;Device&quot;, bool <em>DoReleaseCameraDescriptionFileData</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory13CreateNodeMapERKN17GENICAM_NAMESPACE8gcstringEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates a node map from the preprocessed memory internal representation of the camera description file(s). </p>
+<p><a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1aa17fe46a5d57a45c62c15bc7dd5e4596"><span class="std std-ref">Preprocess()</span></a> is automatically called if needed. The preprocess step can be omitted by the factory depending on the cache mode setting when a cache file is available, then the cache file is read and converted directly into a node map. <a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1af7aa9a03ccdfff824e2cf79088327702"><span class="std std-ref">ReleaseCameraDescriptionFileData()</span></a> is called if DoReleaseCameraDescriptionFileData is true. This method can be called multiple times to create multiple instances of a node map. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory13CreateNodeMapER5CLockRKN17GENICAM_NAMESPACE8gcstringEb">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::CreateNodeMap__CLockR.GENICAM_NAMESPACE::gcstringCR.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a62e473b24369daf110709d1787a30c00"></span>INodeMap *<code class="descname">CreateNodeMap</code><span class="sig-paren">(</span>CLock &amp;<em>UserProvidedLock</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>DeviceName</em> = &quot;Device&quot;, bool <em>DoReleaseCameraDescriptionFileData</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory13CreateNodeMapER5CLockRKN17GENICAM_NAMESPACE8gcstringEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates a node map from the preprocessed memory internal representation of the camera description file(s). </p>
+<p><a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1aa17fe46a5d57a45c62c15bc7dd5e4596"><span class="std std-ref">Preprocess()</span></a> is automatically called if needed. The preprocess step can be omitted by the factory depending on the cache mode setting when a cache file is available, then the cache file is read and converted directly into a node map. <a class="reference internal" href="#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1af7aa9a03ccdfff824e2cf79088327702"><span class="std std-ref">ReleaseCameraDescriptionFileData()</span></a> is called if DoReleaseCameraDescriptionFileData is true. This method can be called multiple times to create multiple instances of a node map. This method allows to provide an external lock to avoid using too many locks in an application. <dl class="docutils">
+<dt><strong>Attention</strong></dt>
+<dd>The provided lock must not be destroyed before the created node map. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE15CNodeMapFactory26GetSupportedSchemaVersionsERN17GENICAM_NAMESPACE15gcstring_vectorE">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::GetSupportedSchemaVersions__GENICAM_NAMESPACE::gcstring_vectorRC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1acd99f5f6c5e27ef7d8b4250f72e048f1"></span>void <code class="descname">GetSupportedSchemaVersions</code><span class="sig-paren">(</span>GENICAM_NAMESPACE::gcstring_vector &amp;<em>SchemaVersions</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE15CNodeMapFactory26GetSupportedSchemaVersionsERN17GENICAM_NAMESPACE15gcstring_vectorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Each list entry is a string with the format “{Major}.{Minor}” were {Major} and {Minor} are integers Example: {“1.1”, “1.2”} indicates that the schema v1.1 and v1.2 are supported. The SubMinor version number is not given since it is for fully compatible bug fixes only </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE15CNodeMapFactory8ToStringEv">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::ToStringC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1af8ca5576be7721fefd6e136c1f26cbe0"></span>GENICAM_NAMESPACE::gcstring <code class="descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE15CNodeMapFactory8ToStringEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Outputs the pre-processed node map in string form (for debug purpose) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE15CNodeMapFactory5ToXmlEv">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::ToXmlC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a58334654a0213540ab8faffad8f0625b"></span>GENICAM_NAMESPACE::gcstring <code class="descname">ToXml</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE15CNodeMapFactory5ToXmlEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Outputs the pre-processed node map in XML form (mainly for debug purpose) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory17GetNodeStatisticsER16NodeStatistics_t">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::GetNodeStatistics__NodeStatistics_tR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a5cc3096338f2f843f6915da3ee9117f8"></span>void <code class="descname">GetNodeStatistics</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory16NodeStatistics_tE" title="GENAPI_NAMESPACE::CNodeMapFactory::NodeStatistics_t">NodeStatistics_t</a> &amp;<em>NodeStatistics</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory17GetNodeStatisticsER16NodeStatistics_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory15ApplyStyleSheetERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::ApplyStyleSheet__GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a25e78f60a30b59bac070c957d9584f2a"></span><em class="property">const</em> GENICAM_NAMESPACE::gcstring <code class="descname">ApplyStyleSheet</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>StyleSheetFileName</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory15ApplyStyleSheetERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Applies a style sheet to the pre-processed node map. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory18CreateEmptyNodeMapEv">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::CreateEmptyNodeMap"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a8782e898b214b0cb1b9fada2da7d9da5"></span><em class="property">static</em> INodeMap *<code class="descname">CreateEmptyNodeMap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory18CreateEmptyNodeMapEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates an empty node map usable as placeholder, e.g. if certain features are not supported by a module. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory10ClearCacheEv">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::ClearCache"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a35c4b1c647e1aa7270f453263caf6306"></span><em class="property">static</em> bool <code class="descname">ClearCache</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory10ClearCacheEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Deletes all preprocessed camera description files from the cache. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory25CreateNodeDataFromNodeMapEP8INodeMap">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::CreateNodeDataFromNodeMap__INodeMapP"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1a13d197997e76b92ef8d5f3cc936e2236"></span><em class="property">static</em> CNodeDataMap *<code class="descname">CreateNodeDataFromNodeMap</code><span class="sig-paren">(</span>INodeMap *<em>pNodeMap</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory25CreateNodeDataFromNodeMapEP8INodeMap" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Private Members</p>
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory7m_pImplE">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::m_pImpl__CNodeMapFactoryImplP"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1aa3d34baba8de73dd2bed5284d28d5837"></span>CNodeMapFactoryImpl *<code class="descname">m_pImpl</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory7m_pImplE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="class">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory16NodeStatistics_tE">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::NodeStatistics_t"></span><span class="target" id="struct_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1_1_node_statistics__t"></span><em class="property">struct </em><code class="descname">NodeStatistics_t</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory16NodeStatistics_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory16NodeStatistics_t8NumNodesE">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::NodeStatistics_t::NumNodes__uint32_t"></span><span class="target" id="struct_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1_1_node_statistics__t_1a529e74c0d90504c485787b267aed348f"></span>uint32_t <code class="descname">NumNodes</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory16NodeStatistics_t8NumNodesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory16NodeStatistics_t13NumPropertiesE">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::NodeStatistics_t::NumProperties__uint32_t"></span><span class="target" id="struct_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1_1_node_statistics__t_1a57100dd1663760d4dcd669aabf0cbb02"></span>uint32_t <code class="descname">NumProperties</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory16NodeStatistics_t13NumPropertiesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory16NodeStatistics_t8NumLinksE">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::NodeStatistics_t::NumLinks__uint32_t"></span><span class="target" id="struct_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1_1_node_statistics__t_1a476841760c51c3b5e2acf1ec216496bc"></span>uint32_t <code class="descname">NumLinks</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory16NodeStatistics_t8NumLinksE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory16NodeStatistics_t10NumStringsE">
+<span id="GENAPI_NAMESPACE::CNodeMapFactory::NodeStatistics_t::NumStrings__uint32_t"></span><span class="target" id="struct_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_map_factory_1_1_node_statistics__t_1aec6d382297aee0df7ed3a9d787f3f5c8"></span>uint32_t <code class="descname">NumStrings</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15CNodeMapFactory16NodeStatistics_t10NumStringsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cpp_genapi_nodemapref.html" class="btn btn-neutral float-right" title="NodeMapRef" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cpp_genapi_ivalue.html" class="btn btn-neutral" title="IValue" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Lucid Vision Labs, Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.31.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

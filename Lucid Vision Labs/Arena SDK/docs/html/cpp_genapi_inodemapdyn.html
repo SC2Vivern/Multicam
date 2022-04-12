@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>INodeMapDyn &mdash; Arena 1.0.31.8 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Arena 1.0.31.8 documentation" href="index.html"/>
+        <link rel="up" title="GenApi C++" href="cpp_genapi.html"/>
+        <link rel="next" title="IPort" href="cpp_genapi_iport.html"/>
+        <link rel="prev" title="INodeMap" href="cpp_genapi_inodemap.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home">
+          
+
+          <!--
+            
+            <img src="_static/lucid-white.png" class="logo" />
+          -->
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.31
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_sdk_datasheet.html">Arena SDK Datasheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_windows.html">Arena SDK for Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_linux.html">Arena SDK for Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sdk.html">Code Reference &amp; Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gentl.html">GenTL Features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cpp.html">Arena C++</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cpp_arena.html">Arena C++</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cpp_genapi.html">GenApi C++</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_concatenatedwrite.html">ConcatenatedWrite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ibase.html">IBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iboolean.html">IBoolean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icategory.html">ICategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ichunkport.html">IChunkPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icommand.html">ICommand</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumentry.html">IEnumEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumeration.html">IEnumeration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumerationt.html">IEnumerationT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ifloat.html">IFloat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inode.html">INode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemap.html">INodeMap</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">INodeMapDyn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iport.html">IPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportrecorder.html">IPortRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportstacked.html">IPortStacked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iregister.html">IRegister</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_istring.html">IString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ivalue.html">IValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapfactory.html">NodeMapFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapref.html">NodeMapRef</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_portwritelist.html">PortWriteList</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_save.html">Save C++</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_examples.html">C++ Code Samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="c.html">Arena C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cs.html">Arena.NET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qt.html">Qt</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arena</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sdk.html">Code Reference &amp; Samples</a> &raquo;</li>
+        
+          <li><a href="cpp.html">Arena C++</a> &raquo;</li>
+        
+          <li><a href="cpp_genapi.html">GenApi C++</a> &raquo;</li>
+        
+      <li>INodeMapDyn</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="inodemapdyn">
+<h1>INodeMapDyn<a class="headerlink" href="#inodemapdyn" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Definition of interface INodeMapDyn. </p>
+<dl class="type">
+<dt id="_CPPv216GENAPI_NAMESPACE">
+<span id="GENAPI_NAMESPACE"></span><span class="target" id="namespace_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e"></span><em class="property">namespace </em><code class="descname">GENAPI_NAMESPACE</code><a class="headerlink" href="#_CPPv216GENAPI_NAMESPACE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE15LoadXMLFromFileERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::LoadXMLFromFile__GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="_i_node_map_dyn_8h_1a85b9f257fada4acf1692ed9ca06c1666"></span><em class="property">virtual</em> void <code class="descname">LoadXMLFromFile</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>FileName</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE15LoadXMLFromFileERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Loads an XML from a file. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE21LoadXMLFromFileInjectERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::LoadXMLFromFileInject__GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="_i_node_map_dyn_8h_1a4b14749d0c68549dcb9020841cbd0091"></span><em class="property">virtual</em> void <code class="descname">LoadXMLFromFileInject</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>TargetFileName</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>InjectFileName</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE21LoadXMLFromFileInjectERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Loads an XML from a file with injection. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE17LoadXMLFromStringERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::LoadXMLFromString__GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="_i_node_map_dyn_8h_1a9c97b5d71dd08a00d8c77c40bc2cae40"></span><em class="property">virtual</em> void <code class="descname">LoadXMLFromString</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>XMLData</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE17LoadXMLFromStringERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Loads an XML from a string. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE23LoadXMLFromStringInjectERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::LoadXMLFromStringInject__GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="_i_node_map_dyn_8h_1a2a514f7e1abe8a0e5a8998162dd62077"></span><em class="property">virtual</em> void <code class="descname">LoadXMLFromStringInject</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>TargetXMLData</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>InjectXMLData</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE23LoadXMLFromStringInjectERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Loads an XML from a string with injection. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE21PreprocessXMLFromFileERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringEK8uint32_t">
+<span id="GENAPI_NAMESPACE::PreprocessXMLFromFile__GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringCR.uint32_tC"></span><span class="target" id="_i_node_map_dyn_8h_1a25c762bea19a96ade2f07cc653736b0c"></span><em class="property">virtual</em> void <code class="descname">PreprocessXMLFromFile</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>XMLFileName</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>StyleSheetFileName</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>OutputFileName</em>, <em class="property">const</em> uint32_t <em>XMLValidation</em> = xvDefault<span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE21PreprocessXMLFromFileERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringEK8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Loads an XML, checks it for correctness, pre-processes it, caches it, and optionally applies a style sheet, and optionally writes it to a file. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">StyleSheetFileName</span></code>: </li>
+<li><code class="docutils literal"><span class="pre">OutputFileName</span></code>: </li>
+<li><code class="docutils literal"><span class="pre">XMLValidation</span></code>: </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE13MergeXMLFilesERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::MergeXMLFiles__GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="_i_node_map_dyn_8h_1abd2c74dd60dcf72c6f308fdab0384171"></span><em class="property">virtual</em> void <code class="descname">MergeXMLFiles</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>TargetFileName</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>InjectedFileName</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>OutputFileName</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE13MergeXMLFilesERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Injects an XML file into a target file. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">InjectedFileName</span></code>: </li>
+<li><code class="docutils literal"><span class="pre">OutputFileName</span></code>: </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25ExtractIndependentSubtreeERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringERN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::ExtractIndependentSubtree__GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringR"></span><span class="target" id="_i_node_map_dyn_8h_1a0aa51e7e2b17cff08c1e0a074d6c72d5"></span><em class="property">virtual</em> void <code class="descname">ExtractIndependentSubtree</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>XMLData</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>InjectXMLData</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>SubTreeRootNodeName</em>, GENICAM_NAMESPACE::gcstring &amp;<em>ExtractedSubtree</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE25ExtractIndependentSubtreeERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringERN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Extract independent subtree. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">InjectXMLData</span></code>: </li>
+<li><code class="docutils literal"><span class="pre">SubTreeRootNodeName</span></code>: </li>
+<li><code class="docutils literal"><span class="pre">ExtractedSubtree</span></code>: </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE26GetSupportedSchemaVersionsERN17GENICAM_NAMESPACE15gcstring_vectorE">
+<span id="GENAPI_NAMESPACE::GetSupportedSchemaVersions__GENICAM_NAMESPACE::gcstring_vectorR"></span><span class="target" id="_i_node_map_dyn_8h_1ad33e4586e31c053d272e4aad8cbcc1a8"></span><em class="property">virtual</em> void <code class="descname">GetSupportedSchemaVersions</code><span class="sig-paren">(</span>GENICAM_NAMESPACE::gcstring_vector &amp;<em>SchemaVersions</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE26GetSupportedSchemaVersionsERN17GENICAM_NAMESPACE15gcstring_vectorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets a list of supported schema versions. </p>
+<p>Each list entry is a string with the format “&lt;Major&gt;.&lt;Minor&gt;” were &lt;Major&gt; and &lt;Minor&gt; are integers Example: {“1.1”, “1.2”} indicates that the schema v1.1 and v1.2 are supported. The SubMinor version number is not given since it is for fully compatible bug fixes only </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE18LoadXMLFromZIPFileERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::LoadXMLFromZIPFile__GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="_i_node_map_dyn_8h_1a7a5064ba197b1511af37136f9182b213"></span><em class="property">virtual</em> void <code class="descname">LoadXMLFromZIPFile</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>ZipFileName</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE18LoadXMLFromZIPFileERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Loads an XML from a ZIP file. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE18LoadXMLFromZIPDataEPKv6size_t">
+<span id="GENAPI_NAMESPACE::LoadXMLFromZIPData__voidCP.s"></span><span class="target" id="_i_node_map_dyn_8h_1aa448e4a794721980e5efe12b36b7ecb1"></span><em class="property">virtual</em> void <code class="descname">LoadXMLFromZIPData</code><span class="sig-paren">(</span><em class="property">const</em> void *<em>zipData</em>, size_t <em>zipSize</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE18LoadXMLFromZIPDataEPKv6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Loads an XML from a ZIP data buffer. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE24PreprocessXMLFromZIPFileERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringEK8uint32_t">
+<span id="GENAPI_NAMESPACE::PreprocessXMLFromZIPFile__GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringCR.uint32_tC"></span><span class="target" id="_i_node_map_dyn_8h_1a502c4aca0388672413308c85d0fe00ed"></span><em class="property">virtual</em> void <code class="descname">PreprocessXMLFromZIPFile</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>XMLFileName</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>StyleSheetFileName</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>OutputFileName</em>, <em class="property">const</em> uint32_t <em>XMLValidation</em> = xvDefault<span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE24PreprocessXMLFromZIPFileERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringEK8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Loads a Zipped XML, checks it for correctness, pre-processes it, caches it, and optionally applies a style sheet, and optionally writes it to a file. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">StyleSheetFileName</span></code>: </li>
+<li><code class="docutils literal"><span class="pre">OutputFileName</span></code>: </li>
+<li><code class="docutils literal"><span class="pre">XMLValidation</span></code>: </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Variables</p>
+<dl class="member">
+<dt>
+<span class="target" id="group___gen_api___public_interface_1ga960e8c7867afb6fe3faf4e09547d6391"></span><code class="descname">interface GENAPI_DECL_ABSTRACT GENAPI_NAMESPACE::INodeMapDyn</code></dt>
+<dd><p>Interface to access the node map. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cpp_genapi_iport.html" class="btn btn-neutral float-right" title="IPort" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cpp_genapi_inodemap.html" class="btn btn-neutral" title="INodeMap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Lucid Vision Labs, Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.31.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

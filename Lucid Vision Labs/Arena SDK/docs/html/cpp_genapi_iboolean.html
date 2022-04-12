@@ -1,0 +1,390 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>IBoolean &mdash; Arena 1.0.31.8 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Arena 1.0.31.8 documentation" href="index.html"/>
+        <link rel="up" title="GenApi C++" href="cpp_genapi.html"/>
+        <link rel="next" title="ICategory" href="cpp_genapi_icategory.html"/>
+        <link rel="prev" title="IBase" href="cpp_genapi_ibase.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home">
+          
+
+          <!--
+            
+            <img src="_static/lucid-white.png" class="logo" />
+          -->
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.31
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_sdk_datasheet.html">Arena SDK Datasheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_windows.html">Arena SDK for Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_linux.html">Arena SDK for Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sdk.html">Code Reference &amp; Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gentl.html">GenTL Features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cpp.html">Arena C++</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cpp_arena.html">Arena C++</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cpp_genapi.html">GenApi C++</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_concatenatedwrite.html">ConcatenatedWrite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ibase.html">IBase</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">IBoolean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icategory.html">ICategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ichunkport.html">IChunkPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icommand.html">ICommand</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumentry.html">IEnumEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumeration.html">IEnumeration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumerationt.html">IEnumerationT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ifloat.html">IFloat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inode.html">INode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemap.html">INodeMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemapdyn.html">INodeMapDyn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iport.html">IPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportrecorder.html">IPortRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportstacked.html">IPortStacked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iregister.html">IRegister</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_istring.html">IString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ivalue.html">IValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapfactory.html">NodeMapFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapref.html">NodeMapRef</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_portwritelist.html">PortWriteList</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_save.html">Save C++</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_examples.html">C++ Code Samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="c.html">Arena C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cs.html">Arena.NET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qt.html">Qt</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arena</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sdk.html">Code Reference &amp; Samples</a> &raquo;</li>
+        
+          <li><a href="cpp.html">Arena C++</a> &raquo;</li>
+        
+          <li><a href="cpp_genapi.html">GenApi C++</a> &raquo;</li>
+        
+      <li>IBoolean</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="iboolean">
+<h1>IBoolean<a class="headerlink" href="#iboolean" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Definition of IBoolean interface. </p>
+<dl class="type">
+<dt id="_CPPv216GENAPI_NAMESPACE">
+<span id="GENAPI_NAMESPACE"></span><span class="target" id="namespace_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e"></span><em class="property">namespace </em><code class="descname">GENAPI_NAMESPACE</code><a class="headerlink" href="#_CPPv216GENAPI_NAMESPACE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv2N16GENAPI_NAMESPACE11CBooleanRefE">
+<span id="GENAPI_NAMESPACE::CBooleanRef"></span><span class="target" id="group___gen_api___public_impl_1ga2b0516316139ae73f3d5f458817271a2"></span><em class="property">typedef </em><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE12CBooleanRefTE" title="GENAPI_NAMESPACE::CBooleanRefT">CBooleanRefT</a>&lt;IBoolean&gt; <code class="descname">CBooleanRef</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE11CBooleanRefE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reference to an IBoolean pointer </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACEaSEb">
+<span id="GENAPI_NAMESPACE::assign-operator__b"></span><span class="target" id="_i_boolean_8h_1ac3f7649af08bf2a69eadfd5617caf784"></span><em class="property">virtual</em> void <code class="descname">operator=</code><span class="sig-paren">(</span>bool <em>Value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACEaSEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE8GetValueEbb">
+<span id="GENAPI_NAMESPACE::GetValue__b.bC"></span><span class="target" id="_i_boolean_8h_1ad756b7de80e97073846c227c6350cc55"></span>GENICAM_NAMESPACE::gcstring <code class="descname">GetValue</code><span class="sig-paren">(</span>bool <em>Verify</em> = false, bool <em>IgnoreCache</em> = false<span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE8GetValueEbb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get node value. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The value read </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">Verify</span></code>: Enables Range verification (default = false). The AccessMode is always checked </li>
+<li><code class="docutils literal"><span class="pre">IgnoreCache</span></code>: If true the value is read ignoring any caches (default = false) </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACEclEv">
+<span id="GENAPI_NAMESPACE::call-operatorC"></span><span class="target" id="_i_boolean_8h_1a6cd9bdcf77b312ae733c626775f24104"></span>GENICAM_NAMESPACE::gcstring <code class="descname">operator()</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACEclEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get node value. </p>
+<p>Execute the command. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Variables</p>
+<dl class="member">
+<dt>
+<span class="target" id="group___gen_api___public_interface_1gaf753a92b53364848a169d64e512b5f9e"></span><code class="descname">interface GENAPI_DECL_ABSTRACT GENAPI_NAMESPACE::IBoolean</code></dt>
+<dd><p>Interface for Boolean properties. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="group___gen_api___public_interface_1gadf60eca8cbbeaaca7993fbfe7f7b78c2"></span><code class="descname">interface GENAPI_DECL_ABSTRACT bool GENAPI_NAMESPACE::Verify</code> = true) = 0</dt>
+<dd></dd></dl>
+
+</div>
+<dl class="class">
+<dt>
+<span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_boolean_ref_t"></span><em class="property">template </em>&lt;<em class="property">class</em> T&gt;</dt>
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CBooleanRefTE">
+<span id="GENAPI_NAMESPACE::CBooleanRefT"></span><em class="property">class </em><code class="descname">CBooleanRefT</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CBooleanRefTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from <a class="reference internal" href="cpp_genapi_ivalue.html#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_value_ref_t"><span class="std std-ref">GENAPI_NAMESPACE::CValueRefT&lt; T &gt;</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CBooleanRefT8SetValueEbb">
+<span id="GENAPI_NAMESPACE::CBooleanRefT::SetValue__b.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_boolean_ref_t_1ad76beea1ea46d6c2b68ed672f389ba15"></span><em class="property">virtual</em> void <code class="descname">SetValue</code><span class="sig-paren">(</span>bool <em>Value</em>, bool <em>Verify</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CBooleanRefT8SetValueEbb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CBooleanRefTaSEb">
+<span id="GENAPI_NAMESPACE::CBooleanRefT::assign-operator__b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_boolean_ref_t_1a5facfc82a07d44581a3ceda6111c9a27"></span><em class="property">virtual</em> void <code class="descname">operator=</code><span class="sig-paren">(</span>bool <em>Value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CBooleanRefTaSEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE12CBooleanRefT8GetValueEbb">
+<span id="GENAPI_NAMESPACE::CBooleanRefT::GetValue__b.bC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_boolean_ref_t_1aa78f6b18f21ae17336ba1e58f22f0edb"></span><em class="property">virtual</em> bool <code class="descname">GetValue</code><span class="sig-paren">(</span>bool <em>Verify</em> = false, bool <em>IgnoreCache</em> = false<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE12CBooleanRefT8GetValueEbb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE12CBooleanRefTclEv">
+<span id="GENAPI_NAMESPACE::CBooleanRefT::call-operatorC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_boolean_ref_t_1a4552143a5d345f4a5bf4757f1dde117e"></span><em class="property">virtual</em> bool <code class="descname">operator()</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE12CBooleanRefTclEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get node value. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Private Types</p>
+<dl class="type">
+<dt id="_CPPv2N16GENAPI_NAMESPACE12CBooleanRefT3refE">
+<span id="GENAPI_NAMESPACE::CBooleanRefT::ref"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_boolean_ref_t_1a4bb8e4e6937a06f3e6ad6961605aeb95"></span><em class="property">typedef </em><a class="reference internal" href="cpp_genapi_ivalue.html#_CPPv2N16GENAPI_NAMESPACE10CValueRefTE" title="GENAPI_NAMESPACE::CValueRefT">CValueRefT</a>&lt;T&gt; <code class="descname">ref</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE12CBooleanRefT3refE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cpp_genapi_icategory.html" class="btn btn-neutral float-right" title="ICategory" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cpp_genapi_ibase.html" class="btn btn-neutral" title="IBase" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Lucid Vision Labs, Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.31.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

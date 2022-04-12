@@ -1,0 +1,89 @@
+;-------------------------------------------------------------------------
+; LucidLwf.INF -- Lucid Vision Labs NDIS LightWeight Filter Driver
+;-------------------------------------------------------------------------
+
+[version]
+Signature       = "$Windows NT$"
+Class           = NetService
+ClassGUID       = {4D36E974-E325-11CE-BFC1-08002BE10318}
+CatalogFile     = lucidlwf.cat
+Provider        = Lucid Vision Labs, Inc
+DriverVer = 02/03/2022,0.0.33.0
+PnpLockDown     = 1
+
+[Manufacturer]
+%Lucid_mfgr%=LUCID,NTx86,NTamd64
+
+[LUCID.NTx86]
+%LucidLwf_Desc%=Install, Lucid_NdisLwf
+
+[LUCID.NTamd64]
+%LucidLwf_Desc%=Install, Lucid_NdisLwf
+
+
+;-------------------------------------------------------------------------
+; Installation Section
+;-------------------------------------------------------------------------
+[Install]
+AddReg=Inst_Ndi
+Characteristics=0x40000
+NetCfgInstanceId="{1CA8644B-A3D9-43BA-8149-5703FC187915}"
+Copyfiles = lucidlwf.copyfiles.sys
+
+[SourceDisksNames]
+1=%LucidLwf_Desc%,"",,
+
+[SourceDisksFiles]
+lucidlwf.sys=1
+
+[DestinationDirs]
+DefaultDestDir=12
+lucidlwf.copyfiles.sys=12
+
+[lucidlwf.copyfiles.sys]
+lucidlwf.sys,,,2
+
+
+;-------------------------------------------------------------------------
+; Ndi installation support
+;-------------------------------------------------------------------------
+[Inst_Ndi]
+HKR, Ndi,Service,,"LucidLwf"
+HKR, Ndi,CoServices,0x00010000,"LucidLwf"
+HKR, Ndi,HelpText,,%LucidLwf_HelpText%
+HKR, Ndi,FilterClass,, custom
+HKR, Ndi,FilterType,0x00010001,2
+
+HKR, Ndi\Interfaces,UpperRange,,"noupper"
+HKR, Ndi\Interfaces,LowerRange,,"nolower"
+HKR, Ndi\Interfaces, FilterMediaTypes,,"ethernet"
+
+HKR, Ndi,FilterRunType,0x00010001, 2 ; Optional filter
+
+;-------------------------------------------------------------------------
+; Service installation support
+;-------------------------------------------------------------------------
+[Install.Services]
+AddService=LucidLwf,,LucidLwf_Service_Inst
+
+[LucidLwf_Service_Inst]
+DisplayName     = %LucidLwf_Desc%
+ServiceType     = 1 ;SERVICE_KERNEL_DRIVER
+StartType       = 1 ;SERVICE_SYSTEM_START
+ErrorControl    = 1 ;SERVICE_ERROR_NORMAL
+ServiceBinary   = %12%\LucidLwf.sys
+LoadOrderGroup  = NDIS
+Description     = %LucidLwf_Desc%
+AddReg          = NdisImPlatformBindingOptions.reg
+
+[Install.Remove.Services]
+DelService=LucidLwf,0x200 ; SPSVCINST_STOPSERVICE
+
+[NdisImPlatformBindingOptions.reg]
+HKR, Parameters, NdisImPlatformBindingOptions,0x00010001,0 ; Subscribe to default behavior
+
+[Strings]
+ProviderString = "Lucid Vision Labs, Inc"
+Lucid_mfgr = "Lucid Vision Labs, Inc"
+LucidLwf_Desc = "Lucid Vision Labs Lightweight Filter Driver"
+LucidLwf_HelpText = "Driver to improve performance of GigE Vision streaming."

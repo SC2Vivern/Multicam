@@ -1,0 +1,647 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Enumeration, Handling Disconnections &mdash; Arena 1.0.31.8 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Arena 1.0.31.8 documentation" href="index.html"/>
+        <link rel="up" title="C# Code Samples" href="cs_examples.html"/>
+        <link rel="next" title="Explore_Nodes, Introduction" href="cs_examples_explore_nodes.html"/>
+        <link rel="prev" title="Enumeration, Introduction" href="cs_examples_enumeration.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home">
+          
+
+          <!--
+            
+            <img src="_static/lucid-white.png" class="logo" />
+          -->
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.31
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_sdk_datasheet.html">Arena SDK Datasheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_windows.html">Arena SDK for Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_linux.html">Arena SDK for Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sdk.html">Code Reference &amp; Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gentl.html">GenTL Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpp.html">Arena C++</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c.html">Arena C</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cs.html">Arena.NET</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cs_arena.html">Arena.NET</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cs_examples.html">C# Code Samples</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_simpleacquisition.html">Simple Acquisition, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition.html">Acquisition, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_multithreadeacquisitionandsave.html">Acquisition, Multithreaded Acquisition and Save</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_multidevice.html">Acquisition, Multi-Device</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_rapidacquisition.html">Acquisition, Rapid Acquisition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_sensorbinning.html">Acquisition, Sensor Binning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_imagecallbacks.html">Callback, Image Callbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_multithreadedimagecallbacks.html">Callback, Multithreaded Image Callbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_onevent.html">Callback, On Event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_onnodechange.html">Callback, On Node Change</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_polling.html">Callback, Polling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_chunkdata.html">ChunkData, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_chunkdata_crcvalidation.html">Chunk Data, CRC Validation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_enumeration.html">Enumeration, Introduction</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Enumeration, Handling Disconnections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_explore_nodes.html">Explore_Nodes, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_explore_nodetypes.html">Explore, Node Types, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_explore_nodemaps.html">Explore, Node Maps, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_exposure.html">Exposure, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_exposure_forhdr.html">Exposure, For HDR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_exposure_long.html">Exposure, Long</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_forceip.html">Force Ip, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_helios_heatmap.html">Helios, HeatMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_helios_minmaxdepth.html">Helios, Min Max Depth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_helios_smoothresults.html">Helios, Smooth Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_ipconfig_manual.html">IP Config, Manual</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_ipconfig_auto.html">IP Config, Auto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_lut.html">LUT, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_multicast.html">Multicast, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_pixelcorrection.html">Pixel Correction, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_polarization_colordolpaolp.html">Polarization, Color DoLP AoLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_polarization_dolpaolp.html">Polarization, DoLP AoLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_record.html">Record, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save.html">Save, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_bitmap.html">Save, Bitmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_filenamepattern.html">Save, File Name Pattern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_ply.html">Save, Ply</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_raw.html">Save, Raw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_scheduledactioncommands.html">Scheduled Action Commands, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_sequencer_hdr.html">Sequencer, HDR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_streamables.html">Streamables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_trigger.html">Trigger, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_trigger_nextleader.html">Trigger, Next Leader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_trigger_overlappingtrigger.html">Trigger, Overlapping Trigger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_usersets.html">UserSets, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wpf_cameraselection.html">Windows Presentation Foundation, Camera Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wpf_featuretree.html">Windows Presentation Foundation, Feature Tree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wpf_miniexample.html">Windows Presentation Foundation, Mini Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wpf_streaming.html">Windows Presentation Foundation, Streaming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qt.html">Qt</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arena</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sdk.html">Code Reference &amp; Samples</a> &raquo;</li>
+        
+          <li><a href="cs.html">Arena.NET</a> &raquo;</li>
+        
+          <li><a href="cs_examples.html">C# Code Samples</a> &raquo;</li>
+        
+      <li>Enumeration, Handling Disconnections</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="enumeration-handling-disconnections">
+<h1>Enumeration, Handling Disconnections<a class="headerlink" href="#enumeration-handling-disconnections" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-c++"><div class="highlight"><pre><span></span><span class="cm">/***************************************************************************************</span>
+<span class="cm"> ***                                                                                 ***</span>
+<span class="cm"> ***  Copyright (c) 2021, Lucid Vision Labs, Inc.                                    ***</span>
+<span class="cm"> ***                                                                                 ***</span>
+<span class="cm"> ***  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR     ***</span>
+<span class="cm"> ***  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,       ***</span>
+<span class="cm"> ***  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE    ***</span>
+<span class="cm"> ***  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER         ***</span>
+<span class="cm"> ***  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  ***</span>
+<span class="cm"> ***  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  ***</span>
+<span class="cm"> ***  SOFTWARE.                                                                      ***</span>
+<span class="cm"> ***                                                                                 ***</span>
+<span class="cm"> ***************************************************************************************/</span>
+<span class="k">using</span> <span class="n">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">System</span><span class="p">.</span><span class="n">Threading</span><span class="p">;</span> <span class="c1">// for threads and mutexes</span>
+<span class="k">using</span> <span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">;</span> <span class="c1">// for List&lt;&gt;</span>
+<span class="k">using</span> <span class="n">System</span><span class="p">.</span><span class="n">Linq</span><span class="p">;</span> <span class="c1">// for List&lt;&gt;.FirstOrDefault()</span>
+
+<span class="k">namespace</span> <span class="n">Cs_Enumeration_HandlingDisconnections</span>
+<span class="p">{</span>
+        <span class="k">class</span> <span class="nc">Cs_Enumeration_HandlingDisconnections</span>
+        <span class="p">{</span>
+                <span class="k">const</span> <span class="n">String</span> <span class="n">TAB1</span> <span class="o">=</span> <span class="s">&quot;  &quot;</span><span class="p">;</span>
+                <span class="k">const</span> <span class="n">String</span> <span class="n">TAB2</span> <span class="o">=</span> <span class="s">&quot;    &quot;</span><span class="p">;</span>
+                <span class="k">const</span> <span class="n">String</span> <span class="n">TAB3</span> <span class="o">=</span> <span class="s">&quot;      &quot;</span><span class="p">;</span>
+                <span class="k">const</span> <span class="n">String</span> <span class="n">TAB4</span> <span class="o">=</span> <span class="s">&quot;        &quot;</span><span class="p">;</span>
+
+                <span class="c1">// Enumeration: Handling Disconnections</span>
+                <span class="c1">//    This example demonstrates a multi-threaded approach to handling</span>
+                <span class="c1">//    device disconnections. It spawns two threads, each with a different</span>
+                <span class="c1">//    responsibility. First, the acquisition thread is responsible for</span>
+                <span class="c1">//    acquiring images when the device is connected. Second, the</span>
+                <span class="c1">//    enumeration thread handles disconnections by reconnecting the</span>
+                <span class="c1">//    device and notifying the acquisition thread.</span>
+
+                <span class="c1">// =-=-=-=-=-=-=-=-=-</span>
+                <span class="c1">// =-=- SETTINGS =-=-</span>
+                <span class="c1">// =-=-=-=-=-=-=-=-=-</span>
+
+                <span class="c1">// image timeout</span>
+                <span class="k">const</span> <span class="n">UInt32</span> <span class="n">IMAGE_TIMEOUT</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span>
+
+                <span class="c1">// update timeout</span>
+                <span class="k">const</span> <span class="n">UInt32</span> <span class="n">UPDATE_TIMEOUT</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+
+                <span class="c1">// maximum number of images</span>
+                <span class="k">const</span> <span class="n">UInt32</span> <span class="n">MAX_IMAGES</span> <span class="o">=</span> <span class="mi">500</span><span class="p">;</span>
+
+                <span class="c1">// Global settings</span>
+                <span class="c1">//    This example uses global scope for variables and information shared</span>
+                <span class="c1">//    between threads. This is not a best practice but is done this way</span>
+                <span class="c1">//    for the sake of simplicity. This structure could just as easily be</span>
+                <span class="c1">//    placed in a class.</span>
+
+                <span class="c1">// arenaNet</span>
+                <span class="k">static</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">ISystem</span> <span class="n">g_system</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+                <span class="k">static</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IDevice</span> <span class="n">g_device</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+                <span class="k">static</span> <span class="n">String</span> <span class="n">g_serialNumber</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+                <span class="k">static</span> <span class="n">UInt32</span> <span class="n">g_subnetMask</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+                <span class="c1">// mutex for threading</span>
+                <span class="k">private</span> <span class="k">static</span> <span class="n">Mutex</span> <span class="n">g_deviceMutex</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Mutex</span><span class="p">();</span>
+
+                <span class="c1">// other</span>
+                <span class="k">static</span> <span class="n">Boolean</span> <span class="n">g_isRunning</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+                <span class="c1">// =-=-=-=-=-=-=-=-=-</span>
+                <span class="c1">// =-=- EXAMPLE -=-=-</span>
+                <span class="c1">// =-=-=-=-=-=-=-=-=-</span>
+
+                <span class="c1">// reconnects a device when disconnected</span>
+                <span class="c1">// (1) On disconnection, activate</span>
+                <span class="c1">// (2) Search for device</span>
+                <span class="c1">// (3) Reconnect device</span>
+                <span class="c1">// (4) Notify all on reconnection</span>
+                <span class="c1">// (5) Notify all on exit</span>
+                <span class="k">static</span> <span class="kt">void</span> <span class="nf">EnumerationThread</span><span class="p">()</span>
+                <span class="p">{</span>
+                        <span class="k">while</span> <span class="p">(</span><span class="n">g_isRunning</span><span class="p">)</span>
+                        <span class="p">{</span>
+                                <span class="k">while</span> <span class="p">(</span><span class="n">g_isRunning</span> <span class="o">&amp;&amp;</span> <span class="n">g_device</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span>
+                                <span class="p">{</span>
+                                        <span class="c1">// Search for device</span>
+                                        <span class="c1">//    When the device has been disconnected, this thread</span>
+                                        <span class="c1">//    waits for it to reconnect, constantly updating and</span>
+                                        <span class="c1">//    scanning the device list for the lost device by its</span>
+                                        <span class="c1">//    serial number</span>
+                                        <span class="n">g_system</span><span class="p">.</span><span class="n">UpdateDevices</span><span class="p">(</span><span class="n">UPDATE_TIMEOUT</span><span class="p">);</span>
+
+                                        <span class="n">List</span><span class="o">&lt;</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IDeviceInfo</span><span class="o">&gt;</span> <span class="n">deviceInfos</span> <span class="o">=</span> <span class="n">g_system</span><span class="p">.</span><span class="n">Devices</span><span class="p">;</span>
+                                        <span class="n">var</span> <span class="n">it</span> <span class="o">=</span> <span class="n">deviceInfos</span><span class="p">.</span><span class="n">FirstOrDefault</span><span class="p">(</span><span class="n">x</span> <span class="o">=&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">SerialNumber</span> <span class="o">==</span> <span class="n">g_serialNumber</span><span class="p">);</span>
+
+                                        <span class="k">if</span> <span class="p">(</span><span class="n">it</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>
+                                        <span class="p">{</span>
+                                                <span class="c1">// Recreate device and notify other thread</span>
+                                                <span class="c1">//    Once the device has been found, recreate it and</span>
+                                                <span class="c1">//    notify the acquisition thread that it can stop</span>
+                                                <span class="c1">//    waiting and continue acquiring images.</span>
+                                                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\r</span><span class="s">{0}Device reconnected&quot;</span><span class="p">,</span> <span class="n">TAB4</span><span class="p">);</span>
+
+                                                <span class="n">g_device</span> <span class="o">=</span> <span class="n">g_system</span><span class="p">.</span><span class="n">CreateDevice</span><span class="p">(</span><span class="n">it</span><span class="p">);</span>
+
+                                                <span class="c1">// Ensure appropriate network settings</span>
+                                                <span class="c1">//    Check that the device is on the same subnet after</span>
+                                                <span class="c1">//    reconnecting the camera. If the camera/adapter are</span>
+                                                <span class="c1">//    on a non 169.254.*.* subnet but not using a</span>
+                                                <span class="c1">//    persistent IP or DHCP, the camera will</span>
+                                                <span class="c1">//    automatically be assigned an LLA and pick a</span>
+                                                <span class="c1">//    169.254.*.* IP/subnet after reconnecting, causing</span>
+                                                <span class="c1">//    the example to exit. There are several ways to fix</span>
+                                                <span class="c1">//    this issue: (1) by setting a static IP to the</span>
+                                                <span class="c1">//    ethernet port, (2) forcing an IP address whenever</span>
+                                                <span class="c1">//    the device is updated (see C_ForceIP), (3) running</span>
+                                                <span class="c1">//    ArenaConfig to configure the adapter settings, or</span>
+                                                <span class="c1">//    (4) setting up a persistent IP on the camera using</span>
+                                                <span class="c1">//    IPConfigUtility</span>
+                                                <span class="n">UInt32</span> <span class="n">subnetMaskReconnect</span> <span class="o">=</span> <span class="p">(</span><span class="n">UInt32</span><span class="p">)</span><span class="n">it</span><span class="p">.</span><span class="n">SubnetMask</span><span class="p">;</span>
+                                                <span class="k">if</span> <span class="p">(</span><span class="n">subnetMaskReconnect</span> <span class="o">!=</span> <span class="n">g_subnetMask</span><span class="p">)</span>
+                                                <span class="p">{</span>
+                                                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Error: Subnet has changed upon reconnecting&quot;</span><span class="p">,</span> <span class="n">TAB2</span><span class="p">);</span>
+                                                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Subnet at example start:   {1}&quot;</span><span class="p">,</span> <span class="n">TAB3</span><span class="p">,</span> <span class="n">g_subnetMask</span><span class="p">);</span>
+                                                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Subnet after reconnection: {1}&quot;</span><span class="p">,</span> <span class="n">TAB3</span><span class="p">,</span> <span class="n">subnetMaskReconnect</span><span class="p">);</span>
+                                                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">{0}Press enter to exit example&quot;</span><span class="p">,</span> <span class="n">TAB1</span><span class="p">);</span>
+
+                                                        <span class="n">g_isRunning</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+                                                        <span class="n">Monitor</span><span class="p">.</span><span class="n">Enter</span><span class="p">(</span><span class="n">g_deviceMutex</span><span class="p">);</span>
+                                                        <span class="n">Monitor</span><span class="p">.</span><span class="n">PulseAll</span><span class="p">(</span><span class="n">g_deviceMutex</span><span class="p">);</span>
+                                                        <span class="n">Monitor</span><span class="p">.</span><span class="n">Exit</span><span class="p">(</span><span class="n">g_deviceMutex</span><span class="p">);</span>
+                                                <span class="p">}</span>
+
+                                                <span class="c1">// notify other thread to wake up and continue grabbing</span>
+                                                <span class="c1">// images</span>
+                                                <span class="n">Monitor</span><span class="p">.</span><span class="n">Enter</span><span class="p">(</span><span class="n">g_deviceMutex</span><span class="p">);</span>
+                                                <span class="n">Monitor</span><span class="p">.</span><span class="n">PulseAll</span><span class="p">(</span><span class="n">g_deviceMutex</span><span class="p">);</span>
+                                                <span class="n">Monitor</span><span class="p">.</span><span class="n">Exit</span><span class="p">(</span><span class="n">g_deviceMutex</span><span class="p">);</span>
+                                        <span class="p">}</span>
+                                <span class="p">}</span>
+                        <span class="p">}</span>
+
+                        <span class="c1">// Notify other thread on exit</span>
+                        <span class="c1">//    If the device is disconnected at the time of exit, the other</span>
+                        <span class="c1">//    thread will be waiting for reconnection. Sending this</span>
+                        <span class="c1">//    notification allows the other thread to stop waiting and</span>
+                        <span class="c1">//    continue to exit.</span>
+                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Notify other thread on exit&quot;</span><span class="p">,</span> <span class="n">TAB3</span><span class="p">);</span>
+
+                        <span class="n">Monitor</span><span class="p">.</span><span class="n">Enter</span><span class="p">(</span><span class="n">g_deviceMutex</span><span class="p">);</span>
+                        <span class="n">Monitor</span><span class="p">.</span><span class="n">PulseAll</span><span class="p">(</span><span class="n">g_deviceMutex</span><span class="p">);</span>
+                        <span class="n">Monitor</span><span class="p">.</span><span class="n">Exit</span><span class="p">(</span><span class="n">g_deviceMutex</span><span class="p">);</span>
+                <span class="p">}</span>
+
+                <span class="c1">// acquires images while device is connected</span>
+                <span class="c1">// (1) starts stream</span>
+                <span class="c1">// (2) retrieves images</span>
+                <span class="c1">// (3) catches disconnections, destroying device appropriately</span>
+                <span class="c1">// (4) waits for reconnection</span>
+                <span class="c1">// (5) restarts stream, continuing to retrieve images</span>
+                <span class="c1">// (6) stops stream</span>
+                <span class="k">static</span> <span class="kt">void</span> <span class="nf">AcquisitionThread</span><span class="p">()</span>
+                <span class="p">{</span>
+            <span class="c1">// enable stream auto negotiate packet size</span>
+            <span class="n">var</span> <span class="n">streamAutoNegotiatePacketSizeNode</span> <span class="o">=</span> <span class="p">(</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IBoolean</span><span class="p">)</span><span class="n">g_device</span><span class="p">.</span><span class="n">TLStreamNodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;StreamAutoNegotiatePacketSize&quot;</span><span class="p">);</span>
+            <span class="n">streamAutoNegotiatePacketSizeNode</span><span class="p">.</span><span class="n">Value</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+
+            <span class="c1">// enable stream packet resend</span>
+            <span class="n">var</span> <span class="n">streamPacketResendEnableNode</span> <span class="o">=</span> <span class="p">(</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IBoolean</span><span class="p">)</span><span class="n">g_device</span><span class="p">.</span><span class="n">TLStreamNodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;StreamPacketResendEnable&quot;</span><span class="p">);</span>
+            <span class="n">streamPacketResendEnableNode</span><span class="p">.</span><span class="n">Value</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+
+            <span class="kt">int</span> <span class="n">numImages</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+                        <span class="n">String</span> <span class="n">countStr</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+                        <span class="n">g_device</span><span class="p">.</span><span class="n">StartStream</span><span class="p">();</span>
+
+                        <span class="k">while</span> <span class="p">(</span><span class="n">g_isRunning</span><span class="p">)</span>
+                        <span class="p">{</span>
+                                <span class="c1">// Lock device across threads</span>
+                                <span class="c1">//    Use a mutex to lock the device across threads, ensuring</span>
+                                <span class="c1">//    that simultaneous writes/reads across threads don&#39;t clobber</span>
+                                <span class="c1">//    one another.</span>
+                                <span class="n">Monitor</span><span class="p">.</span><span class="n">Enter</span><span class="p">(</span><span class="n">g_deviceMutex</span><span class="p">);</span>
+
+                                <span class="k">try</span>
+                                <span class="p">{</span>
+                                        <span class="k">if</span> <span class="p">(</span><span class="n">g_device</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span>
+                                        <span class="p">{</span>
+                                                <span class="c1">// Wait for reconnection if necessary</span>
+                                                <span class="c1">//    When the device has been disconnected, the</span>
+                                                <span class="c1">//    acquisition thread waits on the enumeration thread</span>
+                                                <span class="c1">//    to reconnect the device. This is done through a</span>
+                                                <span class="c1">//    conditional variable. This conditional variable has</span>
+                                                <span class="c1">//    also been set up to stop waiting if the application</span>
+                                                <span class="c1">//    has been terminated.</span>
+                                                <span class="n">Monitor</span><span class="p">.</span><span class="n">Wait</span><span class="p">(</span><span class="n">g_deviceMutex</span><span class="p">);</span>
+
+                                                <span class="c1">// Restart stream if connected</span>
+                                                <span class="c1">//    Check that the device has been reconnected in case</span>
+                                                <span class="c1">//    the the notification has been sent to quit the</span>
+                                                <span class="c1">//    application. If the device has been reconnected,</span>
+                                                <span class="c1">//    restart the stream so that it can continue</span>
+                                                <span class="c1">//    acquiring images.</span>
+                                                <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">g_device</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">null</span><span class="p">))</span>
+                                                        <span class="n">g_device</span><span class="p">.</span><span class="n">StartStream</span><span class="p">();</span>
+                                        <span class="p">}</span>
+
+                                        <span class="c1">// Get images while connected</span>
+                                        <span class="c1">//    While the device is connected and streaming, grab</span>
+                                        <span class="c1">//    images. This example just counts the images and</span>
+                                        <span class="c1">//    requeues their buffers; however, using the image</span>
+                                        <span class="c1">//    factory to copy or convert the images for display or</span>
+                                        <span class="c1">//    processing might be a useful addition.</span>
+                                        <span class="k">while</span> <span class="p">(</span><span class="n">g_isRunning</span> <span class="o">&amp;&amp;</span> <span class="n">numImages</span> <span class="o">&lt;=</span> <span class="n">MAX_IMAGES</span><span class="p">)</span>
+                                        <span class="p">{</span>
+                                                <span class="c1">// get image</span>
+                                                <span class="n">countStr</span> <span class="o">=</span> <span class="s">&quot;Get image &quot;</span> <span class="o">+</span> <span class="n">numImages</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+                                                <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;{0}{1}</span><span class="se">\r</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">TAB3</span><span class="p">,</span> <span class="n">countStr</span><span class="p">);</span>
+
+                                                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IImage</span> <span class="n">image</span> <span class="o">=</span> <span class="n">g_device</span><span class="p">.</span><span class="n">GetImage</span><span class="p">(</span><span class="n">IMAGE_TIMEOUT</span><span class="p">);</span>
+                                                <span class="n">numImages</span><span class="o">++</span><span class="p">;</span>
+                                                <span class="n">g_device</span><span class="p">.</span><span class="n">RequeueBuffer</span><span class="p">(</span><span class="n">image</span><span class="p">);</span>
+                                        <span class="p">}</span>
+                                <span class="p">}</span>
+                                <span class="k">catch</span> <span class="p">(</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">TimeoutException</span><span class="p">)</span>
+                                <span class="p">{</span>
+                                        <span class="c1">// Catch disconnection</span>
+                                        <span class="c1">//    Disconnections will most likely show themselves as</span>
+                                        <span class="c1">//    read/write timeouts. This is caused as the host</span>
+                                        <span class="c1">//    attempts to signal the device, but the device doesn&#39;t</span>
+                                        <span class="c1">//    respond, timing out.</span>
+                                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}{1}&quot;</span><span class="p">,</span> <span class="n">TAB3</span><span class="p">,</span> <span class="n">countStr</span><span class="p">);</span>
+                                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Device disconnected&quot;</span><span class="p">,</span> <span class="n">TAB4</span><span class="p">);</span>
+
+                                        <span class="n">g_system</span><span class="p">.</span><span class="n">DestroyDevice</span><span class="p">(</span><span class="n">g_device</span><span class="p">);</span>
+                                        <span class="n">g_device</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+                                <span class="p">}</span>
+
+                                <span class="k">if</span> <span class="p">(</span><span class="n">numImages</span> <span class="o">&gt;</span> <span class="n">MAX_IMAGES</span><span class="p">)</span>
+                                <span class="p">{</span>
+                                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">{0}Acquisition completed, press enter to continue&quot;</span><span class="p">,</span> <span class="n">TAB2</span><span class="p">);</span>
+                                        <span class="n">g_isRunning</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+                                <span class="p">}</span>
+
+                                <span class="n">Monitor</span><span class="p">.</span><span class="n">Exit</span><span class="p">(</span><span class="n">g_deviceMutex</span><span class="p">);</span>
+                        <span class="p">}</span>
+
+                        <span class="c1">// stop stream</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">g_device</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">null</span><span class="p">))</span>
+                                <span class="n">g_device</span><span class="p">.</span><span class="n">StopStream</span><span class="p">();</span>
+                <span class="p">}</span>
+
+                <span class="c1">// manages Arena objects and threads</span>
+                <span class="c1">// (1) prepare global scope</span>
+                <span class="c1">// (2) start acquisition and enumeration threads</span>
+                <span class="c1">// (3) wait for key press</span>
+                <span class="c1">// (3) stop acquisition and clean up threads</span>
+                <span class="k">static</span> <span class="kt">void</span> <span class="nf">RunExample</span><span class="p">()</span>
+                <span class="p">{</span>
+                        <span class="c1">// Start acquisition and enumeration threads and wait for key</span>
+                        <span class="c1">//    Spawn a thread for acquisition and a thread for enumeration.</span>
+                        <span class="c1">//    Keeping this kind of work off the main thread allows for</span>
+                        <span class="c1">//    multiple things happening simultaneously in the case of more</span>
+                        <span class="c1">//    complex applications.</span>
+                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Start acquisition and enumeration threads&quot;</span><span class="p">,</span> <span class="n">TAB1</span><span class="p">);</span>
+
+                        <span class="n">g_isRunning</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+
+                        <span class="n">Thread</span> <span class="n">acquisitionThread</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Thread</span><span class="p">(</span><span class="n">AcquisitionThread</span><span class="p">);</span>
+                        <span class="n">acquisitionThread</span><span class="p">.</span><span class="n">Start</span><span class="p">();</span>
+
+                        <span class="n">Thread</span> <span class="n">enumerationThread</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Thread</span><span class="p">(</span><span class="n">EnumerationThread</span><span class="p">);</span>
+                        <span class="n">enumerationThread</span><span class="p">.</span><span class="n">Start</span><span class="p">();</span>
+
+                        <span class="c1">// Stop acquisition on enter pressed</span>
+                        <span class="c1">//    Because the main thread pushed all the work into the worker</span>
+                        <span class="c1">//    threads, it is free to wait for user input to end the</span>
+                        <span class="c1">//    application.</span>
+                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}Press enter to stop acquisition&quot;</span><span class="p">,</span> <span class="n">TAB2</span><span class="p">);</span>
+                        <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+
+                        <span class="c1">// Join threads</span>
+                        <span class="c1">//    When user input is received, the application must send a signal</span>
+                        <span class="c1">//    to the worker threads that this has happened. This is</span>
+                        <span class="c1">//    accomplished with a global boolean. The application should then</span>
+                        <span class="c1">//    wait for each thread to complete before continuing its</span>
+                        <span class="c1">//    shutdown.</span>
+                        <span class="n">g_isRunning</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+                        <span class="n">acquisitionThread</span><span class="p">.</span><span class="n">Join</span><span class="p">();</span>
+                        <span class="n">enumerationThread</span><span class="p">.</span><span class="n">Join</span><span class="p">();</span>
+                <span class="p">}</span>
+
+                <span class="k">static</span> <span class="kt">void</span> <span class="nf">Main</span><span class="p">(</span><span class="n">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+                <span class="p">{</span>
+                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Cs_Enumeration_HandlingDisconnections&quot;</span><span class="p">);</span>
+                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Please manually disconnect and reconnect device as device acquires images&quot;</span><span class="p">);</span>
+
+                        <span class="k">try</span>
+                        <span class="p">{</span>
+                                <span class="c1">// prepare example</span>
+                                <span class="n">g_system</span> <span class="o">=</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">Arena</span><span class="p">.</span><span class="n">OpenSystem</span><span class="p">();</span>
+                                <span class="n">g_system</span><span class="p">.</span><span class="n">UpdateDevices</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+
+                                <span class="k">if</span> <span class="p">(</span><span class="n">g_system</span><span class="p">.</span><span class="n">Devices</span><span class="p">.</span><span class="n">Count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+                                <span class="p">{</span>
+                                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Waiting for a device...&quot;</span><span class="p">);</span>
+
+                                        <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+                                        <span class="p">{</span>
+                                                <span class="n">g_system</span><span class="p">.</span><span class="n">UpdateDevices</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+                                                <span class="k">if</span> <span class="p">(</span><span class="n">g_system</span><span class="p">.</span><span class="n">Devices</span><span class="p">.</span><span class="n">Count</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+                                                        <span class="k">break</span><span class="p">;</span>
+                                        <span class="p">}</span>
+                                <span class="p">}</span>
+                                <span class="n">g_serialNumber</span> <span class="o">=</span> <span class="n">g_system</span><span class="p">.</span><span class="n">Devices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">SerialNumber</span><span class="p">;</span>
+                                <span class="n">g_subnetMask</span> <span class="o">=</span> <span class="p">(</span><span class="n">UInt32</span><span class="p">)</span><span class="n">g_system</span><span class="p">.</span><span class="n">Devices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">SubnetMask</span><span class="p">;</span>
+                                <span class="n">g_device</span> <span class="o">=</span> <span class="n">g_system</span><span class="p">.</span><span class="n">CreateDevice</span><span class="p">(</span><span class="n">g_system</span><span class="p">.</span><span class="n">Devices</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+
+                                <span class="c1">// run example</span>
+                                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Commence example</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+                                <span class="n">RunExample</span><span class="p">();</span>
+                                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Example complete&quot;</span><span class="p">);</span>
+
+                                <span class="c1">// clean up device and system</span>
+                                <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">g_device</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">null</span><span class="p">))</span>
+                                        <span class="n">g_system</span><span class="p">.</span><span class="n">DestroyDevice</span><span class="p">(</span><span class="n">g_device</span><span class="p">);</span>
+
+                                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">Arena</span><span class="p">.</span><span class="n">CloseSystem</span><span class="p">(</span><span class="n">g_system</span><span class="p">);</span>
+                        <span class="p">}</span>
+                        <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span>
+                        <span class="p">{</span>
+                                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Exception thrown: {0}&quot;</span><span class="p">,</span> <span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+                        <span class="p">}</span>
+
+                        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Press enter to complete&quot;</span><span class="p">);</span>
+                        <span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span>
+                <span class="p">}</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cs_examples_explore_nodes.html" class="btn btn-neutral float-right" title="Explore_Nodes, Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cs_examples_enumeration.html" class="btn btn-neutral" title="Enumeration, Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Lucid Vision Labs, Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.31.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,610 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>INode &mdash; Arena 1.0.31.8 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Arena 1.0.31.8 documentation" href="index.html"/>
+        <link rel="up" title="GenApi C++" href="cpp_genapi.html"/>
+        <link rel="next" title="INodeMap" href="cpp_genapi_inodemap.html"/>
+        <link rel="prev" title="IFloat" href="cpp_genapi_ifloat.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home">
+          
+
+          <!--
+            
+            <img src="_static/lucid-white.png" class="logo" />
+          -->
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.31
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_sdk_datasheet.html">Arena SDK Datasheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_windows.html">Arena SDK for Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_linux.html">Arena SDK for Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sdk.html">Code Reference &amp; Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gentl.html">GenTL Features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cpp.html">Arena C++</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cpp_arena.html">Arena C++</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cpp_genapi.html">GenApi C++</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_concatenatedwrite.html">ConcatenatedWrite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ibase.html">IBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iboolean.html">IBoolean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icategory.html">ICategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ichunkport.html">IChunkPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icommand.html">ICommand</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumentry.html">IEnumEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumeration.html">IEnumeration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumerationt.html">IEnumerationT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ifloat.html">IFloat</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">INode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemap.html">INodeMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemapdyn.html">INodeMapDyn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iport.html">IPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportrecorder.html">IPortRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportstacked.html">IPortStacked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iregister.html">IRegister</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_istring.html">IString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ivalue.html">IValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapfactory.html">NodeMapFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapref.html">NodeMapRef</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_portwritelist.html">PortWriteList</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_save.html">Save C++</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_examples.html">C++ Code Samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="c.html">Arena C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cs.html">Arena.NET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qt.html">Qt</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arena</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sdk.html">Code Reference &amp; Samples</a> &raquo;</li>
+        
+          <li><a href="cpp.html">Arena C++</a> &raquo;</li>
+        
+          <li><a href="cpp_genapi.html">GenApi C++</a> &raquo;</li>
+        
+      <li>INode</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="inode">
+<h1>INode<a class="headerlink" href="#inode" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Definition of interface INode and types NodeList_t and CallbackHandleType: </p>
+<dl class="type">
+<dt id="_CPPv216GENAPI_NAMESPACE">
+<span id="GENAPI_NAMESPACE"></span><span class="target" id="namespace_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e"></span><em class="property">namespace </em><code class="descname">GENAPI_NAMESPACE</code><a class="headerlink" href="#_CPPv216GENAPI_NAMESPACE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10NodeList_tE">
+<span id="GENAPI_NAMESPACE::NodeList_t"></span><span class="target" id="_i_node_8h_1aa33963917bcc0a8f38633072c9456375"></span><em class="property">typedef </em>node_vector <code class="descname">NodeList_t</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10NodeList_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>a list of node references </p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N16GENAPI_NAMESPACE18CallbackHandleTypeE">
+<span id="GENAPI_NAMESPACE::CallbackHandleType"></span><span class="target" id="_i_node_8h_1a81ab771cf930642b12c6fe9f8bec260f"></span><em class="property">typedef </em>intptr_t <code class="descname">CallbackHandleType</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE18CallbackHandleTypeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>the callback handle for nodes </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE12GetNameSpaceEv">
+<span id="GENAPI_NAMESPACE::GetNameSpaceC"></span><span class="target" id="_i_node_8h_1aed5e49e301b90f98b5d62d5d2c07c090"></span><em class="property">virtual</em> <a class="reference internal" href="cpp_genapi_ibase.html#_CPPv216GENAPI_NAMESPACE" title="GENAPI_NAMESPACE">GENAPI_NAMESPACE</a>::ENameSpace <code class="descname">GetNameSpace</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE12GetNameSpaceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get name space. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE13GetVisibilityEv">
+<span id="GENAPI_NAMESPACE::GetVisibilityC"></span><span class="target" id="_i_node_8h_1ac87d10ff4e26ae7f6368f1a138f500ca"></span><em class="property">virtual</em> EVisibility <code class="descname">GetVisibility</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE13GetVisibilityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the recommended visibility of the node. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE14InvalidateNodeEv">
+<span id="GENAPI_NAMESPACE::InvalidateNode"></span><span class="target" id="_i_node_8h_1a20bd7fd98c0884fce19e01533362471d"></span><em class="property">virtual</em> void <code class="descname">InvalidateNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE14InvalidateNodeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Indicates that the node’s value may have changed. </p>
+<p>Fires the callback on this and all dependent nodes </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE10IsCachableEv">
+<span id="GENAPI_NAMESPACE::IsCachableC"></span><span class="target" id="_i_node_8h_1a108226c397d7bb5c87e9a745689e4b6e"></span><em class="property">virtual</em> bool <code class="descname">IsCachable</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE10IsCachableEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Is the node value cachable. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE21IsAccessModeCacheableEv">
+<span id="GENAPI_NAMESPACE::IsAccessModeCacheableC"></span><span class="target" id="_i_node_8h_1aecb48d9ba5c18a70ebcfce2dec527bd4"></span><em class="property">virtual</em> EYesNo <code class="descname">IsAccessModeCacheable</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE21IsAccessModeCacheableEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>True if the AccessMode can be cached. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE14GetCachingModeEv">
+<span id="GENAPI_NAMESPACE::GetCachingModeC"></span><span class="target" id="_i_node_8h_1aadc7633a68d024ce1297ca208b229c7c"></span><em class="property">virtual</em> ECachingMode <code class="descname">GetCachingMode</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE14GetCachingModeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get Caching Mode. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE14GetPollingTimeEv">
+<span id="GENAPI_NAMESPACE::GetPollingTimeC"></span><span class="target" id="_i_node_8h_1a96158f28bfffeaade3358ba59977dfa7"></span><em class="property">virtual</em> int64_t <code class="descname">GetPollingTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE14GetPollingTimeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>recommended polling time (for not cachable nodes) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE14GetDescriptionEv">
+<span id="GENAPI_NAMESPACE::GetDescriptionC"></span><span class="target" id="_i_node_8h_1a2e84bf4253b324b9fc503bcf80301250"></span><em class="property">virtual</em> GENICAM_NAMESPACE::gcstring <code class="descname">GetDescription</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE14GetDescriptionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get a long description of the node. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE14GetDisplayNameEv">
+<span id="GENAPI_NAMESPACE::GetDisplayNameC"></span><span class="target" id="_i_node_8h_1a1d99618198ce842f8633324d8accca6a"></span><em class="property">virtual</em> GENICAM_NAMESPACE::gcstring <code class="descname">GetDisplayName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE14GetDisplayNameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get a name string for display. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE13GetDeviceNameEv">
+<span id="GENAPI_NAMESPACE::GetDeviceNameC"></span><span class="target" id="_i_node_8h_1a43818108ea74bf0d943be95ed3bbdc85"></span>GENICAM_NAMESPACE::gcstring <code class="descname">GetDeviceName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE13GetDeviceNameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get a name of the device. </p>
+<p>Get device name.</p>
+<p>The device name identifies a device instance, e.g. for debuggin purposes. The default ist “Device”. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE11GetChildrenERN16GENAPI_NAMESPACE10NodeList_tE9ELinkType">
+<span id="GENAPI_NAMESPACE::GetChildren__GENAPI_NAMESPACE::NodeList_tR.ELinkTypeC"></span><span class="target" id="_i_node_8h_1a5d0813aa4312b75ad3e974ed661e39fe"></span><em class="property">virtual</em> void <code class="descname">GetChildren</code><span class="sig-paren">(</span><a class="reference internal" href="cpp_genapi_ibase.html#_CPPv216GENAPI_NAMESPACE" title="GENAPI_NAMESPACE">GENAPI_NAMESPACE</a>::<a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE10NodeList_tE" title="GENAPI_NAMESPACE::NodeList_t">NodeList_t</a> &amp;<em>Children</em>, ELinkType <em>LinkType</em> = ctReadingChildren<span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE11GetChildrenERN16GENAPI_NAMESPACE10NodeList_tE9ELinkType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get all nodes this node directly depends on. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">Children</span></code>: List of children nodes </li>
+<li><code class="docutils literal"><span class="pre">LinkType</span></code>: The link type </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE10GetParentsERN16GENAPI_NAMESPACE10NodeList_tE">
+<span id="GENAPI_NAMESPACE::GetParents__GENAPI_NAMESPACE::NodeList_tRC"></span><span class="target" id="_i_node_8h_1acd1aa32a9773a17c95cccd2f97e8da64"></span><em class="property">virtual</em> void <code class="descname">GetParents</code><span class="sig-paren">(</span><a class="reference internal" href="cpp_genapi_ibase.html#_CPPv216GENAPI_NAMESPACE" title="GENAPI_NAMESPACE">GENAPI_NAMESPACE</a>::<a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE10NodeList_tE" title="GENAPI_NAMESPACE::NodeList_t">NodeList_t</a> &amp;<em>Parents</em><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE10GetParentsERN16GENAPI_NAMESPACE10NodeList_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets all nodes this node is directly depending on. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">Parents</span></code>: List of parent nodes </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16RegisterCallbackEP13CNodeCallback">
+<span id="GENAPI_NAMESPACE::RegisterCallback__CNodeCallbackP"></span><span class="target" id="_i_node_8h_1a2a407420212d2b2494e39a66d115abaa"></span><em class="property">virtual</em> <a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE18CallbackHandleTypeE" title="GENAPI_NAMESPACE::CallbackHandleType">CallbackHandleType</a> <code class="descname">RegisterCallback</code><span class="sig-paren">(</span>CNodeCallback *<em>pCallback</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16RegisterCallbackEP13CNodeCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Register change callback. </p>
+<p>Takes ownership of the CNodeCallback object </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE18DeregisterCallbackE18CallbackHandleType">
+<span id="GENAPI_NAMESPACE::DeregisterCallback__CallbackHandleType"></span><span class="target" id="_i_node_8h_1a8c4fd783a24bb391112ee40b3162a246"></span><em class="property">virtual</em> bool <code class="descname">DeregisterCallback</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE18CallbackHandleTypeE" title="GENAPI_NAMESPACE::CallbackHandleType">CallbackHandleType</a> <em>hCallback</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE18DeregisterCallbackE18CallbackHandleType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>De register change callback. </p>
+<p>Destroys CNodeCallback object <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true if the callback handle was valid </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE10GetNodeMapEv">
+<span id="GENAPI_NAMESPACE::GetNodeMapC"></span><span class="target" id="_i_node_8h_1a9a9378155ea6d7c133f9141caabdb1a1"></span><em class="property">virtual</em> INodeMap *<code class="descname">GetNodeMap</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE10GetNodeMapEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieves the central node map. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE10GetEventIDEv">
+<span id="GENAPI_NAMESPACE::GetEventIDC"></span><span class="target" id="_i_node_8h_1a2492162a2ea926f3759fbabb0bc27bac"></span><em class="property">virtual</em> GENICAM_NAMESPACE::gcstring <code class="descname">GetEventID</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE10GetEventIDEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the EventId of the node. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE12IsStreamableEv">
+<span id="GENAPI_NAMESPACE::IsStreamableC"></span><span class="target" id="_i_node_8h_1a15c58522fd54994176f38a74c85b14e1"></span><em class="property">virtual</em> bool <code class="descname">IsStreamable</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE12IsStreamableEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>True if the node is streamable. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE16GetPropertyNamesERN17GENICAM_NAMESPACE15gcstring_vectorE">
+<span id="GENAPI_NAMESPACE::GetPropertyNames__GENICAM_NAMESPACE::gcstring_vectorRC"></span><span class="target" id="_i_node_8h_1a9296f2df72296020e9d659c75b19f11f"></span><em class="property">virtual</em> void <code class="descname">GetPropertyNames</code><span class="sig-paren">(</span>GENICAM_NAMESPACE::gcstring_vector &amp;<em>PropertyNames</em><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE16GetPropertyNamesERN17GENICAM_NAMESPACE15gcstring_vectorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns a list of the names all properties set during initialization. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE11GetPropertyERKN17GENICAM_NAMESPACE8gcstringERN17GENICAM_NAMESPACE8gcstringERN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::GetProperty__GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringR.GENICAM_NAMESPACE::gcstringR"></span><span class="target" id="_i_node_8h_1a4de6dbac419dbc839e2a67a0142270a7"></span><em class="property">virtual</em> bool <code class="descname">GetProperty</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>PropertyName</em>, GENICAM_NAMESPACE::gcstring &amp;<em>ValueStr</em>, GENICAM_NAMESPACE::gcstring &amp;<em>AttributeStr</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE11GetPropertyERKN17GENICAM_NAMESPACE8gcstringERN17GENICAM_NAMESPACE8gcstringERN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieves a property plus an additional attribute by name. </p>
+<p>If a property has multiple values/attribute they come with Tabs as delimiters </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16ImposeAccessModeE11EAccessMode">
+<span id="GENAPI_NAMESPACE::ImposeAccessMode__EAccessMode"></span><span class="target" id="_i_node_8h_1a905f5d1eb362f706b3d03f67c52df389"></span><em class="property">virtual</em> void <code class="descname">ImposeAccessMode</code><span class="sig-paren">(</span>EAccessMode <em>ImposedAccessMode</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16ImposeAccessModeE11EAccessMode" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Imposes an access mode to the natural access mode of the node. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16ImposeVisibilityE11EVisibility">
+<span id="GENAPI_NAMESPACE::ImposeVisibility__EVisibility"></span><span class="target" id="_i_node_8h_1a92e3c99da88780e568bdf5022849f76b"></span><em class="property">virtual</em> void <code class="descname">ImposeVisibility</code><span class="sig-paren">(</span>EVisibility <em>ImposedVisibility</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16ImposeVisibilityE11EVisibility" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Imposes a visibility to the natural visibility of the node. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE8GetAliasEv">
+<span id="GENAPI_NAMESPACE::GetAliasC"></span><span class="target" id="_i_node_8h_1af306943e4ff053ffb23a0d2bac3b3c0c"></span><em class="property">virtual</em> INode *<code class="descname">GetAlias</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE8GetAliasEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieves the a node which describes the same feature in a different way. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE12GetCastAliasEv">
+<span id="GENAPI_NAMESPACE::GetCastAliasC"></span><span class="target" id="_i_node_8h_1a61de41c6ca711daab16a587e853e5ac8"></span><em class="property">virtual</em> INode *<code class="descname">GetCastAlias</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE12GetCastAliasEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieves the a node which describes the same feature so that it can be casted. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE10GetDocuURLEv">
+<span id="GENAPI_NAMESPACE::GetDocuURLC"></span><span class="target" id="_i_node_8h_1a5546c33f9d1b1cd6a6c8012b5dfed378"></span><em class="property">virtual</em> GENICAM_NAMESPACE::gcstring <code class="descname">GetDocuURL</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE10GetDocuURLEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets a URL pointing to the documentation of that feature. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE12IsDeprecatedEv">
+<span id="GENAPI_NAMESPACE::IsDeprecatedC"></span><span class="target" id="_i_node_8h_1a3c22d79115eada75ed3d3f36aa5a0ad8"></span><em class="property">virtual</em> bool <code class="descname">IsDeprecated</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE12IsDeprecatedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>True if the node should not be used any more. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE25GetPrincipalInterfaceTypeEv">
+<span id="GENAPI_NAMESPACE::GetPrincipalInterfaceTypeC"></span><span class="target" id="_i_node_8h_1a5bcf326af199abe6752ec8577f4c0c55"></span><em class="property">virtual</em> EInterfaceType <code class="descname">GetPrincipalInterfaceType</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE25GetPrincipalInterfaceTypeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the type of the main interface of a node. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE9IsFeatureEv">
+<span id="GENAPI_NAMESPACE::IsFeatureC"></span><span class="target" id="_i_node_8h_1a787b7126114b24e02df1f29abbb236b7"></span><em class="property">virtual</em> bool <code class="descname">IsFeature</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE9IsFeatureEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>True if the node can be reached via category nodes from a category node named “Root”. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10IsReadableE11EAccessMode">
+<span id="GENAPI_NAMESPACE::IsReadable__EAccessMode"></span><span class="target" id="group___gen_api___public_interface_1gae6bd3255de57659cf922757f8babf113"></span>bool <code class="descname">IsReadable</code><span class="sig-paren">(</span>EAccessMode <em>AccessMode</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10IsReadableE11EAccessMode" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Tests if readable. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10IsReadableEPK5IBase">
+<span id="GENAPI_NAMESPACE::IsReadable__IBaseCP"></span><span class="target" id="group___gen_api___public_interface_1ga0d53ca07c80cd92aa63e3cff8d3b7f04"></span>bool <code class="descname">IsReadable</code><span class="sig-paren">(</span><em class="property">const</em> IBase *<em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10IsReadableEPK5IBase" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Checks if a node is readable. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10IsReadableERK5IBase">
+<span id="GENAPI_NAMESPACE::IsReadable__IBaseCR"></span><span class="target" id="group___gen_api___public_interface_1gaa24614bf0ef67c496800b79ee3822428"></span>bool <code class="descname">IsReadable</code><span class="sig-paren">(</span><em class="property">const</em> IBase &amp;<em>r</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10IsReadableERK5IBase" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Checks if a node is readable. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10IsWritableE11EAccessMode">
+<span id="GENAPI_NAMESPACE::IsWritable__EAccessMode"></span><span class="target" id="group___gen_api___public_interface_1ga7f604d74dbea0e93c976ffa90a01549d"></span>bool <code class="descname">IsWritable</code><span class="sig-paren">(</span>EAccessMode <em>AccessMode</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10IsWritableE11EAccessMode" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Tests if writable. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10IsWritableEPK5IBase">
+<span id="GENAPI_NAMESPACE::IsWritable__IBaseCP"></span><span class="target" id="group___gen_api___public_interface_1ga34b49fa66387e0d4466547c4ae1314a2"></span>bool <code class="descname">IsWritable</code><span class="sig-paren">(</span><em class="property">const</em> IBase *<em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10IsWritableEPK5IBase" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Checks if a node is writable. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE10IsWritableERK5IBase">
+<span id="GENAPI_NAMESPACE::IsWritable__IBaseCR"></span><span class="target" id="group___gen_api___public_interface_1ga6dde64500047c9c3fa6888121f39d0a2"></span>bool <code class="descname">IsWritable</code><span class="sig-paren">(</span><em class="property">const</em> IBase &amp;<em>r</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE10IsWritableERK5IBase" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Checks if a node is writable. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE13IsImplementedE11EAccessMode">
+<span id="GENAPI_NAMESPACE::IsImplemented__EAccessMode"></span><span class="target" id="group___gen_api___public_interface_1gaa6eb92824a7c2b018146b6426869bf0f"></span>bool <code class="descname">IsImplemented</code><span class="sig-paren">(</span>EAccessMode <em>AccessMode</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE13IsImplementedE11EAccessMode" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Tests if implemented. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE13IsImplementedEPK5IBase">
+<span id="GENAPI_NAMESPACE::IsImplemented__IBaseCP"></span><span class="target" id="group___gen_api___public_interface_1ga531903744d232acf613409f07ea30299"></span>bool <code class="descname">IsImplemented</code><span class="sig-paren">(</span><em class="property">const</em> IBase *<em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE13IsImplementedEPK5IBase" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Checks if a node is implemented. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE13IsImplementedERK5IBase">
+<span id="GENAPI_NAMESPACE::IsImplemented__IBaseCR"></span><span class="target" id="group___gen_api___public_interface_1ga3e112843786ad4b027a3881edd7c3daf"></span>bool <code class="descname">IsImplemented</code><span class="sig-paren">(</span><em class="property">const</em> IBase &amp;<em>r</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE13IsImplementedERK5IBase" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Checks if a node is implemented. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE11IsAvailableE11EAccessMode">
+<span id="GENAPI_NAMESPACE::IsAvailable__EAccessMode"></span><span class="target" id="group___gen_api___public_interface_1ga953b889dc8a65bf608c7b9ebf2362777"></span>bool <code class="descname">IsAvailable</code><span class="sig-paren">(</span>EAccessMode <em>AccessMode</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE11IsAvailableE11EAccessMode" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Tests if available. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE11IsAvailableEPK5IBase">
+<span id="GENAPI_NAMESPACE::IsAvailable__IBaseCP"></span><span class="target" id="group___gen_api___public_interface_1gae81f4ed75920d0073046b63f3509ea56"></span>bool <code class="descname">IsAvailable</code><span class="sig-paren">(</span><em class="property">const</em> IBase *<em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE11IsAvailableEPK5IBase" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Checks if a node is available. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE11IsAvailableERK5IBase">
+<span id="GENAPI_NAMESPACE::IsAvailable__IBaseCR"></span><span class="target" id="group___gen_api___public_interface_1gaa86efe120c67f618b84482cf913cb7eb"></span>bool <code class="descname">IsAvailable</code><span class="sig-paren">(</span><em class="property">const</em> IBase &amp;<em>r</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE11IsAvailableERK5IBase" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Checks if a node is available. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE7CombineE11EAccessMode11EAccessMode">
+<span id="GENAPI_NAMESPACE::Combine__EAccessMode.EAccessMode"></span><span class="target" id="group___gen_api___public_interface_1gadd8dd8271a02635fa8bf04d5f9d130d3"></span>EAccessMode <code class="descname">Combine</code><span class="sig-paren">(</span>EAccessMode <em>Peter</em>, EAccessMode <em>Paul</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE7CombineE11EAccessMode11EAccessMode" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Computes which access mode the two guards allow together. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE9IsVisibleE11EVisibility11EVisibility">
+<span id="GENAPI_NAMESPACE::IsVisible__EVisibility.EVisibility"></span><span class="target" id="group___gen_api___public_interface_1ga6bf0228ce59b50326cd8691c539c83a7"></span>bool <code class="descname">IsVisible</code><span class="sig-paren">(</span>EVisibility <em>Visibility</em>, EVisibility <em>MaxVisiblity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE9IsVisibleE11EVisibility11EVisibility" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Tests Visibility. </p>
+<p>CAVE : this relys on the EVisibility enum’s coding </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE7CombineE11EVisibility11EVisibility">
+<span id="GENAPI_NAMESPACE::Combine__EVisibility.EVisibility"></span><span class="target" id="group___gen_api___public_interface_1ga4719fd1f4a130a7f8603b77cc3b422de"></span>EVisibility <code class="descname">Combine</code><span class="sig-paren">(</span>EVisibility <em>Peter</em>, EVisibility <em>Paul</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE7CombineE11EVisibility11EVisibility" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Computes which visibility the two guards allow together. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE11IsCacheableE12ECachingMode">
+<span id="GENAPI_NAMESPACE::IsCacheable__ECachingMode"></span><span class="target" id="group___gen_api___public_interface_1ga87c5ef5213ac61d55aa36bcbfe77765e"></span>bool <code class="descname">IsCacheable</code><span class="sig-paren">(</span>ECachingMode <em>CachingMode</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE11IsCacheableE12ECachingMode" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Tests Cacheability. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE7CombineE12ECachingMode12ECachingMode">
+<span id="GENAPI_NAMESPACE::Combine__ECachingMode.ECachingMode"></span><span class="target" id="group___gen_api___public_interface_1ga2e650b1a1dbc7a0aef3a9a56ae42ce85"></span>ECachingMode <code class="descname">Combine</code><span class="sig-paren">(</span>ECachingMode <em>Peter</em>, ECachingMode <em>Paul</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE7CombineE12ECachingMode12ECachingMode" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Computes which CachingMode results from a combination. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Variables</p>
+<dl class="member">
+<dt>
+<span class="target" id="group___gen_api___public_interface_1ga26ca7385475f544c5be0ebb0a0834cb2"></span><code class="descname">interface GENAPI_DECL_ABSTRACT GENAPI_NAMESPACE::INode</code></dt>
+<dd><p>Interface common to all nodes. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cpp_genapi_inodemap.html" class="btn btn-neutral float-right" title="INodeMap" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cpp_genapi_ifloat.html" class="btn btn-neutral" title="IFloat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Lucid Vision Labs, Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.31.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

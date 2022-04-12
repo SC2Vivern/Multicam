@@ -1,4 +1,4 @@
-/*#pragma once
+#pragma once
 #include "ArenaApi.h"
 #include "SaveApi.h"
 
@@ -30,4 +30,4 @@
 int RecordSequencePol(int status, std::string file);
 int testSequence();
 int settingsStuff();
-int testTimedSave(int frames);*/
+int testTimedSave(int frames);

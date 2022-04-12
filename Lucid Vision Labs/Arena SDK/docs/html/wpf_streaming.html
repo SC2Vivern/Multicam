@@ -1,0 +1,508 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Windows Presentation Foundation, Streaming &mdash; Arena 1.0.31.8 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Arena 1.0.31.8 documentation" href="index.html"/>
+        <link rel="up" title="C# Code Samples" href="cs_examples.html"/>
+        <link rel="next" title="Qt" href="qt.html"/>
+        <link rel="prev" title="Windows Presentation Foundation, Mini Example" href="wpf_miniexample.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home">
+          
+
+          <!--
+            
+            <img src="_static/lucid-white.png" class="logo" />
+          -->
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.31
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_sdk_datasheet.html">Arena SDK Datasheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_windows.html">Arena SDK for Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_linux.html">Arena SDK for Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sdk.html">Code Reference &amp; Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gentl.html">GenTL Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpp.html">Arena C++</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c.html">Arena C</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cs.html">Arena.NET</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cs_arena.html">Arena.NET</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cs_examples.html">C# Code Samples</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_simpleacquisition.html">Simple Acquisition, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition.html">Acquisition, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_multithreadeacquisitionandsave.html">Acquisition, Multithreaded Acquisition and Save</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_multidevice.html">Acquisition, Multi-Device</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_rapidacquisition.html">Acquisition, Rapid Acquisition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_acquisition_sensorbinning.html">Acquisition, Sensor Binning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_imagecallbacks.html">Callback, Image Callbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_multithreadedimagecallbacks.html">Callback, Multithreaded Image Callbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_onevent.html">Callback, On Event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_onnodechange.html">Callback, On Node Change</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_callback_polling.html">Callback, Polling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_chunkdata.html">ChunkData, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_chunkdata_crcvalidation.html">Chunk Data, CRC Validation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_enumeration.html">Enumeration, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_enumeration_handlingdisconnections.html">Enumeration, Handling Disconnections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_explore_nodes.html">Explore_Nodes, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_explore_nodetypes.html">Explore, Node Types, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_explore_nodemaps.html">Explore, Node Maps, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_exposure.html">Exposure, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_exposure_forhdr.html">Exposure, For HDR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_exposure_long.html">Exposure, Long</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_forceip.html">Force Ip, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_helios_heatmap.html">Helios, HeatMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_helios_minmaxdepth.html">Helios, Min Max Depth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_helios_smoothresults.html">Helios, Smooth Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_ipconfig_manual.html">IP Config, Manual</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_ipconfig_auto.html">IP Config, Auto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_lut.html">LUT, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_multicast.html">Multicast, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_pixelcorrection.html">Pixel Correction, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_polarization_colordolpaolp.html">Polarization, Color DoLP AoLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_polarization_dolpaolp.html">Polarization, DoLP AoLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_record.html">Record, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save.html">Save, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_bitmap.html">Save, Bitmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_filenamepattern.html">Save, File Name Pattern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_ply.html">Save, Ply</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_save_raw.html">Save, Raw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_scheduledactioncommands.html">Scheduled Action Commands, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_sequencer_hdr.html">Sequencer, HDR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_streamables.html">Streamables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_trigger.html">Trigger, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_trigger_nextleader.html">Trigger, Next Leader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_trigger_overlappingtrigger.html">Trigger, Overlapping Trigger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cs_examples_usersets.html">UserSets, Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wpf_cameraselection.html">Windows Presentation Foundation, Camera Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wpf_featuretree.html">Windows Presentation Foundation, Feature Tree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wpf_miniexample.html">Windows Presentation Foundation, Mini Example</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Windows Presentation Foundation, Streaming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qt.html">Qt</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arena</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sdk.html">Code Reference &amp; Samples</a> &raquo;</li>
+        
+          <li><a href="cs.html">Arena.NET</a> &raquo;</li>
+        
+          <li><a href="cs_examples.html">C# Code Samples</a> &raquo;</li>
+        
+      <li>Windows Presentation Foundation, Streaming</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="windows-presentation-foundation-streaming">
+<h1>Windows Presentation Foundation, Streaming<a class="headerlink" href="#windows-presentation-foundation-streaming" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-c++"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">ObjectModel</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="n">Streaming</span>
+<span class="p">{</span>
+    <span class="c1">// for each device in device list tree</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">TreeItem</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="n">string</span> <span class="n">Title</span> <span class="p">{</span> <span class="n">get</span><span class="p">;</span> <span class="n">set</span><span class="p">;</span> <span class="p">}</span> <span class="c1">// string to display</span>
+        <span class="k">public</span> <span class="n">string</span> <span class="n">UId</span> <span class="p">{</span> <span class="n">get</span><span class="p">;</span> <span class="n">set</span><span class="p">;</span> <span class="p">}</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span> <span class="c1">// serial number to identify device</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">ArenaManager</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">ISystem</span> <span class="n">m_system</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+        <span class="k">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IDeviceInfo</span><span class="o">&gt;</span> <span class="n">m_deviceInfos</span><span class="p">;</span>
+        <span class="k">private</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IDevice</span> <span class="n">m_connectedDevice</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+        <span class="k">private</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IImage</span> <span class="n">m_converted</span><span class="p">;</span>
+
+        <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IImage</span> <span class="n">image</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+
+        <span class="k">public</span> <span class="nf">ArenaManager</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">m_system</span> <span class="o">=</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">Arena</span><span class="p">.</span><span class="n">OpenSystem</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="c1">// connects to a device based on uid</span>
+        <span class="k">public</span> <span class="kt">void</span> <span class="nf">ConnectDevice</span><span class="p">(</span><span class="n">String</span> <span class="n">UId</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">m_connectedDevice</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">UpdateDevices</span><span class="p">();</span>
+
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m_deviceInfos</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">m_deviceInfos</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">SerialNumber</span> <span class="o">==</span> <span class="n">UId</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="n">m_connectedDevice</span> <span class="o">=</span> <span class="n">m_system</span><span class="p">.</span><span class="n">CreateDevice</span><span class="p">(</span><span class="n">m_deviceInfos</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+                        <span class="k">return</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="k">throw</span> <span class="k">new</span> <span class="n">Exception</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="c1">// disconnects for connected device</span>
+        <span class="k">public</span> <span class="kt">void</span> <span class="nf">DisconnectDevice</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">m_system</span><span class="p">.</span><span class="n">DestroyDevice</span><span class="p">(</span><span class="n">m_connectedDevice</span><span class="p">);</span>
+            <span class="n">m_connectedDevice</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// returns if connected to a device</span>
+        <span class="k">public</span> <span class="kt">bool</span> <span class="nf">DeviceConnected</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">m_connectedDevice</span> <span class="o">!=</span> <span class="n">null</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">// gets uid of connected device</span>
+        <span class="k">public</span> <span class="n">String</span> <span class="nf">ConnectedDeviceUId</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="p">((</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IString</span><span class="p">)</span><span class="n">m_connectedDevice</span><span class="p">.</span><span class="n">NodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;DeviceSerialNumber&quot;</span><span class="p">)).</span><span class="n">Value</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// gets list of uids of available devices</span>
+        <span class="k">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">GetDeviceUIds</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">UpdateDevices</span><span class="p">();</span>
+
+            <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">uids</span> <span class="o">=</span> <span class="k">new</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m_deviceInfos</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">uids</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">m_deviceInfos</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">SerialNumber</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="k">return</span> <span class="n">uids</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// gets name of device</span>
+        <span class="k">public</span> <span class="n">String</span> <span class="n">GetDeviceName</span><span class="p">(</span><span class="n">String</span> <span class="n">UId</span><span class="p">,</span> <span class="n">String</span> <span class="n">node</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m_deviceInfos</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">m_deviceInfos</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">SerialNumber</span> <span class="o">==</span> <span class="n">UId</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">node</span> <span class="o">==</span> <span class="s">&quot;DeviceUserID&quot;</span> <span class="o">||</span> <span class="n">node</span> <span class="o">==</span> <span class="s">&quot;UserDefinedName&quot;</span><span class="p">)</span>
+                        <span class="k">return</span> <span class="n">m_deviceInfos</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">UserDefinedName</span><span class="p">;</span>
+                    <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">node</span> <span class="o">==</span> <span class="s">&quot;DeviceModelName&quot;</span> <span class="o">||</span> <span class="n">node</span> <span class="o">==</span> <span class="s">&quot;ModelName&quot;</span><span class="p">)</span>
+                        <span class="k">return</span> <span class="n">m_deviceInfos</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">ModelName</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="k">return</span> <span class="s">&quot;Invalid argument&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// check if ip addresses between device and interface match based on their subnets</span>
+        <span class="k">public</span> <span class="kt">bool</span> <span class="n">IsNetworkValid</span><span class="p">(</span><span class="n">String</span> <span class="n">UId</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">UpdateDevices</span><span class="p">();</span>
+
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m_deviceInfos</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">m_deviceInfos</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">SerialNumber</span> <span class="o">==</span> <span class="n">UId</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">UInt32</span> <span class="n">ip</span> <span class="o">=</span> <span class="p">(</span><span class="n">UInt32</span><span class="p">)</span><span class="n">m_deviceInfos</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">IpAddress</span><span class="p">;</span>
+                    <span class="n">UInt32</span> <span class="n">subnet</span> <span class="o">=</span> <span class="p">(</span><span class="n">UInt32</span><span class="p">)</span><span class="n">m_deviceInfos</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">SubnetMask</span><span class="p">;</span>
+
+                    <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IInteger</span> <span class="n">ifipNode</span> <span class="o">=</span> <span class="p">(</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IInteger</span><span class="p">)</span><span class="n">m_system</span>
+                            <span class="p">.</span><span class="n">GetTLInterfaceNodeMap</span><span class="p">(</span><span class="n">m_deviceInfos</span><span class="p">[</span><span class="n">i</span><span class="p">]).</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;GevInterfaceSubnetIPAddress&quot;</span><span class="p">);</span>
+                    <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IInteger</span> <span class="n">ifsubnetNode</span> <span class="o">=</span> <span class="p">(</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">IInteger</span><span class="p">)</span><span class="n">m_system</span>
+                            <span class="p">.</span><span class="n">GetTLInterfaceNodeMap</span><span class="p">(</span><span class="n">m_deviceInfos</span><span class="p">[</span><span class="n">i</span><span class="p">]).</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;GevInterfaceSubnetMask&quot;</span><span class="p">);</span>
+                    <span class="n">UInt32</span> <span class="n">ifip</span> <span class="o">=</span> <span class="p">(</span><span class="n">UInt32</span><span class="p">)</span><span class="n">ifipNode</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+                    <span class="n">UInt32</span> <span class="n">ifsubnet</span> <span class="o">=</span> <span class="p">(</span><span class="n">UInt32</span><span class="p">)</span><span class="n">ifsubnetNode</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+
+                    <span class="k">if</span> <span class="p">(</span><span class="n">subnet</span> <span class="o">!=</span> <span class="n">ifsubnet</span><span class="p">)</span>
+                        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+
+                    <span class="k">if</span> <span class="p">((</span><span class="n">ip</span> <span class="o">&amp;</span> <span class="n">subnet</span><span class="p">)</span> <span class="o">!=</span> <span class="p">(</span><span class="n">ifip</span> <span class="o">&amp;</span> <span class="n">ifsubnet</span><span class="p">))</span>
+                        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+
+                    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="k">throw</span> <span class="k">new</span> <span class="n">Exception</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="c1">// gets image as bitmap</span>
+        <span class="k">public</span> <span class="n">System</span><span class="p">.</span><span class="n">Drawing</span><span class="p">.</span><span class="n">Bitmap</span> <span class="n">GetImage</span><span class="p">(</span><span class="n">UInt32</span> <span class="n">timeout</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">m_converted</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">ImageFactory</span><span class="p">.</span><span class="n">Destroy</span><span class="p">(</span><span class="n">m_converted</span><span class="p">);</span>
+                <span class="n">m_converted</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IImage</span> <span class="n">image</span> <span class="o">=</span> <span class="n">m_connectedDevice</span><span class="p">.</span><span class="n">GetImage</span><span class="p">(</span><span class="n">timeout</span><span class="p">);</span>
+            <span class="n">m_converted</span> <span class="o">=</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">ImageFactory</span><span class="p">.</span><span class="n">Convert</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="p">(</span><span class="n">ArenaNET</span><span class="p">.</span><span class="n">EPfncFormat</span><span class="p">)</span><span class="mh">0x02200017</span><span class="p">);</span>
+            <span class="n">m_connectedDevice</span><span class="p">.</span><span class="n">RequeueBuffer</span><span class="p">(</span><span class="n">image</span><span class="p">);</span>
+
+            <span class="k">return</span> <span class="n">m_converted</span><span class="p">.</span><span class="n">Bitmap</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// gets image as ArenaNET.IImage</span>
+        <span class="k">public</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IImage</span> <span class="n">GetIImage</span><span class="p">(</span><span class="n">UInt32</span> <span class="n">timeout</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">m_converted</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">ArenaNET</span><span class="p">.</span><span class="n">ImageFactory</span><span class="p">.</span><span class="n">Destroy</span><span class="p">(</span><span class="n">m_converted</span><span class="p">);</span>
+                <span class="n">m_converted</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">image</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">m_connectedDevice</span><span class="p">.</span><span class="n">RequeueBuffer</span><span class="p">(</span><span class="n">image</span><span class="p">);</span>
+                <span class="n">image</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="n">image</span> <span class="o">=</span> <span class="n">m_connectedDevice</span><span class="p">.</span><span class="n">GetImage</span><span class="p">(</span><span class="n">timeout</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">image</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// starts stream</span>
+        <span class="k">public</span> <span class="kt">void</span> <span class="n">StartStream</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">m_connectedDevice</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">((</span><span class="n">m_connectedDevice</span><span class="p">.</span><span class="n">TLStreamNodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;StreamIsGrabbing&quot;</span><span class="p">)</span> <span class="n">as</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IBoolean</span><span class="p">).</span><span class="n">Value</span> <span class="o">==</span> <span class="nb">false</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="p">(</span><span class="n">m_connectedDevice</span><span class="p">.</span><span class="n">TLStreamNodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;StreamBufferHandlingMode&quot;</span><span class="p">)</span> <span class="n">as</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IEnumeration</span><span class="p">).</span><span class="n">Symbolic</span> <span class="o">=</span> <span class="s">&quot;NewestOnly&quot;</span><span class="p">;</span>
+                    <span class="n">m_connectedDevice</span><span class="p">.</span><span class="n">StartStream</span><span class="p">();</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">// stops stream</span>
+        <span class="k">public</span> <span class="kt">void</span> <span class="n">StopStream</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">m_connectedDevice</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">((</span><span class="n">m_connectedDevice</span><span class="p">.</span><span class="n">TLStreamNodeMap</span><span class="p">.</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;StreamIsGrabbing&quot;</span><span class="p">)</span> <span class="n">as</span> <span class="n">ArenaNET</span><span class="p">.</span><span class="n">IBoolean</span><span class="p">).</span><span class="n">Value</span> <span class="o">==</span> <span class="nb">true</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">m_connectedDevice</span><span class="p">.</span><span class="n">StopStream</span><span class="p">();</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">// updates list of available devices</span>
+        <span class="k">private</span> <span class="kt">void</span> <span class="n">UpdateDevices</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">m_system</span><span class="p">.</span><span class="n">UpdateDevices</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+            <span class="n">m_deviceInfos</span> <span class="o">=</span> <span class="n">m_system</span><span class="p">.</span><span class="n">Devices</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="qt.html" class="btn btn-neutral float-right" title="Qt" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="wpf_miniexample.html" class="btn btn-neutral" title="Windows Presentation Foundation, Mini Example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Lucid Vision Labs, Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.31.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

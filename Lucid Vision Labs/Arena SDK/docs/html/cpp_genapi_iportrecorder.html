@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>IPortRecorder &mdash; Arena 1.0.31.8 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Arena 1.0.31.8 documentation" href="index.html"/>
+        <link rel="up" title="GenApi C++" href="cpp_genapi.html"/>
+        <link rel="next" title="IPortStacked" href="cpp_genapi_iportstacked.html"/>
+        <link rel="prev" title="IPort" href="cpp_genapi_iport.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home">
+          
+
+          <!--
+            
+            <img src="_static/lucid-white.png" class="logo" />
+          -->
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.31
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_sdk_datasheet.html">Arena SDK Datasheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_windows.html">Arena SDK for Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_linux.html">Arena SDK for Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sdk.html">Code Reference &amp; Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gentl.html">GenTL Features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cpp.html">Arena C++</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cpp_arena.html">Arena C++</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cpp_genapi.html">GenApi C++</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_concatenatedwrite.html">ConcatenatedWrite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ibase.html">IBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iboolean.html">IBoolean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icategory.html">ICategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ichunkport.html">IChunkPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icommand.html">ICommand</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumentry.html">IEnumEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumeration.html">IEnumeration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumerationt.html">IEnumerationT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ifloat.html">IFloat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inode.html">INode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemap.html">INodeMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemapdyn.html">INodeMapDyn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iport.html">IPort</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">IPortRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportstacked.html">IPortStacked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iregister.html">IRegister</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_istring.html">IString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ivalue.html">IValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapfactory.html">NodeMapFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapref.html">NodeMapRef</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_portwritelist.html">PortWriteList</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_save.html">Save C++</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_examples.html">C++ Code Samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="c.html">Arena C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cs.html">Arena.NET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qt.html">Qt</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arena</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sdk.html">Code Reference &amp; Samples</a> &raquo;</li>
+        
+          <li><a href="cpp.html">Arena C++</a> &raquo;</li>
+        
+          <li><a href="cpp_genapi.html">GenApi C++</a> &raquo;</li>
+        
+      <li>IPortRecorder</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="iportrecorder">
+<h1>IPortRecorder<a class="headerlink" href="#iportrecorder" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Definition of interface IPort. </p>
+<dl class="type">
+<dt id="_CPPv216GENAPI_NAMESPACE">
+<span id="GENAPI_NAMESPACE"></span><span class="target" id="namespace_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e"></span><em class="property">namespace </em><code class="descname">GENAPI_NAMESPACE</code><a class="headerlink" href="#_CPPv216GENAPI_NAMESPACE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CPortRecorderRefE">
+<span id="GENAPI_NAMESPACE::CPortRecorderRef"></span><span class="target" id="group___gen_api___public_impl_1ga9d687879720eaa928462c5f635b9f234"></span><em class="property">typedef </em><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE17CPortRecorderRefTE" title="GENAPI_NAMESPACE::CPortRecorderRefT">CPortRecorderRefT</a>&lt;IPortRecorder&gt; <code class="descname">CPortRecorderRef</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CPortRecorderRefE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reference to an IPortRecorder pointer </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE6ReplayEP5IPort">
+<span id="GENAPI_NAMESPACE::Replay__IPortP"></span><span class="target" id="_i_port_recorder_8h_1a9702dfcf2ff1c5742b68bf7f40ee6939"></span><em class="property">virtual</em> void <code class="descname">Replay</code><span class="sig-paren">(</span>IPort *<em>pPort</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE6ReplayEP5IPort" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Replays the write command to the given port interface. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE9SetCookieEK7int64_t">
+<span id="GENAPI_NAMESPACE::SetCookie__int64_tC"></span><span class="target" id="_i_port_recorder_8h_1a190e88715b6bc8e83b14b7f757242512"></span><em class="property">virtual</em> void <code class="descname">SetCookie</code><span class="sig-paren">(</span><em class="property">const</em> int64_t <em>Value</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE9SetCookieEK7int64_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets a cookie in case the port implementation want to cache a command list. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE9GetCookieEv">
+<span id="GENAPI_NAMESPACE::GetCookie"></span><span class="target" id="_i_port_recorder_8h_1a0afce92df1d386ab405a4a43d343dc8c"></span><em class="property">virtual</em> int64_t <code class="descname">GetCookie</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE9GetCookieEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the cookie a port implementation may have set for caching a command list. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE13StopRecordingEv">
+<span id="GENAPI_NAMESPACE::StopRecording"></span><span class="target" id="_i_port_recorder_8h_1af2dbb96f429cb85149ed6d0520022e93"></span><em class="property">virtual</em> void <code class="descname">StopRecording</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE13StopRecordingEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>stops recording </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Variables</p>
+<dl class="member">
+<dt>
+<span class="target" id="_i_port_recorder_8h_1a9628dff59c50347d27b94f737ed65887"></span><code class="descname">interface GENAPI_DECL_ABSTRACT GENAPI_NAMESPACE::IPortWriteList</code> = {
+        
+        virtual void Write(const void *pBuffer, int64_t Address, int64_t Length) = 0</dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="group___gen_api___public_interface_1ga529bbd4f863844c8d6ce02299fe5d1c1"></span><code class="descname">interface GENAPI_DECL_ABSTRACT GENAPI_NAMESPACE::IPortReplay</code></dt>
+<dd><p>Interface for replaying write commands on a port. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="group___gen_api___public_interface_1ga2511130cb938a4bc7402be91db3030a9"></span><code class="descname">interface GENAPI_DECL_ABSTRACT bool GENAPI_NAMESPACE::Invalidate</code> = true ) = 0</dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="group___gen_api___public_interface_1ga27b4e71f293e79c555966a22c334227c"></span><code class="descname">interface GENAPI_DECL_ABSTRACT GENAPI_NAMESPACE::IPortRecorder</code></dt>
+<dd><p>Interface for recording write commands on a port. </p>
+</dd></dl>
+
+</div>
+<dl class="class">
+<dt>
+<span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_port_recorder_ref_t"></span><em class="property">template </em>&lt;<em class="property">class</em> T&gt;</dt>
+<dt id="_CPPv2N16GENAPI_NAMESPACE17CPortRecorderRefTE">
+<span id="GENAPI_NAMESPACE::CPortRecorderRefT"></span><em class="property">class </em><code class="descname">CPortRecorderRefT</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE17CPortRecorderRefTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from <a class="reference internal" href="cpp_genapi_iport.html#class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_port_ref_t"><span class="std std-ref">GENAPI_NAMESPACE::CPortRefT&lt; T &gt;</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE17CPortRecorderRefT6ReplayEP14IPortWriteListb">
+<span id="GENAPI_NAMESPACE::CPortRecorderRefT::Replay__IPortWriteListP.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_port_recorder_ref_t_1a76b0216dd0fc3ae544b218bed106b0d8"></span><em class="property">virtual</em> void <code class="descname">Replay</code><span class="sig-paren">(</span>IPortWriteList *<em>pPortRecorder</em>, bool <em>Invalidate</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE17CPortRecorderRefT6ReplayEP14IPortWriteListb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>sends the commands to the camera. </p>
+<p>the default implementation just walks the list and issues each command using the WriteRegister method. Depending on the capabilities of the transport layer the implementation can however use a special command which sends all register write commands as one package. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE17CPortRecorderRefT14StartRecordingEP14IPortWriteList">
+<span id="GENAPI_NAMESPACE::CPortRecorderRefT::StartRecording__IPortWriteListP"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_port_recorder_ref_t_1afc27298e65e56cd35c4a8433a5dd479f"></span><em class="property">virtual</em> void <code class="descname">StartRecording</code><span class="sig-paren">(</span>IPortWriteList *<em>pPortRecorder</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE17CPortRecorderRefT14StartRecordingEP14IPortWriteList" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>starts logging all WriteRegister commands to a list </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE17CPortRecorderRefT13StopRecordingEv">
+<span id="GENAPI_NAMESPACE::CPortRecorderRefT::StopRecording"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_port_recorder_ref_t_1a1f29cfec984bc38d2287fd86e2f4ecec"></span><em class="property">virtual</em> void <code class="descname">StopRecording</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE17CPortRecorderRefT13StopRecordingEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>stops recording </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Private Types</p>
+<dl class="type">
+<dt id="_CPPv2N16GENAPI_NAMESPACE17CPortRecorderRefT3refE">
+<span id="GENAPI_NAMESPACE::CPortRecorderRefT::ref"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_port_recorder_ref_t_1a73966aa3cd09b25cb869b105c5e0a8ae"></span><em class="property">typedef </em><a class="reference internal" href="cpp_genapi_iport.html#_CPPv2N16GENAPI_NAMESPACE9CPortRefTE" title="GENAPI_NAMESPACE::CPortRefT">CPortRefT</a>&lt;T&gt; <code class="descname">ref</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE17CPortRecorderRefT3refE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cpp_genapi_iportstacked.html" class="btn btn-neutral float-right" title="IPortStacked" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cpp_genapi_iport.html" class="btn btn-neutral" title="IPort" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Lucid Vision Labs, Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.31.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

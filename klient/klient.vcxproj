@@ -122,12 +122,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\opencv\build\include;C:\Program Files\Lucid Vision Labs\Arena SDK\include\Arena;C:\Program Files\Lucid Vision Labs\Arena SDK\GenICam\library\CPP\include;C:\Program Files\Lucid Vision Labs\Arena SDK\include\Save;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\Lucid Vision Labs\Arena SDK\GenICam\library\CPP\include;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\Lucid Vision Labs\Arena SDK\include\Save;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\Lucid Vision Labs\Arena SDK\include\Arena;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\opencv\build\include;C:\Program Files\Lucid Vision Labs\Arena SDK\include\Arena;C:\Program Files\Lucid Vision Labs\Arena SDK\GenICam\library\CPP\include;C:\Program Files\Lucid Vision Labs\Arena SDK\include\Save;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>"C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\opencv\build\x64\vc15\lib";"C:\Program Files\Lucid Vision Labs\Arena SDK\lib64\Arena";"C:\Program Files\Lucid Vision Labs\Arena SDK\GenICam\library\CPP\lib\Win64_x64";%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\opencv\build\x64\vc15\lib;C:\Program Files\Lucid Vision Labs\Arena SDK\lib64\Arena;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\Lucid Vision Labs\Arena SDK\lib64\Arena;C:\Program Files\Lucid Vision Labs\Arena SDK\GenICam\library\CPP\lib\Win64_x64;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\Lucid Vision Labs\Arena SDK\GenICam\library\CPP\lib\Win64_x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Arenad_v140.lib;Saved_v140.lib;opencv_world452d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

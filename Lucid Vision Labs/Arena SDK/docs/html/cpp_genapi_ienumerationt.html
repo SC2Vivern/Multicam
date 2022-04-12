@@ -1,0 +1,481 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>IEnumerationT &mdash; Arena 1.0.31.8 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Arena 1.0.31.8 documentation" href="index.html"/>
+        <link rel="up" title="GenApi C++" href="cpp_genapi.html"/>
+        <link rel="next" title="IFloat" href="cpp_genapi_ifloat.html"/>
+        <link rel="prev" title="IEnumeration" href="cpp_genapi_ienumeration.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home">
+          
+
+          <!--
+            
+            <img src="_static/lucid-white.png" class="logo" />
+          -->
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.31
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_sdk_datasheet.html">Arena SDK Datasheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_windows.html">Arena SDK for Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_linux.html">Arena SDK for Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sdk.html">Code Reference &amp; Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gentl.html">GenTL Features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cpp.html">Arena C++</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cpp_arena.html">Arena C++</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cpp_genapi.html">GenApi C++</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_concatenatedwrite.html">ConcatenatedWrite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ibase.html">IBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iboolean.html">IBoolean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icategory.html">ICategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ichunkport.html">IChunkPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icommand.html">ICommand</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumentry.html">IEnumEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumeration.html">IEnumeration</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">IEnumerationT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ifloat.html">IFloat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inode.html">INode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemap.html">INodeMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemapdyn.html">INodeMapDyn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iport.html">IPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportrecorder.html">IPortRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportstacked.html">IPortStacked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iregister.html">IRegister</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_istring.html">IString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ivalue.html">IValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapfactory.html">NodeMapFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapref.html">NodeMapRef</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_portwritelist.html">PortWriteList</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_save.html">Save C++</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_examples.html">C++ Code Samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="c.html">Arena C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cs.html">Arena.NET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qt.html">Qt</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arena</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sdk.html">Code Reference &amp; Samples</a> &raquo;</li>
+        
+          <li><a href="cpp.html">Arena C++</a> &raquo;</li>
+        
+          <li><a href="cpp_genapi.html">GenApi C++</a> &raquo;</li>
+        
+      <li>IEnumerationT</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ienumerationt">
+<h1>IEnumerationT<a class="headerlink" href="#ienumerationt" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Definition of interface IEnumerationT. </p>
+<dl class="type">
+<dt id="_CPPv216GENAPI_NAMESPACE">
+<span id="GENAPI_NAMESPACE"></span><span class="target" id="namespace_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e"></span><em class="property">namespace </em><code class="descname">GENAPI_NAMESPACE</code><a class="headerlink" href="#_CPPv216GENAPI_NAMESPACE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACEaSE5EnumT">
+<span id="GENAPI_NAMESPACE::assign-operator__EnumT"></span><span class="target" id="_i_enumeration_t_8h_1aebd41d21370826c4849eb2ba2c913d57"></span><em class="property">virtual</em> IEnumeration &amp;<code class="descname">operator=</code><span class="sig-paren">(</span>EnumT <em>Value</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACEaSE5EnumT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE8GetEntryEK5EnumT">
+<span id="GENAPI_NAMESPACE::GetEntry__EnumTC"></span><span class="target" id="_i_enumeration_t_8h_1a94061abcd5bcb3f36b1c7175cc44daaf"></span><em class="property">virtual</em> IEnumEntry *<code class="descname">GetEntry</code><span class="sig-paren">(</span><em class="property">const</em> EnumT <em>Value</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE8GetEntryEK5EnumT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>returns the EnumEntry object belonging to the Value </p>
+</dd></dl>
+
+</div>
+<dl class="class">
+<dt>
+<span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref"></span><em class="property">template </em>&lt;<em class="property">class</em> EnumT&gt;</dt>
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRefE">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef"></span><em class="property">class </em><code class="descname">CEnumerationTRef</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRefE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from IEnumerationT&lt; EnumT &gt;, IReference, IEnumReference</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef16CEnumerationTRefEv">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::CEnumerationTRef"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1a81ed9316a85e388fb45aced201a39017"></span><code class="descname">CEnumerationTRef</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef16CEnumerationTRefEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef12SetReferenceEP5IBase">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::SetReference__IBaseP"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1a38ee0406a206d9626cfd83fef79a626c"></span><em class="property">virtual</em> void <code class="descname">SetReference</code><span class="sig-paren">(</span>IBase *<em>ptr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef12SetReferenceEP5IBase" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>sets the implementation to the reference </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef11SetNumEnumsEi">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::SetNumEnums__i"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1a61031ebd4de1481acbb83ba8a6cc7257"></span><em class="property">virtual</em> void <code class="descname">SetNumEnums</code><span class="sig-paren">(</span>int <em>NumEnums</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef11SetNumEnumsEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>sets the number of enum values </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef16SetEnumReferenceEiN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::SetEnumReference__i.GENICAM_NAMESPACE::gcstring"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1aebfb30826c38ebf71106508e31c6d032"></span><em class="property">virtual</em> void <code class="descname">SetEnumReference</code><span class="sig-paren">(</span>int <em>Index</em>, GENICAM_NAMESPACE::gcstring <em>Name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef16SetEnumReferenceEiN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>sets the Enum value corresponding to a value </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE16CEnumerationTRef13GetAccessModeEv">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::GetAccessModeC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1acdf6e4412856e2779481435cb2b44f0f"></span><em class="property">virtual</em> EAccessMode <code class="descname">GetAccessMode</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE16CEnumerationTRef13GetAccessModeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the access mode of the node. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef7GetNodeEv">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::GetNode"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1a0b033cdeb5b2d613395652bdf776493d"></span><em class="property">virtual</em> INode *<code class="descname">GetNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef7GetNodeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the INode interface of the node. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef8ToStringEbb">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::ToString__b.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1a994de6208dcebf6c2111a6900fdc4d86"></span><em class="property">virtual</em> GENICAM_NAMESPACE::gcstring <code class="descname">ToString</code><span class="sig-paren">(</span>bool <em>Verify</em> = false, bool <em>IgnoreCache</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef8ToStringEbb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get content of the node as string. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef10FromStringERKN17GENICAM_NAMESPACE8gcstringEb">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::FromString__GENICAM_NAMESPACE::gcstringCR.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1a05b965683878b271260b358ce8831096"></span><em class="property">virtual</em> void <code class="descname">FromString</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>ValueStr</em>, bool <em>Verify</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef10FromStringERKN17GENICAM_NAMESPACE8gcstringEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set content of the node as string. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16GENAPI_NAMESPACE16CEnumerationTRef17IsValueCacheValidEv">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::IsValueCacheValidC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1a9b0ab62805807e431b086ab51a204b1a"></span>bool <code class="descname">IsValueCacheValid</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16GENAPI_NAMESPACE16CEnumerationTRef17IsValueCacheValidEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Checks if the value comes from cache or is requested from another node. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef12GetSymbolicsER12StringList_t">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::GetSymbolics__StringList_tR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1aede75c55473b7bf7af48b8e072f2fb95"></span><em class="property">virtual</em> void <code class="descname">GetSymbolics</code><span class="sig-paren">(</span>StringList_t &amp;<em>Symbolics</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef12GetSymbolicsER12StringList_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get list of symbolic Values. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef10GetEntriesER10NodeList_t">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::GetEntries__NodeList_tR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1ac97e5ae281f45f867f4e19552793b7f4"></span><em class="property">virtual</em> void <code class="descname">GetEntries</code><span class="sig-paren">(</span><a class="reference internal" href="cpp_genapi_inode.html#_CPPv2N16GENAPI_NAMESPACE10NodeList_tE" title="GENAPI_NAMESPACE::NodeList_t">NodeList_t</a> &amp;<em>Entries</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef10GetEntriesER10NodeList_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get list of entry nodes. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRefaSERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::assign-operator__GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1a18438a77946f65a3a625b99dd3bc5883"></span><em class="property">virtual</em> IEnumeration &amp;<code class="descname">operator=</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>ValueStr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRefaSERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRefaSEPKc">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::assign-operator__cCP"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1a72fdbcd088aee539ccf9e9077a0879f1"></span><em class="property">virtual</em> IEnumeration &amp;<code class="descname">operator=</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>pValueStr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRefaSEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef11SetIntValueE7int64_tb">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::SetIntValue__int64_t.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1ab668c9c730786d7ac1c5f4cafd17eb25"></span><em class="property">virtual</em> void <code class="descname">SetIntValue</code><span class="sig-paren">(</span>int64_t <em>Value</em>, bool <em>Verify</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef11SetIntValueE7int64_tb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRefmlEv">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::mul-operator"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1aa83979fa57292dde6d7f746912ba1a41"></span><em class="property">virtual</em> GENICAM_NAMESPACE::gcstring <code class="descname">operator*</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRefmlEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef11GetIntValueEbb">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::GetIntValue__b.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1af21849e5e6956c228f1f14360a83676f"></span><em class="property">virtual</em> int64_t <code class="descname">GetIntValue</code><span class="sig-paren">(</span>bool <em>Verify</em> = false, bool <em>IgnoreCache</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef11GetIntValueEbb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef14GetEntryByNameERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::GetEntryByName__GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1ad25236d1e432d0de1a57fd5d8c0f2060"></span><em class="property">virtual</em> IEnumEntry *<code class="descname">GetEntryByName</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>Symbolic</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef14GetEntryByNameERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get an entry node by name. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef8GetEntryEK7int64_t">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::GetEntry__int64_tC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1a396c2374891530a90c124710261884e7"></span><em class="property">virtual</em> IEnumEntry *<code class="descname">GetEntry</code><span class="sig-paren">(</span><em class="property">const</em> int64_t <em>IntValue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef8GetEntryEK7int64_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get an entry node by its IntValue. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef15GetCurrentEntryEbb">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::GetCurrentEntry__b.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1a792dfb0a7ed8973cb03774b79357e2eb"></span><em class="property">virtual</em> IEnumEntry *<code class="descname">GetCurrentEntry</code><span class="sig-paren">(</span>bool <em>Verify</em> = false, bool <em>IgnoreCache</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef15GetCurrentEntryEbb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the current entry. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef8SetValueE5EnumTb">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::SetValue__EnumT.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1a11b23acd57ae81a1034337008bbd55f9"></span><em class="property">virtual</em> void <code class="descname">SetValue</code><span class="sig-paren">(</span>EnumT <em>Value</em>, bool <em>Verify</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef8SetValueE5EnumTb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRefaSE5EnumT">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::assign-operator__EnumT"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1abe9deed15970378aff6fbf0510aea112"></span><em class="property">virtual</em> IEnumeration &amp;<code class="descname">operator=</code><span class="sig-paren">(</span>EnumT <em>Value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRefaSE5EnumT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef8GetValueEbb">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::GetValue__b.b"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1a257fece29d733459b965dba29ffed4e6"></span><em class="property">virtual</em> EnumT <code class="descname">GetValue</code><span class="sig-paren">(</span>bool <em>Verify</em> = false, bool <em>IgnoreCache</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef8GetValueEbb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRefclEv">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::call-operator"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1a8c51c4fbe272a57a70853ac5f98d6d30"></span><em class="property">virtual</em> EnumT <code class="descname">operator()</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRefclEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get node value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef8GetEntryEK5EnumT">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::GetEntry__EnumTC"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1aa9e821152ae230efc4daed02a482ba3e"></span><em class="property">virtual</em> IEnumEntry *<code class="descname">GetEntry</code><span class="sig-paren">(</span><em class="property">const</em> EnumT <em>Value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef8GetEntryEK5EnumT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>returns the EnumEntry object belonging to the Value </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Protected Attributes</p>
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef5m_PtrE">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::m_Ptr__IEnumerationP"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1ac2b719531ce31a15348412431d8dcf20"></span>IEnumeration *<code class="descname">m_Ptr</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef5m_PtrE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Pointer to the implementation the reference references to. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef12m_EnumValuesE">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::m_EnumValues__std::vector:int64_t:"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1ae567714bdd240f5ac81f38df98d7b4de"></span>std::vector&lt;int64_t&gt; <code class="descname">m_EnumValues</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef12m_EnumValuesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The values for enums with a given index. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef12m_EnumExistsE">
+<span id="GENAPI_NAMESPACE::CEnumerationTRef::m_EnumExists__std::vector:b:"></span><span class="target" id="class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_enumeration_t_ref_1a3004ffacbd49bf83d6fa0dc22cbf2dd5"></span>std::vector&lt;bool&gt; <code class="descname">m_EnumExists</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE16CEnumerationTRef12m_EnumExistsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Indicates it an enum with a given index exists. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cpp_genapi_ifloat.html" class="btn btn-neutral float-right" title="IFloat" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cpp_genapi_ienumeration.html" class="btn btn-neutral" title="IEnumeration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Lucid Vision Labs, Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.31.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
