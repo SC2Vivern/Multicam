@@ -109,6 +109,41 @@ void sendSetToClients()
     sendTextToClients("O");
 }
 
+void sendRecordTimedSequenceToClients()
+{
+    sendTextToClients("R");
+}
+
+void sendPreviewToClients()
+{
+    sendTextToClients("V");
+}
+
+void sendCalibrationToClients()
+{
+    sendTextToClients("C");
+}
+
+void sendCalibrationDownloadToClients()
+{
+    sendTextToClients("D");
+}
+
+void sendSaveParamToClients()
+{
+    sendTextToClients("M");
+}
+
+void sendSaveScreenshotToClients()
+{
+    sendTextToClients("U");
+}
+
+void sendSaveWithTriggerToClients()
+{
+    sendTextToClients("T");
+}
+
 void sendTextToClients(string text)
 {
     for (int i = 0; i < clients.size(); ++i)
