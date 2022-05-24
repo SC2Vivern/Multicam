@@ -3,6 +3,7 @@
 #include "polar_camera.h"
 
 #include "pulse.h"
+#include "../klient/RecordVid.h"
 
 //#include "../rs_recorder/rs_camera.h"
 //#include "../basler_recorder/basler_camera.h"
@@ -60,7 +61,10 @@ void recordSequence()
 	//RecordSequencePol(statu, filepath);
 	//RecordSequenceRGB(statuC, filepath);
 	//RecordSequenceDepth(statuD, filepath);
-	testSequence();
+	//testSequence();
+    //testtest();
+    //recordSeconds(1000);
+
 	sendDoneToServer();
 
 }
@@ -72,7 +76,8 @@ void calibrateTest()
 
 void saveRecTest()
 {
-	testTimedSave(100);
+	//testTimedSave(250);
+    testtest();
 }
 
 void socketThreadFunction()

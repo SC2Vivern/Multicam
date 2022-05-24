@@ -91,26 +91,28 @@ void sendFileNameToClients()
 
 void sendFireToClients()
 {
-    for (int i = 0; i < clients.size(); ++i)
-        clients[i]->SendLine("F");
+    sendTextToClients("F");
 }
 
 void sendStopToClients()
 {
-    for (int i = 0; i < clients.size(); ++i)
-        clients[i]->SendLine("S");
+    sendTextToClients("S");
 }
 
 void sendRecToClients()
 {
-	for (int i = 0; i < clients.size(); ++i)
-		clients[i]->SendLine("P");
+    sendTextToClients("P");
 }
 
 void sendSetToClients()
 {
-	for (int i = 0; i < clients.size(); ++i)
-		clients[i]->SendLine("O");
+    sendTextToClients("O");
+}
+
+void sendTextToClients(string text)
+{
+    for (int i = 0; i < clients.size(); ++i)
+        clients[i]->SendLine(text);
 }
 
 int main()
