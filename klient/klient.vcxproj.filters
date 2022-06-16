@@ -33,6 +33,9 @@
     <ClCompile Include="RecordVid.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Gstreamer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\socketCS.h">
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RecordVid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gstreamer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

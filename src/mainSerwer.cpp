@@ -89,6 +89,12 @@ void sendFileNameToClients()
         clients[i]->SendLine("N "+fname);
 }
 
+void sendTextToClients(string text)
+{
+    for (int i = 0; i < clients.size(); ++i)
+        clients[i]->SendLine(text);
+}
+
 void sendFireToClients()
 {
     sendTextToClients("F");
@@ -144,11 +150,7 @@ void sendSaveWithTriggerToClients()
     sendTextToClients("T");
 }
 
-void sendTextToClients(string text)
-{
-    for (int i = 0; i < clients.size(); ++i)
-        clients[i]->SendLine(text);
-}
+
 
 int main()
 {

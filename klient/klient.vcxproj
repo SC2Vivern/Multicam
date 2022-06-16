@@ -26,6 +26,7 @@
     </ClCompile>
     <ClCompile Include="..\src\pulse.cpp" />
     <ClCompile Include="..\src\socketCS.cpp" />
+    <ClCompile Include="Gstreamer.cpp" />
     <ClCompile Include="Settings.cpp" />
     <ClCompile Include="RecordVid.cpp" />
   </ItemGroup>
@@ -33,6 +34,7 @@
     <ClInclude Include="..\src\polar_camera.h" />
     <ClInclude Include="..\src\pulse.h" />
     <ClInclude Include="..\src\socketCS.h" />
+    <ClInclude Include="Gstreamer.h" />
     <ClInclude Include="RecordVid.h" />
     <ClInclude Include="Settings.h" />
   </ItemGroup>
@@ -80,15 +82,19 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="G:\gstreamer\1.0\msvc_x86_64\share\vs\2010\libs\gstreamer-1.0.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="G:\gstreamer\1.0\msvc_x86_64\share\vs\2010\libs\gstreamer-1.0.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="G:\gstreamer\1.0\msvc_x86_64\share\vs\2010\libs\gstreamer-1.0.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="G:\gstreamer\1.0\msvc_x86_64\share\vs\2010\libs\gstreamer-1.0.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -128,12 +134,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\Lucid Vision Labs\Arena SDK\GenICam\library\CPP\include;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\Lucid Vision Labs\Arena SDK\include\Save;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\Lucid Vision Labs\Arena SDK\include\Arena;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\opencv\build\include;C:\Program Files\Lucid Vision Labs\Arena SDK\include\Arena;C:\Program Files\Lucid Vision Labs\Arena SDK\GenICam\library\CPP\include;C:\Program Files\Lucid Vision Labs\Arena SDK\include\Save;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>G:\gstreamer\1.0\msvc_x86_64\lib\glib-2.0\include;G:\gstreamer\1.0\msvc_x86_64\include\glib-2.0;G:\gstreamer\1.0\msvc_x86_64\include\gstreamer-1.0;G:\gstreamer\1.0\msvc_x86_64\include;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\Lucid Vision Labs\Arena SDK\GenICam\library\CPP\include;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\Lucid Vision Labs\Arena SDK\include\Save;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\Lucid Vision Labs\Arena SDK\include\Arena;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\opencv\build\include;C:\Program Files\Lucid Vision Labs\Arena SDK\include\Arena;C:\Program Files\Lucid Vision Labs\Arena SDK\GenICam\library\CPP\include;C:\Program Files\Lucid Vision Labs\Arena SDK\include\Save;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\opencv\build\x64\vc15\lib;C:\Program Files\Lucid Vision Labs\Arena SDK\lib64\Arena;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\Lucid Vision Labs\Arena SDK\lib64\Arena;C:\Program Files\Lucid Vision Labs\Arena SDK\GenICam\library\CPP\lib\Win64_x64;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\Lucid Vision Labs\Arena SDK\GenICam\library\CPP\lib\Win64_x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>G:\gstreamer\1.0\msvc_x86_64\bin;G:\gstreamer\1.0\msvc_x86_64\lib\glib-2.0;G:\gstreamer\1.0\msvc_x86_64\lib\gstreamer-1.0;G:\gstreamer\1.0\msvc_x86_64\lib;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\opencv\build\x64\vc15\lib;C:\Program Files\Lucid Vision Labs\Arena SDK\lib64\Arena;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\Lucid Vision Labs\Arena SDK\lib64\Arena;C:\Program Files\Lucid Vision Labs\Arena SDK\GenICam\library\CPP\lib\Win64_x64;C:\Users\KamilVivern\Desktop\pw\inz\multicam\sokety\Lucid Vision Labs\Arena SDK\GenICam\library\CPP\lib\Win64_x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Arenad_v140.lib;Saved_v140.lib;opencv_world452d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
